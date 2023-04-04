@@ -1,0 +1,71 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+# The basic information about the site
+title = "JesusValera"
+description = "JesusValera's page"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to generate a feed file for the site
+generate_feed = true
+
+# The filename to use for the feed. Used as the template filename, too.
+# Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+# feed_filename = "atom.xml"
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# The taxonomies to be rendered for the site and their configuration.
+taxonomies = [
+    {name = "tags", feed = true}, # each tag will have its own feed
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-light"
+
+[extra]
+# Basic infomation
+author = "Jesus Valera Reales"
+github = "https://github.com/JesusValera"
+email  = "jesus1902@outlook.com"
+
+# Set date format in the site
+timeformat = "%B %e, %Y" # e.g. June 14, 2021
+
+# Google Analytics
+# If using this, add a value like "UA—XXXXXXXX-X"
+google_analytics = ""
+
+## Open Graph + Twitter Cards
+[extra.seo]
+# this image will be used as fallback if a page has no image of its own
+image = "icon.ico"
+image_height = 0
+image_width = 0
+og_locale = "en_US"
+
+[extra.seo.twitter]
+site = "JesusValera96"
+creator = "JesusValera96"
+
+# Menu items
+[[extra.menu]]
+name = "Blog"
+url = "blog"
+
+[[extra.menu]]
+name = "Projects"
+url = "projects"
+
+[[extra.menu]]
+name = "Readings"
+url = "readings"
+
+[[extra.menu]]
+name = "CV"
+url = "cv"
