@@ -1,6 +1,8 @@
 +++
 title = "Home"
-template = "about/section.html"
+template = "home.html"
 +++
 
-## TODO
+## Hello you 🚧
+
+<img alt="JesusValera" src="/jesus.jpeg">
