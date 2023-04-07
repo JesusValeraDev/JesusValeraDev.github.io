@@ -1,13 +1,12 @@
 {% import 'macros.html' as macros %}
 <!DOCTYPE html>
-<html lang="{{ config.extra.language_code | default(value='en') }}">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {% block seo %}
     {%- set site_url = current_url | default(value=get_url(path="404.html")) -%}
-    {% set author = config.extra.author | default(value="") -%}
     {% set description = config.description | default(value="") -%}
     {% set image = config.extra.seo.image | default(value="") -%}
     {% set image_height = config.extra.seo.image_height | default(value=0) -%}
@@ -62,7 +61,7 @@
   {% block footer %}
   <footer>
     <span>
-      &copy; {{ macros::time() }} Jesus Valera Reales. Made with Zola.
+      &copy; <time datetime="{{ now() | date(format='%Y') }}">{{ now() | date(format="%Y") }}</time> - Jesus Valera Reales
     </span>
   </footer>
   {% endblock footer %}

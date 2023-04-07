@@ -5,9 +5,6 @@ date = 2021-05-02T18:18:18+00:00
 
 [taxonomies]
 tags = ["Markdown", "Sample"]
-
-[extra]
-author = "Public"
 +++
 
 This article offers a sample of basic Markdown syntax that can be used in Zola
