@@ -2,7 +2,6 @@
   &-header {
     &-title {
       color: $default-shade;
-      font-family: $sans-serif;
       font-size: 4rem;
       margin: 1rem 0;
       text-align: center;
@@ -18,7 +17,6 @@
 
   &-clouds {
     text-align: center;
-    font-family: $sans-serif;
 
     a {
       display: inline-block;
@@ -46,7 +44,6 @@
       margin: 2rem 0 0.5rem;
       
       a {
-        font-family: $sans-serif;
         color: $default-color;
       }
     }
@@ -66,7 +63,6 @@
     }
 
     &-line {
-      @include transition(all 0.3s ease-out);
       border-top: 0.1rem solid $default-shade;
       display: block;
       width: 0;

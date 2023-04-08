@@ -1,6 +1,6 @@
 pre,
 code {
-  font-family: $monospaced;
+  font-family: Menlo, Monaco, monospace;
 }
 
 code {
@@ -14,14 +14,14 @@ code {
 pre {
   margin: 0 0 1rem;
   overflow: auto;
+  padding: .8em;
 }
 
 pre code {
   background-color: transparent;
   color: inherit;
-  font-size: 100%;
   padding: 0;
-  font: $code-font;
+  font: 400 0.85rem Menlo, monospace;
 }
 
 .highlight {

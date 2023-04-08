@@ -54,17 +54,13 @@ creator = "JesusValera96"
 
 # Menu items
 [[extra.menu]]
-name = "Blog"
-url = "blog"
-
-[[extra.menu]]
-name = "Projects"
-url = "projects"
-
-[[extra.menu]]
 name = "Readings"
 url = "readings"
 
 [[extra.menu]]
 name = "CV"
 url = "cv"
+
+[[extra.menu]]
+name = "About"
+url = "about"
