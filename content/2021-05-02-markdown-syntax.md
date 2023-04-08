@@ -2,6 +2,7 @@
 title = "Markdown Syntax Guide"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 date = 2021-05-02T18:18:18+00:00
+draft = true
 
 [taxonomies]
 tags = ["Markdown", "Sample"]
