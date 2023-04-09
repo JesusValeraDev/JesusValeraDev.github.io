@@ -57,7 +57,7 @@ Madrid, Spain
 **RAD4M · Internship**</br>
 Android Developer</br>
 Mar 2018 - Jun 2018 · 4 mos</br>
-Cracow, PolandCracow, Poland
+Cracow, Poland
 - Developed from scratch an Android application with Maps, Shared Preferences and third-party libraries
 > Skills: Kotlin · Android · MySQL · Git
 
@@ -67,5 +67,5 @@ Cracow, PolandCracow, Poland
 Software Developer</br>
 Mar 2017 - Jun 2017 · 4 mos</br>
 Murcia, Spain
-- Developed an Android dating application with a swiping system and different screens• Developed an Android dating application with a swiping system and different screens
+- Developed an Android dating application with a swiping system and different screens
 > Skills: PHP · Java · Android · MySQL

@@ -6,7 +6,7 @@
     <p>
       <small>
         <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date(format="%B %e, %Y") }}</time>
-        - X words - X mins
+        · {{ page.word_count }} words - {{ page.reading_time }} mins
       </small>
     </p>
 
@@ -46,7 +46,7 @@
 {% endif %}
 
 {% if config.title %}
-<meta property="og:site_name" content="{{ config.title }}" />
+  <meta property="og:site_name" content="{{ config.title }}"/>
 {% endif %}
 
 {% if image %}
@@ -60,7 +60,7 @@
 {% endif %}
 
 {% if page.date %}
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="{{ page.date | date(format='%+') }}">
 {% endif %}
 
@@ -96,11 +96,11 @@
 
 {% if config.extra.seo.webmaster %}
   {% if config.extra.seo.webmaster.google %}
-    <meta name="google-site-verification" content="{{ config.extra.seo.webmaster.google }}" />
+    <meta name="google-site-verification" content="{{ config.extra.seo.webmaster.google }}"/>
   {% endif %}
 
   {% if config.extra.seo.webmaster.bing %}
-    <meta name="msvalidate.01" content="{{ config.extra.seo.webmaster.bing }}" />
+    <meta name="msvalidate.01" content="{{ config.extra.seo.webmaster.bing }}"/>
   {% endif %}
 {% endif %}
 
