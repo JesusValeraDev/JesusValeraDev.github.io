@@ -5,6 +5,9 @@ date = 2020-03-20
 
 [taxonomies]
 tags = ['PHP', 'Testing', 'Unit Testing', 'Programming', 'Scalability']
+
+[extra]
+static_thumbnail = "/images/2020-03-20/1.jpg"
 +++
 
 ## 1.- What is a test?

@@ -1,11 +1,14 @@
 +++
 title = "Markdown Syntax Guide"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-date = 2021-05-02T18:18:18+00:00
+date = 2021-05-02
 draft = true
 
 [taxonomies]
 tags = ["Markdown", "Sample"]
+
+[extra]
+static_thumbnail = "/images/2020-03-20/2.png"
 +++
 
 This article offers a sample of basic Markdown syntax that can be used in Zola

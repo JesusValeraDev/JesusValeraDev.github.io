@@ -33,12 +33,9 @@ highlight_theme = "base16-ocean-light"
 github = "https://github.com/JesusValera"
 email  = "jesus1902@outlook.com"
 
-# Set date format in the site
-timeformat = "%B %e, %Y" # e.g. June 14, 2021
-
 # Google Analytics
 # If using this, add a value like "UA—XXXXXXXX-X"
-google_analytics = ""
+google_analytics = "G-K2RD5QTTM8"
 
 ## Open Graph + Twitter Cards
 [extra.seo]

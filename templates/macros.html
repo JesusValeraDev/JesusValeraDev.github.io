@@ -1,19 +1,18 @@
 {% macro page(page) -%}
-<a href="{{ page.permalink | safe }}" class="catalogue-item">
-  <div>
-    <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date(format=config.extra.timeformat |
-      default(value="%B %e, %Y")) }}</time>
-    <h1 class="catalogue-title">{{ page.title }}</h1>
+<div class="preview post-preview">
+  <a href="{{ page.permalink | safe }}" class="catalogue-item">
+    <h1>{{ page.title }}</h1>
     <div class="catalogue-line"></div>
     <p>
-      {%- if page.summary -%}
-      {{ page.summary | safe }}
-      {% else -%}
-      {{ page.content | striptags | truncate(length=280) | safe }}
-      {%- endif -%}
+      <small>
+        <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date(format="%B %e, %Y") }}</time>
+        - X words - X mins
+      </small>
     </p>
-  </div>
-</a>
+
+    <img src="{{ page.extra.static_thumbnail }}" alt="{{ page.title }}" style="max-height: 300px">
+  </a>
+</div>
 {%- endmacro %}
 
 {% macro seo(
@@ -78,7 +77,7 @@
 {% endif %}
 
 {% if image %}
-  <meta name="twitter:card" content="summary_large_image"">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:image" content="{{ get_url(path=image) | safe }}">
 {% else %}
   <meta name="twitter:card" content="summary">
@@ -91,7 +90,7 @@
 {% if config.extra.seo.twitter.site %}
   <meta name="twitter:site" content="@{{ config.extra.seo.twitter.site }}">
   {% if config.extra.seo.twitter_creator %}
-    <meta name="twitter:creator" content="@{{  config.extra.seo.twitter.creator }}">
+    <meta name="twitter:creator" content="@{{ config.extra.seo.twitter.creator }}">
   {% endif %}
 {% endif %}
 
