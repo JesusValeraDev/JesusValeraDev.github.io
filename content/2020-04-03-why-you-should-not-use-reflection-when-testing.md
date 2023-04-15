@@ -13,15 +13,15 @@ static_thumbnail = "/images/2020-04-03/1.webp"
 
 ![the-art-of-programming-meme](/images/2020-04-03/1.webp)
 
-## It causes bugs when refactoring due to the highly coupling
+## It causes bugs when refactoring due to the high coupling
 
 When we use reflection our tests get too fragile, we are allowing our tests to know so much information about the real
 implementation.
 We need to hard-code the method name, and we are coupling our test method to the production code.
 Furthermore, we need to write a lot about boilerplate to test a simple method.
 
-- **Q**: I need to get at least an 80% of code coverage, how can I get it without Reflection class?
-- **A**: You should test ONLY your public methods and depend on the variables we pass, we should reach all the possible
+- **Q**: I need to get at least 80% of code coverage, how can I get it without the Reflection class?
+- **A**: You should test ONLY your public methods and depending on the variables we pass, we should reach all the possible
   paths.
 
 So, we do not need to test the private methods per se, they are called indirectly from our public functions.
@@ -43,8 +43,7 @@ final class Operation
 {
     public function addition(int $number1, int $number2): int
     {
-        $addition = new Addition();
-        return $addition->simpleOperation($number1, $number2);
+        return (new Addition())->simpleOperation($number1, $number2);
     }
 }
 
@@ -100,8 +99,8 @@ tests?
 </span></code></pre>
 
 - **Q**: Will the ‘standard’ fail? What about the Reflection one?
-- **A**: The standard will fail because we expect 4 as a result but we got a 0.
-  However, the reflection one will pass, because we are not focusing on the real implementation, we are creating a false
+- **A**: The standard will fail because we expect 4 as a result, but we got a 0.
+  However, the reflection will pass, because we are not focusing on the real implementation, we are creating a false
   positive which can be dangerous.
 
 ## Dealing with some problems when not using Reflection
@@ -110,48 +109,28 @@ Let me show you a more realistic example (idea from
 [PHPTheRightWay](https://phptherightway.com/pages/Design-Patterns.html)):
 
 [//]: # (```php)
-[//]: # (<?php)
-[//]: # (final class Vehicle)
+[//]: # (final readonly class Vehicle)
 [//]: # ({)
-[//]: # (    private string $model;)
-[//]: # (    private int $price;)
+[//]: # (    public string $model;)
+[//]: # (    public int $price;)
 [//]: # ()
 [//]: # (    public function __construct&#40;string $model&#41;)
 [//]: # (    {)
 [//]: # (        $this->model = $model;)
-[//]: # (        $this->price = mt_rand&#40;1000, 3000&#41;;)
-[//]: # (    })
-[//]: # ()
-[//]: # (    public function model&#40;&#41;: string)
-[//]: # (    {)
-[//]: # (        return $this->model;)
-[//]: # (    })
-[//]: # ()
-[//]: # (    public function price&#40;&#41;: int)
-[//]: # (    {)
-[//]: # (        return $this->price;)
+[//]: # (        $this->price = random_int&#40;1000, 3000&#41;;)
 [//]: # (    })
 [//]: # (})
 [//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final class </span><span style="color:#d08770;">Vehicle
+
+<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final readonly class </span><span style="color:#d08770;">Vehicle
 </span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">private </span><span style="color:#d08770;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">private </span><span style="color:#d08770;">int </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">;
+</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public </span><span style="color:#d08770;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">;
+</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public </span><span style="color:#d08770;">int </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">;
 </span><span style="color:#343d46;">
 </span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">)
 </span><span style="color:#343d46;">    {
 </span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">model </span><span>= </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">price </span><span>= </span><span style="color:#96b5b4;">mt_rand</span><span style="color:#343d46;">(</span><span style="color:#d08770;">1000</span><span style="color:#343d46;">, </span><span style="color:#d08770;">3000</span><span style="color:#343d46;">);
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">model</span><span style="color:#343d46;">(): </span><span style="color:#b48ead;">string
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">model</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">price</span><span style="color:#343d46;">(): </span><span style="color:#b48ead;">int
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">price</span><span style="color:#343d46;">;
+</span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">price </span><span>= </span><span style="color:#96b5b4;">random_int</span><span style="color:#343d46;">(</span><span style="color:#d08770;">1000</span><span style="color:#343d46;">, </span><span style="color:#d08770;">3000</span><span style="color:#343d46;">);
 </span><span style="color:#343d46;">    }
 </span><span style="color:#343d46;">}
 </span></code></pre>
@@ -163,6 +142,7 @@ To test the vehicle’s model is easy, but what about the price?
 [//]: # ({)
 [//]: # (    $model = 'Seat';)
 [//]: # (    $vehicle = new Vehicle&#40;$model&#41;;)
+[//]: # ()
 [//]: # (    $this->assertSame&#40;$model, $vehicle->model&#40;&#41;&#41;;)
 [//]: # (})
 [//]: # ()
@@ -170,7 +150,8 @@ To test the vehicle’s model is easy, but what about the price?
 [//]: # ({)
 [//]: # (    $model = 'Seat';)
 [//]: # (    $vehicle = new Vehicle&#40;$model&#41;;)
-[//]: # (    $this->assertSame&#40;???, $vehicle->price&#40;&#41;&#41;;)
+[//]: # ()
+[//]: # (    $this->assertSame&#40; ¿¿?? , $vehicle->price&#40;&#41;&#41;;)
 [//]: # (})
 [//]: # (```)
 
@@ -178,6 +159,7 @@ To test the vehicle’s model is easy, but what about the price?
 </span><span>{
 </span><span>    </span><span style="color:#bf616a;">$model </span><span>= '</span><span style="color:#a3be8c;">Seat</span><span>';
 </span><span>    </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>(</span><span style="color:#bf616a;">$model</span><span>);
+</span><span>
 </span><span>    </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>(</span><span style="color:#bf616a;">$model</span><span>, </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">model</span><span>());
 </span><span>}
 </span><span>
@@ -185,14 +167,14 @@ To test the vehicle’s model is easy, but what about the price?
 </span><span>{
 </span><span>    </span><span style="color:#bf616a;">$model </span><span>= '</span><span style="color:#a3be8c;">Seat</span><span>';
 </span><span>    </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>(</span><span style="color:#bf616a;">$model</span><span>);
-</span><span>    </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>(???, </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">price</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>( ¿¿?? , </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">price</span><span>());
 </span><span>}
 </span></code></pre>
 
 One possible solution could be using the Reflection class to be able to set explicitly the price like:
 
 [//]: # (```php)
-[//]: # (<?php)
 [//]: # (public function testGetPrice&#40;&#41;: void)
 [//]: # ({)
 [//]: # (     /** @var Vehicle|MockObject $vehicle */)
@@ -231,40 +213,35 @@ probably we are doing something wrong in this class (TIP: you should make **fina
 One solution could be to inject the value in the constructor like:
 
 [//]: # (```php)
-[//]: # (final class Vehicle)
+[//]: # (<?php)
+[//]: # (final readonly class Vehicle)
 [//]: # ({)
-[//]: # (    // . . .)
-[//]: # ()
-[//]: # (    public function __construct&#40;string $model, int $price&#41;)
-[//]: # (    {)
-[//]: # (        $this->model = $model;)
-[//]: # (        $this->price = $price;)
+[//]: # (    public function __construct&#40;)
+[//]: # (        public string $model,)
+[//]: # (        public int $price,)
+[//]: # (    &#41; {)
 [//]: # (    })
-[//]: # ()
-[//]: # (    // . . .)
 [//]: # (})
 [//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final class </span><span style="color:#d08770;">Vehicle
+
+<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final </span><span style="color:#d08770;">readonly </span><span style="color:#b48ead;">class </span><span style="color:#d08770;">Vehicle
 </span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#a7adba;">// . . .
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">)
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">model </span><span>= </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">price </span><span>= </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">;
+</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(
+</span><span style="color:#343d46;">        </span><span style="color:#d08770;">public </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">,
+</span><span style="color:#343d46;">        </span><span style="color:#d08770;">public </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">,
+</span><span style="color:#343d46;">    ) {
 </span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#a7adba;">// . . .
 </span><span style="color:#343d46;">}
 </span></code></pre>
 
 And when we want to create this class, we could pass the final price as:
 
 [//]: # (```php)
-[//]: # ($vehiclePrice = mt_rand&#40;1000, 3000&#41;;)
+[//]: # ($vehiclePrice = random_int&#40;1000, 3000&#41;;)
 [//]: # ($vehicle = new Vehicle&#40;‘Seat’, $vehiclePrice&#41;;)
 [//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php"><code class="language-php" data-lang="php"><span style="color:#bf616a;">$vehiclePrice </span><span>= </span><span style="color:#96b5b4;">mt_rand</span><span>(</span><span style="color:#d08770;">1000</span><span>, </span><span style="color:#d08770;">3000</span><span>);
+
+<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php"><code class="language-php" data-lang="php"><span style="color:#bf616a;">$vehiclePrice </span><span>= </span><span style="color:#96b5b4;">random_int</span><span>(</span><span style="color:#d08770;">1000</span><span>, </span><span style="color:#d08770;">3000</span><span>);
 </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>(‘</span><span style="color:#d08770;">Seat</span><span>’, </span><span style="color:#bf616a;">$vehiclePrice</span><span>);
 </span></code></pre>
 
@@ -279,6 +256,7 @@ So, our price test could be like:
 [//]: # (    $this->assertSame&#40;$price, $vehicle->price&#40;&#41;&#41;;)
 [//]: # (})
 [//]: # (```)
+
 <pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">testPrice</span><span>(): </span><span style="color:#d08770;">void
 </span><span>{
 </span><span>    </span><span style="color:#bf616a;">$price </span><span>= </span><span style="color:#d08770;">200</span><span>;
@@ -288,9 +266,10 @@ So, our price test could be like:
 </span><span>}
 </span></code></pre>
 
-To sum up, I don’t recommend you to implement the Reflection class for tests (also for production code).
+To sum up, I don’t recommend using the Reflection class anywhere in your code unless you are very aware of what you are
+doing, usually, there are alternative implementations to what you want to achieve without using it.
 
-Defining our classes as `final` helps us to have a better design, not only because it forbid us the use of Reflection,
-but also it prevents us from mocking our business logic, which is good.
+![the-art-of-programming-meme](/images/2020-04-03/2.webp)
 
-But about the evil behind the mocking, we will talk in another post.
+Additionally, defining our classes as `final` helps us to have a better design, not only because it forbid us the use of
+Reflection, but also it prevents us from mocking our business logic, which is good.
