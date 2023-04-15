@@ -51,12 +51,12 @@ creator = "JesusValera96"
 
 # Menu items
 [[extra.menu]]
-name = "Readings"
-url = "readings"
+name = "Blog"
+url = ""
 
 [[extra.menu]]
-name = "CV"
-url = "cv"
+name = "Readings"
+url = "readings"
 
 [[extra.menu]]
 name = "About"

@@ -1,7 +1,8 @@
 +++
-title = "The importance of the tests in our software"
+title = "The importance of tests in our software"
 description = "A test is an empirical assertion that demonstrates the behaviour of expected functionality.  Examples of test types, suggestions and their importance"
 date = 2020-03-20
+aliases = ['the-importance-of-the-tests-in-our-software']
 
 [taxonomies]
 tags = ['PHP', 'Testing', 'Unit Testing', 'Programming', 'Scalability']
@@ -10,7 +11,7 @@ tags = ['PHP', 'Testing', 'Unit Testing', 'Programming', 'Scalability']
 static_thumbnail = "/images/2020-03-20/1.jpg"
 +++
 
-## 1.- What is a test?
+## 1. What is a test?
 
 A test is an empirical assertion that demonstrates the behaviour of an expected functionality from something.
 
@@ -37,7 +38,7 @@ The tests are classified by what they verify, the most important ones are the fo
 
 A software needs all of them, but the most important concerning developers are unit, integration and functional tests.
 
-## 2.- Differences between test types
+## 2. Differences between test types
 
 ### Unit test
 
@@ -108,7 +109,7 @@ behaviour.
 
 One of the best known is Selenium.
 
-## 3.- Cohn pyramid
+## 3. Cohn pyramid
 
 ![cohn-pyramid](/images/2020-03-20/4.webp)
 
@@ -142,7 +143,7 @@ In legacy projects which are really coupled to 3rd party libraries like the data
 write unit tests. The recommendation is to do the inverse, creating first integration tests to check you do not break
 something and then re-factorize the code with unit tests step by step.
 
-## 4.- Methodologies
+## 4. Methodologies
 
 ### Test-Last
 
@@ -188,7 +189,7 @@ light. Afterwards, you refactor it and so on.
 - It requires an important learning curve
 - Its implementation is complex in legacy codes
 
-## 5.- Unit test resources
+## 5. Unit test resources
 
 We use to say “mock” when we want to reference a test double, but there are actually five different types and mock is
 only one of them.
