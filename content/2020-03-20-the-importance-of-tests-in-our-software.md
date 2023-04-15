@@ -1,6 +1,6 @@
 +++
 title = "The importance of tests in our software"
-description = "A test is an empirical assertion that demonstrates the behaviour of expected functionality.  Examples of test types, suggestions and their importance"
+description = "A test is an empirical assertion that demonstrates the behaviour of expected functionality. Examples of test types, suggestions and their importance"
 date = 2020-03-20
 aliases = ['the-importance-of-the-tests-in-our-software']
 

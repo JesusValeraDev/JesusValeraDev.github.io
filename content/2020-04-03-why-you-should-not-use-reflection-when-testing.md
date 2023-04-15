@@ -269,7 +269,7 @@ So, our price test could be like:
 To sum up, I don’t recommend using the Reflection class anywhere in your code unless you are very aware of what you are
 doing, usually, there are alternative implementations to what you want to achieve without using it.
 
-![the-art-of-programming-meme](/images/2020-04-03/2.webp)
+![stone-figures](/images/2020-04-03/2.webp)
 
 Additionally, defining our classes as `final` helps us to have a better design, not only because it forbid us the use of
 Reflection, but also it prevents us from mocking our business logic, which is good.
