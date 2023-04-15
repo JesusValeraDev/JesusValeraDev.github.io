@@ -8,11 +8,10 @@ tags = ['PHP', 'Testing', 'Mocking', 'Test Doubles', 'Stub']
 
 [extra]
 static_thumbnail = "/images/2020-06-11/1.png"
+subtitle = "Dummy, Stub, Spy, Mock or Fake"
 +++
 
 ## Dummy, Stub, Spy, Mock or Fake
-
-<!-- more -->
 
 <img alt="parliament-budapest" src="/images/2020-06-11/1.png" style="width: 100%"/>
 
@@ -133,7 +132,7 @@ interface LoggerInterface
 
 final class LoggerSpy implements LoggerInterface
 {
-public Array<String> messages = [];
+    public Array<String> messages = [];
 
     public function log(String message): void
     {
@@ -198,7 +197,6 @@ final class ShoppingService
 
         return amount;
     }
-
 }
 ```
 
@@ -232,7 +230,6 @@ class ShoppingService // Not final anymore because of the mock!!
     {
         return ShoppingCart::transform(lines);
     }
-
 }
 ```
 
@@ -245,8 +242,8 @@ final class LoggerTest extends TestCase
     {
         MockShoppingService service = this.createMock(ShoppingService::class);
         service
-        .method('getShoppingCart') // Overriding the method.
-        .willReturn([100, 200, 300]);
+            .method('getShoppingCart') // Overriding the method.
+            .willReturn([100, 200, 300]);
 
         Lines stubLines = new Lines(null);
         Float totalAmount = service.calculateAmount(stubLines);
@@ -255,6 +252,10 @@ final class LoggerTest extends TestCase
     }
 }
 ```
+
+> This methodology is very handy when we want to refactor a class step-by-step, but we could go further and extract that
+> logic in a new class, then when the class `ShoppingService` is created, just injecting the dependency via constructor
+> would help us to separate the logic.
 
 ## Fake
 A fake is a simpler implementation of real objects.

@@ -37,22 +37,17 @@
 
 <body>
   {% block header %}
-  <nav class="nav">
-    <div class="nav-container">
-      <a href="{{ config.base_url | safe }}">
-        <img class="nav-image" alt="JesusValera" src="{{ get_url(path='assets/favicon-32x32.jpeg') | safe }}" style="border-radius: 50%">
-      </a>
-      <ul>
-        {% if config.extra.menu %}
-          {% for menu in config.extra.menu %}
-            <li><a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a></li>
-          {% endfor %}
-        {% else %}
-          <li><a href="{{ config.base_url | safe }}">Posts</a></li>
-        {% endif %}
-      </ul>
-    </div>
-  </nav>
+  <header>
+    <a class="profile-icon" href="{{ config.base_url | safe }}">
+      <img alt="JesusValera" src="{{ get_url(path='jesus.jpeg') | safe }}">
+    </a>
+    <nav>
+      {% for menu in config.extra.menu %}
+        <a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+
   {% endblock header %}
 
   <main>

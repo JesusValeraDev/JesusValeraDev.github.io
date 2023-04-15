@@ -1,86 +1,9 @@
-.container {
-  margin: 0 auto;
-  max-width: 800px;
-  width: 80%;
-}
-
 main,
-footer,
-.nav-container {
+footer {
   display: block;
   margin: 0 auto;
   max-width: 800px;
   width: 80%;
-  font-size: large;
-}
-
-.nav {
-  box-shadow: 0 2px 2px -2px $shadow-color;
-  overflow: auto;
-
-  &-container {
-    margin: 1rem auto;
-    position: relative;
-    text-align: center;
-  }
-
-  &-title {
-    color: $default-color;
-    display: inline-block;
-    margin: 0;
-    padding-right: .2rem;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 1rem 0 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  li {
-    color: $default-color;
-    display: inline-block;
-    opacity: .6;
-    padding: 0 2rem 0 0;
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 1;
-    }
-  }
-
-  a {
-    color: $default-color;
-  }
-
-  &-image {
-    display: inline;
-    width: auto;
-  }
-}
-
-@media (min-width: 600px) {
-  .nav {
-    &-container {
-      text-align: left;
-    }
-
-    ul {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-    }
-  }
 }
 
 footer {
@@ -90,5 +13,82 @@ footer {
   span {
     color: $default-color;
     font-size: .8rem;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin: auto;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 2px -2px $shadow-color;
+
+  .profile-icon {
+    height: 50px;
+    width: 50px;
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    margin: auto;
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+
+    color: $default-color;
+
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    a {
+      color: $default-color;
+      opacity: .6;
+    }
+
+    a:hover,
+    a:focus {
+      opacity: 1;
+    }
+
+    a:not(:last-child) {
+      margin-right: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
+
+    .profile-icon {
+      text-align: center;
+      height: 100px;
+      width: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+    }
+
+    nav {
+      flex: 1 0 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: inherit;
+    }
   }
 }
