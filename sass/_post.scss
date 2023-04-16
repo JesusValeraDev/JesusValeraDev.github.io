@@ -1,6 +1,18 @@
 .post {
   padding: 1rem 0;
 
+  &-title {
+    margin-bottom: 0;
+  }
+
+  &-subtitle {
+    margin: 0 0 5px 0;
+  }
+
+  time {
+    color: #AAAAAAFF;
+  }
+
   p {
     margin: 0 0 1rem;
     text-align: justify;

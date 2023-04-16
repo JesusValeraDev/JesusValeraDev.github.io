@@ -11,9 +11,9 @@ static_thumbnail = "/images/2020-06-11/1.png"
 subtitle = "Dummy, Stub, Spy, Mock or Fake"
 +++
 
-## Dummy, Stub, Spy, Mock or Fake
-
 <img alt="parliament-budapest" src="/images/2020-06-11/1.png" style="width: 100%"/>
+
+<!-- more -->
 
 ## Test Doubles
 

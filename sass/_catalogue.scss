@@ -18,6 +18,14 @@
     letter-spacing: .5px;
   }
 
+  a {
+    opacity: 0.8;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+
   &-title {
     color: $default-shade;
     display: block;
@@ -25,6 +33,7 @@
     font-weight: 700;
     margin-top: .5rem;
   }
+
   &-subtitle {
     color: $default-shade;
     display: block;

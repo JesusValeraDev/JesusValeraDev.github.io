@@ -9,9 +9,12 @@ tags = ['PHP', 'Testing', 'Reflections', 'Architectural Design', 'Programming']
 
 [extra]
 static_thumbnail = "/images/2020-04-03/1.webp"
+subtitle = "with some code examples"
 +++
 
 ![the-art-of-programming-meme](/images/2020-04-03/1.webp)
+
+<!-- more -->
 
 ## It causes bugs when refactoring due to the high coupling
 

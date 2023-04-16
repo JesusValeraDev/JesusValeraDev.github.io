@@ -9,6 +9,7 @@ tags = ['PHP', 'Testing', 'Unit Testing', 'Programming', 'Scalability']
 
 [extra]
 static_thumbnail = "/images/2020-03-20/1.jpg"
+subtitle = "Introduction to unit testing with PHP"
 +++
 
 ## 1. What is a test?
