@@ -289,7 +289,7 @@ That means if we have to pick a test double, first, we must know if the test is 
 fake is the best option, otherwise, my recommendation is to pick the corresponding test with the least knowledge as
 possible: dummy, stub, spy or mock (in that order).
 
----
+<div class="separator"></div>
 
 ## References
 

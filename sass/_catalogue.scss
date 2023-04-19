@@ -1,8 +1,4 @@
 .catalogue {
-  div {
-    margin-bottom: 1.2rem;
-  }
-
   &-item {
     color: $default-color;
     display: block;
@@ -23,6 +19,8 @@
   }
 
   a:hover {
+    text-decoration: underline;
+    text-decoration-color: $default-shade;
     opacity: 1;
   }
 

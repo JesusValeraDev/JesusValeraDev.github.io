@@ -120,7 +120,7 @@ Once you are done, let’s create a PR!
 </span><span style="color:#bf616a;"><b>git</b></span><span> <b>merge upstream/master</b>
 </span></code></pre>
 
----
+<div class="separator"></div>
 
 ## Reference
 

@@ -8,7 +8,7 @@ aliases = ['the-importance-of-the-tests-in-our-software']
 tags = ['PHP', 'Testing', 'Unit Testing', 'Programming', 'Scalability']
 
 [extra]
-static_thumbnail = "/images/2020-03-20/1.jpg"
+static_thumbnail = "/images/2020-03-20/1.png"
 subtitle = "Introduction to unit testing with PHP"
 +++
 
@@ -18,7 +18,7 @@ A test is an empirical assertion that demonstrates the behaviour of an expected 
 
 <!-- more -->
 
-![the-art-of-programming-meme](/images/2020-03-20/1.jpg)
+![the-art-of-programming-meme](/images/2020-03-20/1.png)
 
 The tests are classified by what they verify, the most important ones are the following:
 
@@ -43,7 +43,7 @@ A software needs all of them, but the most important concerning developers are u
 
 ### Unit test
 
-![given-when-then](/images/2020-03-20/2.png)
+<img src="/images/2020-03-20/2.png" alt="given-when-then" style="width: 80%">
 
 What is a unit test? We could consider, in our context, a public method from one API class. That means, a unit test is a
 verification between the current input and expected output, it is an isolated logic and decoupled from outside. It is
@@ -100,7 +100,7 @@ expected result is whatever we want.
 
 In other words, we do not care what the developer did, we care about the output as we were the client.
 
-![functional-test](/images/2020-03-20/3.webp)
+<img src="/images/2020-03-20/3.png" alt="functional-test" style="width: 80%">
 
 For example, if we send a form with a wrong value, we expect to see an error message in a specific field, we do not care
 about what regular expression is and why it failed.
@@ -112,7 +112,7 @@ One of the best known is Selenium.
 
 ## 3. Cohn pyramid
 
-![cohn-pyramid](/images/2020-03-20/4.webp)
+<img src="/images/2020-03-20/4.png" alt="cohn-pyramid" style="width: 80%">
 
 There are different test types as we have just seen, even each one is focused on a particular issue from the
 application.
@@ -176,7 +176,7 @@ This methodology is when you type the tests BEFORE you wrote the production code
 
 ### TDD (test-driven development)
 
-![tdd](/images/2020-03-20/5.png)
+<img src="/images/2020-03-20/5.png" alt="tdd" style="width: 80%">
 
 This methodology is when you type the tests BEFORE you wrote the production code BUT you are refactoring the code as
 long as you are working on them.

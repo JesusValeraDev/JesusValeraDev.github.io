@@ -9,6 +9,10 @@
     margin: 0 0 5px 0;
   }
 
+  &-line {
+    margin-bottom: 1.5rem;
+  }
+
   time {
     color: #AAAAAAFF;
   }
@@ -20,10 +24,6 @@
 
   a:hover {
     text-decoration: underline;
-  }
-
-  img {
-    margin: 0 auto 0.5rem;
   }
 
   img + em {

@@ -20,7 +20,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   font-size: 1.1rem;
   margin: auto;
   padding-bottom: 1rem;
@@ -30,6 +30,7 @@ header {
     height: 50px;
     width: 50px;
     position: relative;
+    margin-left: 2rem;
   }
 
   img {
@@ -44,26 +45,17 @@ header {
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-
     color: $default-color;
-
-
-    &:last-child {
-      padding-right: 0;
-    }
 
     a {
       color: $default-color;
       opacity: .6;
+      margin-right: 2rem;
     }
 
     a:hover,
     a:focus {
       opacity: 1;
-    }
-
-    a:not(:last-child) {
-      margin-right: 1.3rem;
     }
   }
 }
