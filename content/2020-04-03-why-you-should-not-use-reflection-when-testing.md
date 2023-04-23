@@ -8,11 +8,11 @@ aliases = ['is-it-a-good-idea-to-use-reflection-while-testing']
 tags = ['PHP', 'Testing', 'Reflections', 'Architectural Design', 'Programming']
 
 [extra]
-static_thumbnail = "/images/2020-04-03/1.webp"
+static_thumbnail = "/images/2020-04-03/1.png"
 subtitle = "with some code examples"
 +++
 
-![the-art-of-programming-meme](/images/2020-04-03/1.webp)
+![the-art-of-programming-meme](/images/2020-04-03/1.png)
 
 <!-- more -->
 
@@ -272,7 +272,7 @@ So, our price test could be like:
 To sum up, I don’t recommend using the Reflection class anywhere in your code unless you are very aware of what you are
 doing, usually, there are alternative implementations to what you want to achieve without using it.
 
-![stone-figures](/images/2020-04-03/2.webp)
+![stone-figures](/images/2020-04-03/2.png)
 
 Additionally, defining our classes as `final` helps us to have a better design, not only because it forbid us the use of
 Reflection, but also it prevents us from mocking our business logic, which is good.

@@ -15,7 +15,6 @@ subtitle = "Being up-to-date and avoiding conflicts"
 
 <!-- more -->
 
-<br>
 Have you ever wondered how you could collaborate with open-source projects, but you didn’t know how to start? It
 couldn’t be easier. Take a look:
 

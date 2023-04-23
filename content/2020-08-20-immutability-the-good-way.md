@@ -1,8 +1,7 @@
 +++
 title = "Immutability, the good way"
-description = "Pactical examples of immutability in PHP"
+description = "An immutable object will remain in the same state as it was created. Design and implementation will be much easier and more consistent over the time"
 date = 2020-08-20
-draft = true
 
 [taxonomies]
 tags = ['PHP', 'Immutability', 'Good Practices', 'Programming', 'OOP']
@@ -15,7 +14,6 @@ subtitle = "Practical examples of immutability in PHP"
 A **mutable** object can be modified after its creation, an **immutable** cannot.
 
 <img alt="parliament-budapest" src="/images/2020-08-20/1.png" style="width: 100%"/>
-<br>
 
 <!-- more -->
 
@@ -277,6 +275,14 @@ final  class ProductTransfer
 
 As you can see, having the _@psalm-immutable_ on your immutable classes you don’t need to worry about any of this
 (cloning or getters), and you can even leave your properties public without any fear because they are write-only.
+
+## Recommendations
+
+- Use _\DateTimeImmutable_ over _\DateTime_
+- Encourage immutability for your [Value Objects](https://codete.com/blog/value-objects/)
+  & [Data Transfer Objects](https://en.wikipedia.org/wiki/Data_transfer_object)
+- Don’t use the ‘&’ character
+- Introduce a static analyzer tool in your projects (as Psalm or PHPStan)
 
 <div class="separator"></div>
 
