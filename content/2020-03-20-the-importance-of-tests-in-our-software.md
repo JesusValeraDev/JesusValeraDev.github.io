@@ -46,8 +46,8 @@ A software needs all of them, but the most important concerning developers are u
 <img src="/images/2020-03-20/2.png" alt="given-when-then" style="width: 80%">
 
 What is a unit test? We could consider, in our context, a public method from one API class. That means, a unit test is a
-verification between the current input and expected output, it is an isolated logic and decoupled from outside. It is
-recommendable to use interfaces in order to invert the dependencies in our application (~DIP: Dependency Inversion
+verification between the current input and expected output, it is an isolated logic and decoupled from the outside. It
+is recommendable to use interfaces in order to invert the dependencies in our application (~DIP: Dependency Inversion
 Principle).
 
 Indeed, we can also depend on external dependencies using mocks or stubs.
@@ -86,7 +86,7 @@ Further, this kind of tests can connect to the database, to the network, filesys
 The integration tests are slower than unit tests due to their complexity, besides, sometimes it’s needed to load
 specific configuration in order to work properly.
 
-These kinds of tests are dependent on the environment, I mean, if a test fails the problem could be a different
+These kinds of tests are dependent on the environment, I mean, if a test fails, the problem could be a different
 configuration from one environment to another.
 
 You can even create integration tests with PHPUnit, the `Unit` in the name is just a convention.

@@ -18,9 +18,9 @@ A **mutable** object can be modified after its creation, an **immutable** cannot
 <!-- more -->
 
 An immutable object will remain in the same state as it was created. Design and implementation will be much easier and
-consistent. In the case of problems, locate a potential bug is faster due that it won’t have side-effects.
+consistent. In the case of problems, locate a potential bug is faster due that it won't have side effects.
 
-Although, creating immutable objects sometimes require more code, and it doesn’t fit in all scenarios (entities need to
+Although, creating immutable objects sometimes require more code, and it doesn't fit in all scenarios (entities need to
 be mutable for example).
 
 ## Mutability examples and their impacts
@@ -204,7 +204,7 @@ echo $product->toString();
 This is happening because what _\DateTimeImmutable_ does is to create a new instance of the same object with the same
 values.
 
-Perfect, now our code is working like a charm, doesn’t it? Well, take a look at the following snippet.
+Perfect, now our code is working like a charm, doesn't it? Well, take a look at the following snippet.
 
 ```php
 <?php

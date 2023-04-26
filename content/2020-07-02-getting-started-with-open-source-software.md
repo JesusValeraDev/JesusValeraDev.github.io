@@ -15,8 +15,8 @@ subtitle = "Being up-to-date and avoiding conflicts"
 
 <!-- more -->
 
-Have you ever wondered how you could collaborate with open-source projects, but you didn’t know how to start? It
-couldn’t be easier. Take a look:
+Have you ever wondered how you could collaborate with open-source projects, but you didn't know how to start? It
+couldn't be easier. Take a look:
 
 - Fork the repository into your account.
 
@@ -69,7 +69,7 @@ Get the last changes in your project (not necessary if you just forked the proje
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span>(</span><span style="color:#bf616a;">master</span><span>)$ <b>git checkout</b></span><span style="color:#bf616a;"><b> -b</b></span><span><b> new-branch</b>
 </span></code></pre>
 
-Once you are done, let’s create a PR!
+Once you're done, let’s create a PR!
 
 [//]: # (```bash)
 [//]: # (&#40;new-branch&#41;$ git add . # Add to git your changes)
@@ -89,7 +89,7 @@ Once you are done, let’s create a PR!
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span>(</span><span style="color:#bf616a;">master</span><span>)$ <b>git remote set-url origin git@github.com:myself/forked.git</b>
 </span></code></pre>
 
-### That’s all!
+### That's all!
 
 > If your changes (_or someone else’s_) have been merged in the origin, you need to run **fetch upstream master** and 
 > **git merge upstream/master** in master to be up-to-date!
@@ -123,6 +123,6 @@ Once you are done, let’s create a PR!
 
 ## Reference
 
-- [Syncing a fork | Github doc](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+- [Syncing a fork | GitHub doc](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
 - [Learn Git commands | GitExplorer](https://gitexplorer.com/)
 - [Git Tips | Oh Shit, Git!?!](https://ohshitgit.com/)

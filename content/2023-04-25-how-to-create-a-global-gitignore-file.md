@@ -15,13 +15,13 @@ subtitle = "and forget to ignore the same files over and over again! ⚡️"
 
 <!-- more -->
 
-Sometimes while we are creating a pull request, we realise we are committing some unnecessary config files, like the
+Sometimes while we're creating a pull request, we realise we're committing some unnecessary config files, like the
 settings from your IDE, some cache files or even auto-generated files like the `.DS_Store`.
 
 Fortunately, there is a way to ignore all these files in your system and don't bother to add them anymore to every
 project in the specific `.gitignore`.
 
-The first step is to create the global `.gitignore` file we are going to use.
+The first step is to create the global `.gitignore` file we're going to use.
 
 ```bash
 touch ~/.gitignore
@@ -52,7 +52,7 @@ git config --global core.excludesFile
 /Users/Jesus/.gitignore # Output 👀
 ```
 
-> If you are not working alone on a project, consider that maybe other people are not ignoring the duplicate files
+> If you aren't working alone on a project, consider that maybe other people aren't ignoring the duplicate files
 > globally as you do, so for this, it is worth adding these lines not only on your global but in the `.gitignore` from
 > that project.
 

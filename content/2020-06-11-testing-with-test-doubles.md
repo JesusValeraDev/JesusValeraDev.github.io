@@ -87,7 +87,7 @@ final class Service
 }
 ```
 
-To test this service we can create a stub of the user and check if the response is what we were expecting.
+To test this service, we can create a stub of the user and check if the response is what we were expecting.
 
 ```java
 final class ServiceTest extends TestCase
@@ -201,7 +201,7 @@ final class ShoppingService
 ```
 
 In this kind of situations, mocking is the best option if we cannot modify this class easily (maybe the class is used in
-different parts) and it could take too long to refactorize.
+different parts), and it could take too long to refactorize.
 
 My favourite solution for this is “[extract method refactoring](https://refactoring.guru/extract-method)”:
 

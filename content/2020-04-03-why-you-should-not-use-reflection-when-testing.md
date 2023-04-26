@@ -18,16 +18,16 @@ subtitle = "with some code examples"
 
 ## It causes bugs when refactoring due to the high coupling
 
-When we use reflection our tests get too fragile, we are allowing our tests to know so much information about the real
+When we use reflection, our tests get too fragile, we are allowing our tests to know so much information about the real
 implementation.
-We need to hard-code the method name, and we are coupling our test method to the production code.
+We need to hardcode the method name, and we are coupling our test method to the production code.
 Furthermore, we need to write a lot about boilerplate to test a simple method.
 
 - **Q**: I need to get at least 80% of code coverage, how can I get it without the Reflection class?
-- **A**: You should test ONLY your public methods and depending on the variables we pass, we should reach all the possible
-  paths.
+- **A**: You should test ONLY your public methods, and depending on the variables we pass, we should reach all the
+  possible paths.
 
-So, we do not need to test the private methods per se, they are called indirectly from our public functions.
+So, we do not need to test the private methods per se; they are called indirectly from our public functions.
 
 ## Comparison between standard and Reflection tests
 
@@ -80,7 +80,7 @@ final class OperationTest
 }
 ```
 
-What would happen if we modified the `simpleOperation()` method from the Addition class to the following and we run the
+What would happen if we modified the `simpleOperation()` method from the Addition class to the following, and we run the
 tests?
 
 [//]: # (```php)
