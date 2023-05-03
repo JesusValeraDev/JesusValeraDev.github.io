@@ -15,7 +15,7 @@ subtitle = "en las fiestas del día 3 de Mayo en Caravaca de la Cruz"
 
 **CRISTIANO**: Cita te di y a la cita acudiste presuroso; que el cielo te haga dichoso le pido a mi Cruz bendita.
 
-**SULTÁN**: Parlamento me anunciaron los sones de tus clarines y vengo a saber los fines que para ello te impulsaron. Se
+**SULTÁN**: Parlamento me anunciaron los sones de tus clarines y vengo a saber los fines que para ello te impulsaron. Sé
 breve.
 
 **CRISTIANO**: Ya lo has de ver, pues me abruma la impaciencia por cumplir de mi conciencia con un sagrado deber.
@@ -93,10 +93,7 @@ escupir tu rostro feo, mi mayor satisfacción. Aléjate moro impío.
 
 **SULTÁN**: ¡Viva nuestro Alá agareno!
 
-**CRISTIANO**: ¡Viva nuestra Cruz bendita!
-¡VIVA!
-Que ganas de que lleguen de nuevo, se me ponen los pelos de punta.
-Espero que no haya faltado nada ni haya ningún error. Si lo hay me lo decís y lo arreglo.
+**CRISTIANO**: ¡Viva nuestra Cruz bendita! ¡VIVA!
 
 > José Ortega Martínez, 1883
 
