@@ -13,87 +13,254 @@ subtitle = "en las fiestas del día 3 de Mayo en Caravaca de la Cruz"
 
 ![parlamento-batalla-moros-cristianos](/other/1.png)
 
-**CRISTIANO**: Cita te di y a la cita acudiste presuroso; que el cielo te haga dichoso le pido a mi Cruz bendita.
+**CRISTIANO**<br>
+Cita te di y a la cita<br>
+acudiste presuroso;<br>
+que el cielo te haga dichoso<br>
+le pido a mi Cruz bendita.<br>
 
-**SULTÁN**: Parlamento me anunciaron los sones de tus clarines y vengo a saber los fines que para ello te impulsaron. Sé
-breve.
+**SULTÁN**<br>
+Parlamento me anunciaron<br>
+los sones de tus clarines<br>
+y vengo a saber los fines<br>
+que para ello te impulsaron.<br>
+Sé breve.<br>
 
-**CRISTIANO**: Ya lo has de ver, pues me abruma la impaciencia por cumplir de mi conciencia con un sagrado deber.
+**CRISTIANO**<br>
+Ya lo has de ver,<br>
+pues me abruma la impaciencia<br>
+por cumplir de mi conciencia<br>
+con un sagrado deber.<br>
 
-**SULTÁN**: Pues di cristiano.
+**SULTÁN**<br>
+Pues di cristiano.<br>
 
-**CRISTIANO**: ¡Sultán! Ya nuestros bravos soldados frente a frente situados, prestos a la lucha están. Ya el relinchar
-de los brutos y el crujir de las corazas óyense cual amenazas de desolación y lutos. Bien pronto los resplandores de ese
-sol que nos alumbra, convertiranse en penumbra llena de sangre y horrores. Y esta alfombra matizada de violetas y
-tomillos, y esos tiernos pajarillos que trinan en la enramada y esas fuentes cristalinas en do se miran los cielos, y
-esos mansos arroyuelos, y esas bordadas colinas, ruinas quedarán mañana de la destructora guerra y no habrá un palmo de
-tierra que no haya una tumba humana.
+**CRISTIANO**<br>
+¡Sultán!<br>
+Ya nuestros bravos soldados<br>
+frente a frente situados,<br>
+prestos a la lucha están.<br>
+Ya el relinchar de los brutos<br>
+y el crujir de las corazas<br>
+óyense cual amenazas<br>
+de desolación y lutos.<br>
+Bien pronto los resplandores<br>
+de ese sol que nos alumbra,<br>
+convertiranse en penumbra<br>
+llena de sangre y horrores.<br>
+Y esta alfombra matizada<br>
+de violetas y tomillos,<br>
+y esos tiernos pajarillos<br>
+que trinan en la enramada<br>
+y esas fuentes cristalinas<br>
+en do se miran los cielos,<br>
+y esos mansos arroyuelos,<br>
+y esas bordadas colinas,<br>
+ruinas quedarán mañana<br>
+de la destructora guerra<br>
+y no habrá un palmo de tierra<br>
+que no haya una tumba humana.<br>
 
-**SULTÁN**: Tétrica es la descripción que me haces de la guerra, ¿crees que mi ánimo se aterra? Termina ya tu sermón.
+**SULTÁN**<br>
+Tétrica es la descripción<br>
+que me haces de la guerra,<br>
+¿crees que mi ánimo se aterra?<br>
+Termina ya tu sermón.<br>
 
-**CRISTIANO**: Sé indulgente, gran Sultán y un momento más escucha.
+**CRISTIANO**<br>
+Sé indulgente, gran Sultán<br>
+y un momento más escucha.<br>
 
-**SULTÁN**: Vamos cristiano a la lucha.
+**SULTÁN**<br>
+Vamos cristiano a la lucha.<br>
 
-**CRISTIANO**: Es que la quiero evitar. Quiero que seamos hermanos como tales nos amemos y sólo al Dios adoremos que
-adoramos los cristianos. Que no busques otra luz del mundo en nuestro camino que la del faro divino de mi Santísima
-Cruz. Que jamás ostentar dejes esas reliquias mentidas de sectas envilecidas que obras son de los herejes. Que os
-inspiréis en mi Dios, de Cielos y Tierra Rey y de su divina Ley caminéis por siempre en pos. Que apagues tu encono fiero
-y hacer la paz te decidas para salvar estas vidas que va a segar el acero, y con nobleza y honor los ejércitos unidos,
-desde hoy queden convertidos a la gracia del Creador. El hablarte en este estilo ya ves que no me avergüenza, cumplí así
-con mi conciencia y espero el fallo tranquilo.
+**CRISTIANO**<br>
+Es que la quiero evitar.<br>
+Quiero que seamos hermanos<br>
+como tales nos amemos<br>
+y sólo al Dios adoremos<br>
+que adoramos los cristianos.<br>
+Que no busques otra luz<br>
+del mundo en nuestro camino<br>
+que la del faro divino<br>
+de mi Santísima Cruz.<br>
+Que jamás ostentar dejes<br>
+esas reliquias mentidas<br>
+de sectas envilecidas<br>
+que obras son de los herejes.<br>
+Que os inspiréis en mi Dios,<br>
+de Cielos y Tierra Rey<br>
+y de su divina Ley<br>
+caminéis por siempre en pos.<br>
+Que apagues tu encono fiero<br>
+y hacer la paz te decidas<br>
+para salvar estas vidas<br>
+que va a segar el acero,<br>
+y con nobleza y honor<br>
+los ejércitos unidos,<br>
+desde hoy queden convertidos<br>
+a la gracia del Creador.<br>
+El hablarte en este estilo<br>
+ya ves que no me avergüenza,<br>
+cumplí así con mi conciencia<br>
+y espero el fallo tranquilo.<br>
 
-**SULTÁN**: ¡Tranquilo, sí… estarlo debe y con sobrada razón quien no tiene corazón o como el tuyo que es de nieve! Gran
-ruindad se necesita, ¿dije ruindad? ¡Cobardía!, para venir este día a hablar de una Cruz bendita, de un Dios que será un
-cualquiera y que en verdad y no en broma, será un criado de Mahoma de los de más baja esfera.
+**SULTÁN**<br>
+¡Tranquilo, sí… estarlo debe<br>
+y con sobrada razón<br>
+quien no tiene corazón<br>
+o como el tuyo que es de nieve!<br>
+Gran ruindad se necesita,<br>
+¿dije ruindad? ¡Cobardía!,<br>
+para venir este día<br>
+a hablar de una Cruz bendita,<br>
+de un Dios que será un cualquiera<br>
+y que en verdad y no en broma,<br>
+será un criado de Mahoma<br>
+de los de más baja esfera.<br>
 
-**CRISTIANO**: ¡Impío, calle esos labios!
+**CRISTIANO**<br>
+¡Impío, calla esos labios!<br>
 
-**SULTÁN**: Cristiano, no alces el grito, que para un leño y un mito no hay ofensa ni hay agravios. Que es su valor tan
-menguado y tan mezquino su precio, que sólo con mi desprecio lo encuentro muy bien pagado. Ya verás, gran General,
-dentro de breves momentos esas cruces y esos cuentos a donde van a parar. Ya verás el fin que tienen tus orgullos
-altaneros y esos míseros guerreros que a luchar contra mí vienen. Sangre, lodo y confusión quedará tan solo de ellos
-antes que el Sol sus destellos retire de esta mansión. Y al golpe de los alfanjes de mis huestes agarenas, cubrirán
-estas arenas los cuerpos de esas falanges, y una por una segadas sus desgreñadas cabezas en mis altas fortalezas
-ordenaré sean colgadas, do el águila y el milano con sus garras como el hierro no dejen rastro de un perro de ese
-ejército cristiano. Y esa Cruz tan altanera, falsa, engañosa y mentida, la mirarás convertida en asta de mi bandera.
-¿Qué dije? Locura fuera elevarla a tal destino: la quemo… y tu Dios divino que la saque de la hoguera.
+**SULTÁN**<br>
+Cristiano, no alces el grito,<br>
+que para un leño y un mito<br>
+no hay ofensa ni hay agravios.<br>
+Que es su valor tan menguado<br>
+y tan mezquino su precio,<br>
+que sólo con mi desprecio<br>
+lo encuentro muy bien pagado.<br>
+Ya verás, gran General,<br>
+dentro de breves momentos<br>
+esas cruces y esos cuentos<br>
+a donde van a parar.<br>
+Ya verás el fin que tienen<br>
+tus orgullos altaneros<br>
+y esos míseros guerreros<br>
+que a luchar contra mí vienen.<br>
+Sangre, lodo y confusión<br>
+quedará tan solo de ellos<br>
+antes que el Sol sus destellos<br>
+retire de esta mansión.<br>
+Y al golpe de los alfanjes<br>
+de mis huestes agarenas,<br>
+cubrirán estas arenas<br>
+los cuerpos de esas falanges,<br>
+y una por una segadas<br>
+sus desgreñadas cabezas<br>
+en mis altas fortalezas<br>
+ordenaré sean colgadas,<br>
+do el águila y el milano<br>
+con sus garras como el hierro<br>
+no dejen rastro de un perro<br>
+de ese ejército cristiano.<br>
+Y esa Cruz tan altanera,<br>
+falsa, engañosa y mentida,<br>
+la mirarás convertida<br>
+en asta de mi bandera.<br>
+¿Qué dije? Locura fuera<br>
+elevarla a tal destino:<br>
+la quemo… y tu Dios divino<br>
+que la saque de la hoguera.<br>
 
-**CRISTIANO**: Maldito seas agareno, maldita tu raza mora y maldito cuanto adora ese pueblo sarraceno. ¡Infame,
-blasfemo, vil, sucia escoria del averno, aborto del mismo infierno y venenosos reptil! Ya para ti no hay perdón,
-africano mal nacido, que de mi pecho has oído la piadosa compasión. ¡Guerra a muerte miserable! ¡Guerra que cuartel no
-haya para ti y esa canalla, asquerosa y despreciable; y exterminio, sangre y fuego que hagan tus ídolos trizas y
-confundan en cenizas a ese Alá del que reniego! ¡Sólo esto espero, traidor, sólo esto espero, cobarde! ¿Tiemblas? Pues
-¿do está tu alarde de arrogancia y de valor? ¿Qué hiciste de aquellos bríos que mostrabas belicoso cuando, humilde y
-silencioso escuché tus desvaríos? Qué gran mentira revela ese rostro demudado más propio que de un soldado de una simple
-mujerzuela.
+**CRISTIANO**<br>
+Maldito seas agareno,<br>
+maldita tu raza mora<br>
+y maldito cuanto adora<br>
+ese pueblo sarraceno.<br>
+¡Infame, blasfemo, vil,<br>
+sucia escoria del averno,<br>
+aborto del mismo infierno<br>
+y venenosos reptil!<br>
+Ya para ti no hay perdón,<br>
+africano mal nacido,<br>
+que de mi pecho has oído<br>
+la piadosa compasión.<br>
+¡Guerra a muerte miserable!<br>
+¡Guerra que cuartel no haya<br>
+para ti y esa canalla,<br>
+asquerosa y despreciable;<br>
+y exterminio, sangre y fuego<br>
+que hagan tus ídolos trizas<br>
+y confundan en cenizas<br>
+a ese Alá del que reniego!<br>
+¡Sólo esto espero, traidor,<br>
+sólo esto espero, cobarde!<br>
+¿Tiemblas? Pues ¿do está tu alarde<br>
+de arrogancia y de valor?<br>
+¿Qué hiciste de aquellos bríos<br>
+que mostrabas belicoso<br>
+cuando, humilde y silencioso<br>
+escuché tus desvaríos?<br>
+Qué gran mentira revela<br>
+ese rostro demudado<br>
+más propio que de un soldado<br>
+de una simple mujerzuela.<br>
 
-**SULTÁN**: ¡Cristiano!
+**SULTÁN**<br>
+¡Cristiano!<br>
 
-**CRISTIANO**: No hay que perder un momento más. Escucha ¿quisiste lucha? A la lucha hasta morir o vencer. Mando moros a
-millones, trae tus estados enteros, que un puñado de guerreros basta para tus legiones. ¡Di a Alá que te preste luz, di
-que de su altura baje y en mi presencia ultraje a mi Santísima Cruz! Cruz bendita, Cruz gloriosa, Madre del mundo
-cristiano, llega que el perro africano ciegue al verte tan hermosa. Llega de mi ayuda en pos, llega radiante de gloria y
-preside la victoria de los hijos de tu Dios. Llega en la lucha y goza, que la piel de ese agareno cubrirá el polvo y el
-cieno por do pase tu carroza. Llega que tu hijo está aquí, y en terminando esta guerra no habrá un lugar en la Tierra
-donde no se adore a Ti. ¡A la batalla ahora mismo!
+**CRISTIANO**<br>
+No hay que perder un momento más.<br>
+Escucha ¿quisiste lucha?<br>
+A la lucha hasta morir o vencer.<br>
+Mando moros a millones,<br>
+trae tus estados enteros,<br>
+que un puñado de guerreros<br>
+basta para tus legiones.<br>
+¡Di a Alá que te preste luz,<br>
+di que de su altura baje<br>
+y en mi presencia ultraje<br>
+a mi Santísima Cruz!<br>
+Cruz bendita, Cruz gloriosa,<br>
+Madre del mundo cristiano,<br>
+llega que el perro africano<br>
+ciegue al verte tan hermosa.<br>
+Llega de mi ayuda en pos,<br>
+llega radiante de gloria<br>
+y preside la victoria<br>
+de los hijos de tu Dios.<br>
+Llega en la lucha y goza,<br>
+que la piel de ese agareno<br>
+cubrirá el polvo y el cieno<br>
+por do pase tu carroza.<br>
+Llega que tu hijo está aquí,<br>
+y en terminando esta guerra<br>
+no habrá un lugar en la Tierra<br>
+donde no se adore a Ti.<br>
+¡A la batalla ahora mismo!<br>
 
-**SULTÁN**: Mas si el plazo dilatara.
+**SULTÁN**<br>
+Mas si el plazo dilatara.<br>
 
-**CRISTIANO**: ¡Te hallaré aunque te ocultaras en el seno del abismo! Tu cabeza es mi ambición, darte muerte mi deseo y
-escupir tu rostro feo, mi mayor satisfacción. Aléjate moro impío.
+**CRISTIANO**<br>
+¡Te hallaré aunque te ocultaras<br>
+en el seno del abismo!<br>
+Tu cabeza es mi ambición,<br>
+darte muerte mi deseo<br>
+y escupir tu rostro feo,<br>
+mi mayor satisfacción.<br>
+Aléjate moro impío.<br>
 
-**SULTÁN**: Volveré, perro cristiano…
+**SULTÁN**<br>
+Volveré, perro cristiano…<br>
 
-**CRISTIANO**: No volverás, africano, lo juro por el Dios mío.
+**CRISTIANO**<br>
+No volverás, africano,<br>
+lo juro por el Dios mío.<br>
 
-**SULTÁN**: Guerra a muerte el moro grita.
+**SULTÁN**<br>
+Guerra a muerte el moro grita.<br>
 
-**CRISTIANO**: Guerra a muerte sarraceno.
+**CRISTIANO**<br>
+Guerra a muerte sarraceno.<br>
 
-**SULTÁN**: ¡Viva nuestro Alá agareno!
+**SULTÁN**<br>
+¡Viva nuestro Alá agareno!<br>
 
-**CRISTIANO**: ¡Viva nuestra Cruz bendita! ¡VIVA!
+**CRISTIANO**<br>
+¡Viva nuestra Cruz bendita!<br>
+¡VIVA!
 
 > José Ortega Martínez, 1883
 
