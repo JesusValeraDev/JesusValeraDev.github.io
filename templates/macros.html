@@ -1,8 +1,8 @@
 {% macro page(page) -%}
 <div class="catalogue-item">
   <a href="{{ page.permalink | safe }}">
-    <span class="catalogue-title">{{ page.title }}</span>
-    <span class="catalogue-subtitle">{{ page.extra.subtitle }}</span>
+    <h1 class="catalogue-title">{{ page.title }}</h1>
+    <h2 class="catalogue-subtitle">{{ page.extra.subtitle }}</h2>
     <div class="catalogue-line"></div>
   </a>
   <p>

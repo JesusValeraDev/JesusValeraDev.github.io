@@ -27,9 +27,9 @@
   &-title {
     color: $default-shade;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    margin-top: .5rem;
+    margin: 0.5rem 0 0 0;
   }
 
   &-subtitle {
@@ -37,7 +37,7 @@
     display: block;
     font-size: 1.4rem;
     font-weight: 500;
-    margin-bottom: .5rem;
+    margin: 0 0 0.5rem 0;
   }
 
   &-line {

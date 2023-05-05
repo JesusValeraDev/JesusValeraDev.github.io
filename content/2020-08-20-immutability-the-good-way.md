@@ -171,7 +171,7 @@ If we replace the `\DateTime` by a `\DateTimeImmutable` class, let’s see what 
 ```php
 <?php
 
-final  class ProductTransfer
+final class ProductTransfer
 {
     public function __construct(
         public string $name,
