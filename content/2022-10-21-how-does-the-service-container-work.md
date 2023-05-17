@@ -36,40 +36,69 @@ a `PostgreSQLUserRepository` or a `InMemoryUserRespository` instance.
 ## Symfony
 
 We can define our services as `php` or `yaml` file extension (you can define this configuration directly in
-the `src/Kernel.php` file).<br>
-I will use YAML because I find it quite handy and easy to use for the tutorial (it’s almost the same as using PHP).
+the `src/Kernel.php` file).
 
-```yaml
-# config/services.yml
---
-services:
-  _defaults:
-    autowire: true
-    autoconfigure: false
-    public: true
+[//]: # (```php)
+[//]: # (<?php)
+[//]: # (# config/services.php)
+[//]: # (namespace Symfony\Component\DependencyInjection\Loader\Configurator;)
+[//]: # ()
+[//]: # (return function&#40;ContainerConfigurator $containerConfigurator&#41; {)
+[//]: # (    $services = $containerConfigurator->services&#40;&#41;;)
+[//]: # ()
+[//]: # (    $services->set&#40;)
+[//]: # (        \App\Domain\UserRepository::class,)
+[//]: # (        \App\Infrastructure\PostgreSQLUserRepository::class)
+[//]: # (    &#41;;)
+[//]: # (};)
+[//]: # (```)
+<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#a7adba;"># config/services.php
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Symfony\Component\DependencyInjection\Loader\Configurator;
+</span><span>
+</span><span style="color:#b48ead;">return function</span><span>(</span><span style="color:#d08770;">ContainerConfigurator </span><span style="color:#bf616a;">$containerConfigurator</span><span>) {
+</span><span>    </span><span style="color:#bf616a;">$services </span><span>= </span><span style="color:#bf616a;">$containerConfigurator</span><span>-&gt;</span><span style="color:#bf616a;">services</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">$services</span><span>-&gt;</span><span style="color:#bf616a;">set</span><span>(
+</span><span>        \App\Domain\</span><span style="color:#d08770;"><b>UserRepository</b></span><span>::</span><span style="color:#d08770;">class</span><span>,
+</span><span>        \App\Infrastructure\</span><span style="color:#d08770;"><b>PostgreSQLUserRepository</b></span><span>::</span><span style="color:#d08770;">class
+</span><span>    );
+</span><span>};
+</span></code></pre>
 
-  App\Domain\UserRepository: ~
-  App\Infrastructure\PostgreSQLUserRepository: '@App\Domain\UserRepository'
-```
+Alternatively, we can define a different instance for the _testing_ environment:
 
-Alternatively, we can define a different instance for a testing environment:
-
-```yaml
-# config/services_test.yml
---
-services:
-  _defaults:
-    autowire: true
-    autoconfigure: false
-    public: true
-
-  App\Domain\UserRepository: ~
-  App\Infrastructure\InMemoryUserRespository: '@App\Domain\UserRepository'
-```
+[//]: # (```php)
+[//]: # (<?php)
+[//]: # (# config/services_test.yml)
+[//]: # (namespace Symfony\Component\DependencyInjection\Loader\Configurator;)
+[//]: # ()
+[//]: # (return function&#40;ContainerConfigurator $containerConfigurator&#41; {)
+[//]: # (    $services = $containerConfigurator->services&#40;&#41;;)
+[//]: # ()
+[//]: # (    $services->set&#40;)
+[//]: # (        \App\Domain\UserRepository::class,)
+[//]: # (        \App\Infrastructure\InMemoryUserRespository::class)
+[//]: # (    &#41;;)
+[//]: # (};)
+[//]: # (```)
+<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#a7adba;"># config/services_test.yml
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Symfony\Component\DependencyInjection\Loader\Configurator;
+</span><span>
+</span><span style="color:#b48ead;">return function</span><span>(</span><span style="color:#d08770;">ContainerConfigurator </span><span style="color:#bf616a;">$containerConfigurator</span><span>) {
+</span><span>    </span><span style="color:#bf616a;">$services </span><span>= </span><span style="color:#bf616a;">$containerConfigurator</span><span>-&gt;</span><span style="color:#bf616a;">services</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">$services</span><span>-&gt;</span><span style="color:#bf616a;">set</span><span>(
+</span><span>        \App\Domain\</span><span style="color:#d08770;"><b>UserRepository</b></span><span>::</span><span style="color:#d08770;">class</span><span>,
+</span><span>        \App\Infrastructure\</span><span style="color:#d08770;"><b>InMemoryUserRespository</b></span><span>::</span><span style="color:#d08770;">class
+</span><span>    );
+</span><span>};
+</span></code></pre>
 
 ## Laravel
 
-In Laravel, however, you can do this in PHP in the `AppServiceProvider`.
+In Laravel, however, you can do this in the `AppServiceProvider` class.
 
 [//]: # (```php)
 [//]: # (namespace App\Providers;)
@@ -151,7 +180,7 @@ another class, eg:
 
 The framework will handle it, checking firstly if we defined in our service provider the injected class and creating a
 new instance of it. In case this class has any dependency, the framework will resolve them automatically recursively by
-reflection until the class is ready, in case any dependency cannot be resolved or the dependency is a primitive and we
+reflection until the class is ready, in case any dependency cannot be resolved or the dependency is a primitive, and we
 didn't define the value, it will throw an exception.
 
 <div class="separator"></div>
@@ -224,9 +253,9 @@ and this is a simplified version of it:
 </span><span style="color:#343d46;">}
 </span></code></pre>
 
-This is a vague idea of what a framework does under the hood, ideally, we should use a cache layer. Using reflection
-takes a lot of resources and it is very slow, additionally, we are not taking into consideration different scenarios
-like what to do depending on whether the resolved parameter is a primitive or even a callable.
+This is the idea of what a framework does under the hood; ideally, we should use a cache layer.
+Using reflection takes a lot of resources, and it is very slow; additionally, we are not taking into consideration
+different scenarios like what to do depending on whether the resolved parameter is a primitive or even a callable.
 
 ![parthenon-greece](/images/2022-10-21/2.png)
 
