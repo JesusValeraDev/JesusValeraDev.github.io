@@ -1,5 +1,5 @@
 * {
-  line-height: 1.35;
+  line-height: 1.55;
 }
 
 html,
@@ -11,23 +11,23 @@ body {
 
 html {
   font-family: sans-serif;
-  font-size: 18px;
   overflow-y: scroll;
-}
-
-body {
-  -webkit-text-size-adjust: 100%;
-  margin: 0;
-  min-height: 100vh;
   padding: 1.75rem 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body {
+  overflow-y: scroll;
+  font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: $default-shade;
 }
 
@@ -55,8 +55,4 @@ img {
   display: block;
   margin: 1rem auto;
   max-width: 100%;
-}
-
-td {
-  vertical-align: top;
 }

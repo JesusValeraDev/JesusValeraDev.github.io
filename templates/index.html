@@ -16,9 +16,9 @@
 {%- endblock seo %}
 
 {% block content %}
-  {% for page in section.pages %}
-    <div class="catalogue">
+  <nav class="catalogue">
+    {% for page in section.pages %}
       {{ macros::page(page=page) }}
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </nav>
 {% endblock content %}

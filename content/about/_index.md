@@ -5,7 +5,7 @@ template = "section.html"
 
 **Procuros**</br>
 Software Developer</br>
-Feb 2023 - Present</br>
+Feb 2023 - May 2023 · 3 mos</br>
 Hamburg, Germany · Remote
 > Skills: PHP · Laravel · Docker
 

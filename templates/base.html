@@ -4,17 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  {% block seo %}
-    {%- set site_url = current_url | default(value=get_url(path="404.html")) -%}
-    {% set description = config.description | default(value="") -%}
-    {% set image = config.extra.seo.image | default(value="") -%}
-    {% set image_height = config.extra.seo.image_height | default(value=0) -%}
-    {% set image_width = config.extra.seo.image_width | default(value=0) -%}
-  {% endblock seo %}
-
+  <title>{{ config.title | default(value='JesusValera') }}</title>
   <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
-
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.jpeg') | safe }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.jpeg') | safe }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='assets/apple-touch-icon.jpeg') | safe }}">
@@ -33,6 +24,14 @@
       gtag('config', '{{ config.extra.google_analytics }}');
     </script>
   {% endif %}
+
+  {% block seo %}
+    {%- set site_url = current_url | default(value=get_url(path="404.html")) -%}
+    {% set description = config.description | default(value="") -%}
+    {% set image = config.extra.seo.image | default(value="") -%}
+    {% set image_height = config.extra.seo.image_height | default(value=0) -%}
+    {% set image_width = config.extra.seo.image_width | default(value=0) -%}
+  {% endblock seo %}
 </head>
 
 <body>
@@ -47,7 +46,6 @@
       {% endfor %}
     </nav>
   </header>
-
   {% endblock header %}
 
   <main>
