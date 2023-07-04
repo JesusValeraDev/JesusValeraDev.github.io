@@ -97,7 +97,7 @@ We focus on “**WHAT**”.
 FP is not better or worse than OOP, they are different but complementary in order to solve the same problem.<br>
 If you want to learn/practice with some FP, I definitely recommend you **Phel**.
 
-You can read more information here: [Phel: the Lisp that compiles to PHP](https://chemaclass.medium.com/544980605ebe).
+You can read more information here: [Phel: the Lisp that compiles to PHP](https://chemaclass.com/blog/phel-first-release/).
 
 [Version 0.1](https://github.com/phel-lang/phel-lang/tags) has been recently released, and I am sure you will have fun!
 🎁
