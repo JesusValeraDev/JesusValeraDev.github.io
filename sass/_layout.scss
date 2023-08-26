@@ -38,6 +38,10 @@ header {
     margin: auto;
     border-radius: 50%;
     width: 100%;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
   }
 
   nav {

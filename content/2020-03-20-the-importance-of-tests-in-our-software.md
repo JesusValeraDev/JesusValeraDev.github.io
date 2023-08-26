@@ -12,105 +12,11 @@ static_thumbnail = "/images/2020-03-20/1.png"
 subtitle = "Introduction to unit testing with PHP"
 +++
 
-## 1. What is a test?
-
 A test is an empirical assertion that demonstrates the behaviour of an expected functionality from something.
 
 <!-- more -->
 
-![the-art-of-programming-meme](/images/2020-03-20/1.png)
-
-The tests are classified by what they verify, the most important ones are the following:
-
-### Functional tests
-
-- Unit test
-- Component test
-- Integration test
-- System test
-- Smoke test
-- Non-functional test
-
-### Compatibility test
-
-- Security test
-- Stress test
-- Usability test
-
-A software needs all of them, but the most important concerning developers are unit, integration and functional tests.
-
-## 2. Differences between test types
-
-### Unit test
-
-<img src="/images/2020-03-20/2.png" alt="given-when-then" style="width: 80%">
-
-What is a unit test? We could consider, in our context, a public method from one API class. That means, a unit test is a
-verification between the current input and expected output, it is an isolated logic and decoupled from the outside. It
-is recommendable to use interfaces in order to invert the dependencies in our application (~DIP: Dependency Inversion
-Principle).
-
-Indeed, we can also depend on external dependencies using mocks or stubs.
-
-The benefit of using unit test is that they took less time on execution, for that reason, they can be launched more
-often. Also, they force you to write less coupled code, doing better software design.
-
-So, a unit test is, therefore, the demonstration of an isolated functionality from the outside.
-
-The unit tests give you:
-
-- A simple way to test your code exhaustively and independently
-- They command you to the portion of code that causes the problem
-
-A test is not a unit test if…
-
-- it performs queries to the database
-- it connects in any way with the network
-- it operates with a file system
-- it cannot be launched in parallel with other unit tests
-- you need to modify any file (config file for example) to be able to run it
-
-They are also known as ‘white box testing’. We know the internal code from the method.
-
-The tests are focused on the object state.
-
-There are frameworks for automatizing this task, the most popular is the xUnit family: JUnit, PHPUnit…
-
-### Integration test
-
-The integration tests are similar to the units except that they are focused on proving the interaction between two or
-more components together, they could be classes, modules, etc…
-
-Further, this kind of tests can connect to the database, to the network, filesystem, etc.
-
-The integration tests are slower than unit tests due to their complexity, besides, sometimes it’s needed to load
-specific configuration in order to work properly.
-
-These kinds of tests are dependent on the environment, I mean, if a test fails, the problem could be a different
-configuration from one environment to another.
-
-You can even create integration tests with PHPUnit, the `Unit` in the name is just a convention.
-
-### Functional test
-
-The functional tests are called end-to-end (E2E) or browser testing.
-
-These kinds of tests do not check the how, but the what, I mean, if that specific test executes some magic but the
-expected result is whatever we want.
-
-In other words, we do not care what the developer did, we care about the output as we were the client.
-
-<img src="/images/2020-03-20/3.png" alt="functional-test" style="width: 80%">
-
-For example, if we send a form with a wrong value, we expect to see an error message in a specific field, we do not care
-about what regular expression is and why it failed.
-
-Those tests are also known as “black-box testing”. We do not know the code we are testing. They focus on object
-behaviour.
-
-One of the best known is Selenium.
-
-## 3. Cohn pyramid
+## Cohn pyramid
 
 <img src="/images/2020-03-20/4.png" alt="cohn-pyramid" style="width: 80%">
 
@@ -144,7 +50,7 @@ In legacy projects which are really coupled to 3rd party libraries like the data
 write unit tests. The recommendation is to do the inverse, creating first integration tests to check you do not break
 something and then re-factorize the code with unit tests step by step.
 
-## 4. Methodologies
+## Test Methodologies
 
 ### Test-Last
 
@@ -190,7 +96,7 @@ light. Afterwards, you refactor it and so on.
 - It requires an important learning curve
 - Its implementation is complex in legacy codes
 
-## 5. Unit test resources
+## Unit test resources
 
 We use to say “mock” when we want to reference a test double, but there are actually five different types and mock is
 only one of them.
