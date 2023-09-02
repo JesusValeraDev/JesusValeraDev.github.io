@@ -40,6 +40,7 @@ template = "section.html"
 - The Power of Habits - Charles Duhigg
 - Never Split the Difference - Chris Voss, Tahl Raz
 - Start with Why - Simon Sinek
+- Turn the Ship Around!: A True Story of Turning Followers into Leaders - L. David Marquet
 - Who Moved my Cheese? - Spencer Johnson
 - The little Prince - Antoine de Saint-Exupéry
 - The Metamorphosis - Franz Kafka
