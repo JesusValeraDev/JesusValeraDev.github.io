@@ -3,10 +3,21 @@ title = "CV"
 template = "section.html"
 +++
 
+**GotPhoto.com | fotograf.de**</br>
+Software Developer</br>
+Sep 2023 - Present</br>
+Berlin, Germany
+> Skills: PHP · Symfony · CakePHP · Docker
+
+---
+
 **Procuros**</br>
 Software Developer</br>
 Feb 2023 - May 2023 · 3 mos</br>
 Hamburg, Germany · Remote
+- Created a new connector, which allowed data transmission between the provider and the client
+- Improved the application architecture
+- Implement tests & bug fixes
 > Skills: PHP · Laravel · Docker
 
 ---
