@@ -19,6 +19,14 @@
     color: #AAAAAAFF;
   }
 
+  .found-typo {
+    float: right;
+    color: #AAAAAAFF;
+    a {
+      color: #869bee;
+    }
+  }
+
   p {
     margin: 0 0 1rem;
     text-align: justify;

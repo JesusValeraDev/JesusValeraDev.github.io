@@ -33,6 +33,8 @@ highlight_theme = "base16-ocean-light"
 github = "https://github.com/JesusValera"
 email  = "jesus1902@outlook.com"
 
+repo_content_url = "https://github.com/JesusValera/JesusValera.github.io/blob/main/content/"
+
 # Google Analytics
 # If using this, add a value like "UA—XXXXXXXX-X"
 google_analytics = "G-K2RD5QTTM8"
