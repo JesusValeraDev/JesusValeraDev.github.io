@@ -44,8 +44,6 @@ For the next example, let’s try to use a Laravel facade and a PHP function.
 Imagine we have the following service, and we really want to invert the dependencies. As you can see, we have the
 `trans()` facade and the `date()` PHP function.
 
-namespace Infrastructure;
-
 ```php
 namespace Infrastructure;
 
