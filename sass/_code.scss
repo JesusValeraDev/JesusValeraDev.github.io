@@ -1,14 +1,15 @@
 pre,
 code {
-  font-family: Menlo, Monaco, monospace;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;;
 }
 
 code {
   background-color: $grey-3;
-  border-radius: 3px;
+  border-radius: 4px;
   color: $code-color;
   font-size: 85%;
-  padding: .25em .5em;
+  padding: 3px 4px;
+  transition: color 0.25s, background-color 0.5s;
 }
 
 pre {
