@@ -20,44 +20,40 @@ PHPStorm is a powerful IDE that helps to boost your development, but over time, 
 
 ## Plugins
 
-I am sure you already know plugins like [Symfony Support](https://plugins.jetbrains.com/plugin/7219-symfony-support) and [Twig](https://plugins.jetbrains.com/plugin/7303-twig), or [Laravel Idea](https://plugins.jetbrains.com/plugin/13441-laravel-idea) and [Blade](https://plugins.jetbrains.com/plugin/7569-blade) depending on the framework you work with.<br>
-There are even plugins for tools like [Pest](https://plugins.jetbrains.com/plugin/14636-pest), [Git](https://plugins.jetbrains.com/plugin/7499-gittoolbox) or [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation).
+Plugins are a crucial part of any IDE, they can help you to write better code with suggestions and/or spotting bugs.
 
-Another recommendation, in case you want to familiarize with the IDE shortcuts is [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x).
+Depending on the framework you work with, I am sure you know plugins like [Symfony Support](https://plugins.jetbrains.com/plugin/7219-symfony-support)
+and [Twig](https://plugins.jetbrains.com/plugin/7303-twig), or [Laravel Idea](https://plugins.jetbrains.com/plugin/13441-laravel-idea) and [Blade](https://plugins.jetbrains.com/plugin/7569-blade).
+However, there are other interesting plugins like [GitToolBox](https://plugins.jetbrains.com/plugin/7499-gittoolbox), [Pest](https://plugins.jetbrains.com/plugin/14636-pest), or [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation).
 
-Although, my favorite so far, which is also not very well-known, is [PHP Inspections (EA Extended)](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-").
+Another (not so popular) recommendation, in case you want to familiarize with the IDE shortcuts is [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x).
 
-It covers:
+Although, my favorite so far, which is also not very well-known, is [PHP Inspections (EA Extended)](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-"). This plugin helps you with:
 - architecture related issues
-- weak types control and possible code construct simplifications
-- performance issues
-- non-optimal, duplicate and suspicious "if" conditions
-- validation of magic methods usage
 - regular expressions
-- validation of exception handling workflow
-- compatibility issues
-- variety of time-consuming bugs
-- PHPUnit API usage
-- security issues
+- non-optimal, duplicate and suspicious "if" conditions
+- performance issues
 
 ---
 
 ## Code Style
 
-> Editor > Code Style > PHP
+PHP is a programming language where anybody can write the code on their own, in order to internationalize the industry, some people reunited and decided to create <span style="text-decoration: underline dotted" title="PHP Standard Recommendation">PSRs</span>.<br>
+For that reason, there are standards for `Loggering` ([PSR-3](https://www.php-fig.org/psr/psr-3)), `Event Dispatcher` ([PSR-14](https://www.php-fig.org/psr/psr-14)), and even `Clock` ([PSR-20](https://www.php-fig.org/psr/psr-20)). Check the full list [here](https://www.php-fig.org/psr/).
 
-PHP is a programming language on which every body can write the code in a certain way, in order to unify the style, the industry decided to create some standards.
-There are standards even for how we should create a `ClockInterface`.
+One of the most popular is related to the `Code Style`, that is:
+- Should I use tabs or spaces?
+- Where should I place the opening-bracket?
+- When instantiating a class, parenthesis is mandatory when the constructor is empty?
 
-One of the most popular and extremely important is the definition of the style, for that purpose, the PSR2 was created, PHP evolve very fast and some years later a new revision of that PRS was introduced
-with the name PSR12.
+In recent years, due to the fast changes the language had, PSR-2 became deprecated, and PSR-12 was created instead, but as the language continues evolving very fast, <span style="text-decoration: underline dotted" title="PHP Evolving Recommendation">PERs</span> were introduced.<br>
+At some point, PSR-12 will be replaced by this [PER](https://www.php-fig.org/per/coding-style/), unfortunately, it is not possible to define at the moment your code as `PER`, but `PSR-12` in PHPStorm, anyway, `PSR-12` is enough in the 95% of the situations.
 
-Recently, as PHP still evolving extremely fast, PSR evolve into PER, unfortunately, we don't have the ability to set PER in PHPStorm, but we can with PSR-12, which at the end is very similar to PER.
+To define `PSR-12` as the code style in PHPStorm:
 
-~~~
-Defining the Code Style to `PHP Standards Recommendations 12` ([PSR-12](https://www.php-fig.org/psr/psr-12/)) -> the new one is called [PER](https://www.php-fig.org/per/coding-style/), but PHPStorm doesn't allow it at the moment
-- PSR-12 is the standard in our industry, and for some reason it is not set by default, if you are not using it, you should 🙂
-~~~
+> Settings ➔ Editor ➔ Code Style ➔ PHP ➔ "Set from..." ➔ PSR12
+
+---
 
 ## Live Templates
 
