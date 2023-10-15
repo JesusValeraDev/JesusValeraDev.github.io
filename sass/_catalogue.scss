@@ -27,16 +27,14 @@
     margin: .3rem;
     padding: .4rem;
     opacity: .9;
-    color: $default-color;
+    @include color(color, --second-text-color, $theme-light-second-text-color);
   }
 
   div:hover {
     text-decoration: none;
-    text-decoration-color: $default-shade;
     opacity: 1;
 
     border-radius: 2px;
-    background-color: #efefef;
-    color: #000;
+    @include color(background-color, --catalogue-color, $theme-light-catalogue-color);
   }
 }

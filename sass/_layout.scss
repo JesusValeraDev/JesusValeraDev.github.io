@@ -2,7 +2,7 @@ main,
 footer {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: $body-width;
   width: 80%;
 }
 
@@ -11,7 +11,7 @@ footer {
   text-align: center;
 
   span {
-    color: $default-color;
+    @include color(color, --second-text-color, $theme-light-second-text-color);
     font-size: .8rem;
   }
 }
@@ -24,7 +24,7 @@ header {
   font-size: 1.1rem;
   margin: auto;
   padding-bottom: 1rem;
-  box-shadow: 0 2px 2px -2px $shadow-color;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
 
   .profile-icon {
     height: 50px;
@@ -49,11 +49,10 @@ header {
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-    color: $default-color;
 
     a {
       font-size: 1.1em;
-      color: $default-color;
+      @include color(color, --second-text-color, $theme-light-second-text-color);
       opacity: .8;
       margin-right: 2rem;
     }
@@ -61,6 +60,29 @@ header {
     a:hover,
     a:focus {
       opacity: 1;
+    }
+  }
+
+  .theme-selector {
+    padding-top: 20px;
+    margin: 12px;
+
+    .theme-button {
+      display: none;
+      padding: 0;
+      border: none;
+      background: transparent;
+      color: gray;
+      cursor: pointer;
+      margin-right: 1rem;
+
+      &:not(:hover) {
+        border-bottom-color: transparent;
+      }
+
+      &.enabled {
+        display: inline;
+      }
     }
   }
 }

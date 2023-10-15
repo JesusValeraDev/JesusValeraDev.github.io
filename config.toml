@@ -26,7 +26,11 @@ taxonomies = [
 
 [markdown]
 highlight_code = true
-highlight_theme = "base16-ocean-light"
+highlight_theme = "css"
+highlight_themes_css = [
+    { theme = "OneHalfDark", filename = "syntax-theme-dark.css" },
+    { theme = "demain", filename = "syntax-theme-light.css" },
+]
 
 [extra]
 # Basic infomation

@@ -1,11 +1,26 @@
-// Colors
-$default-color: #555;
-$default-shade: #353535;
-$default-tint: #aaa;
-$grey-1: #979797;
-$grey-2: #e5e5e5;
-$grey-3: #8E96AA24;
-$white: #fff;
-$blue: #4a9ae1;
-$shadow-color: rgba(0, 0, 0, .2);
-$code-color: #3451b2;
+$body-width: 800px;
+
+$font-size: 18px;
+$font-size-code: 16px;
+$font-primary: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-secondary: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+// In order to add new rules, update the '.theme-dark' property from the file _macros.scss.
+$theme-light-bg-color: white;
+$theme-dark-bg-color: #292929;
+
+$theme-light-first-text-color: #444;
+$theme-dark-first-text-color: #ccc;
+
+$theme-light-second-text-color: #555;
+$theme-dark-second-text-color: #888;
+
+$theme-light-accent-text-color: #2f84c0;
+$theme-dark-accent-text-color: #00a3f1;
+
+$theme-light-catalogue-color: #efefef;
+$theme-dark-catalogue-color: #272727;
+
+$theme-light-code-background-color: rgba(27,31,35,.05);
+$theme-dark-code-background-color: #323232;

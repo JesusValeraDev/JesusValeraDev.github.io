@@ -1,0 +1,16 @@
+@mixin color($property, $var, $fallback) {
+  #{$property}: var($var, $fallback);
+}
+
+@mixin border-color($property, $px, $type, $var, $fallback) {
+  #{$property}: $px $type var($var, $fallback);
+}
+
+.theme-dark {
+  --bg-color: #{$theme-dark-bg-color};
+  --first-text-color: #{$theme-dark-first-text-color};
+  --second-text-color: #{$theme-dark-second-text-color};
+  --accent-text-color: #{$theme-dark-accent-text-color};
+  --catalogue-color: #{$theme-dark-catalogue-color};
+  --code-background-color: #{$theme-dark-code-background-color}
+}
