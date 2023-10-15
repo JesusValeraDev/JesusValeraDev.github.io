@@ -13,8 +13,6 @@ subtitle = "forEach, map, filter, reduce, find, findIndex, some & every"
 
 ![rabbit](/images/2021-05-17/1.png)
 
-<!-- more -->
-
 Functional Programming is a paradigm where programs are constructed by applying and composing functions. The Functional
 Programming keys are:
 
@@ -38,203 +36,129 @@ Using this method, you can get the item of the current element when iterating an
 It is recommendable not to use it unless you are sure you want to modify the original array. This method is mutable. It
 means it will modify the original array.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (countries.forEach&#40;)
-[//]: # (    &#40;country, index&#41; => console.log&#40;index, country.toUpperCase&#40;&#41;&#41;)
-[//]: # (&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (0 "SPAIN")
-[//]: # (1 "GERMANY")
-[//]: # (2 "PORTUGAL")
-[//]: # (3 "FRANCE")
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#bf616a;"><b><b>countries</b></b></span><span>.</span><span style="color:#96b5b4;">forEach</span><span>(
-</span><span>    (</span><span style="color:#bf616a;">country</span><span>, </span><span style="color:#bf616a;">index</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;">index</span><span>, </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#96b5b4;">toUpperCase</span><span>())
-</span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span style="color:#d08770;">0 </span><span>"</span><span style="color:#a3be8c;">SPAIN</span><span>"
-</span><span style="color:#d08770;">1 </span><span>"</span><span style="color:#a3be8c;">GERMANY</span><span>"
-</span><span style="color:#d08770;">2 </span><span>"</span><span style="color:#a3be8c;">PORTUGAL</span><span>"
-</span><span style="color:#d08770;">3 </span><span>"</span><span style="color:#a3be8c;">FRANCE</span><span>"
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+countries.forEach(
+    (country, index) => console.log(index, country.toUpperCase())
+)
+
+--OUTPUT--
+0 "SPAIN"
+1 "GERMANY"
+2 "PORTUGAL"
+3 "FRANCE"
+```
 
 ## Map 🗺
 
 We use _map()_ whenever we want to map the values into other values producing a new array.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (const mapped = countries.map&#40;&#40;country&#41; => country.toUpperCase&#40;&#41;&#41;)
-[//]: # (console.log&#40;mapped&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (["SPAIN", "GERMANY", "PORTUGAL", "FRANCE"])
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>mapped</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;">map</span><span>((</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#96b5b4;">toUpperCase</span><span>())
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>mapped</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span>["</span><span style="color:#a3be8c;">SPAIN</span><span>", "</span><span style="color:#a3be8c;">GERMANY</span><span>", "</span><span style="color:#a3be8c;">PORTUGAL</span><span>", "</span><span style="color:#a3be8c;">FRANCE</span><span>"]
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+const mapped = countries.map((country) => country.toUpperCase())
+console.log(mapped)
+
+--OUTPUT--
+["SPAIN", "GERMANY", "PORTUGAL", "FRANCE"]
+```
 
 ## Filter ⌛️
 
 We use _filter()_ when we want to pick just some specific elements regarding a filter. It returns a new array with the
 filtered elements or empty if no matches.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (const filtered = countries.filter&#40;)
-[//]: # (    &#40;country&#41; => country.includes&#40;'an'&#41;)
-[//]: # (&#41;)
-[//]: # (console.log&#40;filtered&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (["Germany", "France"])
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>filtered</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;">filter</span><span>(
-</span><span>    (</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">an</span><span>')
-</span><span>)
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>filtered</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span>["</span><span style="color:#a3be8c;">Germany</span><span>", "</span><span style="color:#a3be8c;">France</span><span>"]
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+const filtered = countries.filter(
+    (country) => country.includes('an')
+)
+console.log(filtered)
+
+--OUTPUT--
+["Germany", "France"]
+```
 
 ## Reduce ⛏
 
 We use _reduce()_ when we want to return a single value depending on a specific closure. This function can take an
 initial value, which by default is empty (0 or "") as the second parameter.
 
-[//]: # (```javascript)
-[//]: # (const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-[//]: # (let initialValue = 5)
-[//]: # (const sum = numbers.reduce&#40;)
-[//]: # (    &#40;accumulator, value&#41; => accumulator + value,)
-[//]: # (    initialValue)
-[//]: # (&#41;)
-[//]: # (console.log&#40;sum&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (60)
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>numbers</b> </span><span>= [</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">9</span><span>, </span><span style="color:#d08770;">10</span><span>]
-</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;"><b>initialValue</b> </span><span>= </span><span style="color:#d08770;">5
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>sum</b> </span><span>= </span><span style="color:#bf616a;"><b>numbers</b></span><span>.</span><span style="color:#8fa1b3;">reduce</span><span>(
-</span><span>    (</span><span style="color:#bf616a;">accumulator</span><span>, </span><span style="color:#bf616a;">value</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">accumulator </span><span>+ </span><span style="color:#bf616a;">value</span><span>,
-</span><span>    </span><span style="color:#bf616a;"><b>initialValue</b>
-</span><span>)
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>sum</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span style="color:#d08770;">60
-</span></code></pre>
+```javascript
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let initialValue = 5
+const sum = numbers.reduce(
+    (accumulator, value) => accumulator + value,
+    initialValue
+)
+console.log(sum)
+
+--OUTPUT--
+60
+```
 
 ## find 🔎
 
 We use _find()_ if we are interested in the first occurrence of a certain element in an array. It will return
 _undefined_ otherwise.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (const find = countries.find&#40;&#40;country&#41; => country.includes&#40;'an'&#41;&#41;)
-[//]: # (console.log&#40;find&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # ("Germany")
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>find</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#96b5b4;"><b>find</b></span><span>((</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">an</span><span>'))
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>find</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span>"</span><span style="color:#a3be8c;">Germany</span><span>"
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+const find = countries.find((country) => country.includes('an'))
+console.log(find)
+
+--OUTPUT--
+"Germany"
+```
 
 ## find Index 🔑
 
 We use _findIndex()_ if we would like the first occurrence of a certain element in an array, this method is pretty
 similar to _find_ but it will return not the value but the index. In case there are no matches, the output would be -1.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (const findIndex = countries.findIndex&#40;)
-[//]: # (    &#40;country&#41; => country.includes&#40;'an'&#41;)
-[//]: # (&#41;)
-[//]: # (console.log&#40;findIndex&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (1)
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b><b>find</b>Index</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;"><b><b>find</b>Index</b></span><span>(
-</span><span>    (</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">an</span><span>')
-</span><span>)
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b><b>find</b>Index</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span style="color:#d08770;">1
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+const findIndex = countries.findIndex(
+    (country) => country.includes('an')
+)
+console.log(findIndex)
+
+--OUTPUT--
+1
+```
 
 ## Some 🧵
 
 We use _some()_ if we are interested to know if some element from an array meets a specific closure. If any of the items
 satisfy the criteria the result will be _true_, else, it will be _false_.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (const isAn = countries.some&#40;&#40;country&#41; => country.includes&#40;'an'&#41;&#41;)
-[//]: # (const isLand = countries.some&#40;&#40;country&#41; => country.includes&#40;'land'&#41;&#41;)
-[//]: # (console.log&#40;isAn&#41;)
-[//]: # (console.log&#40;isLand&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (true)
-[//]: # (false)
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>isAn</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;">some</span><span>((</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">an</span><span>'))
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>isLand</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;">some</span><span>((</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">land</span><span>'))
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>isAn</b></span><span>)
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>isLand</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span style="color:#d08770;">true
-</span><span style="color:#d08770;">false
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+const isAn = countries.some((country) => country.includes('an'))
+const isLand = countries.some((country) => country.includes('land'))
+console.log(isAn)
+console.log(isLand)
+
+--OUTPUT--
+true
+false
+```
 
 ## Every ☘️
 
 We use _every()_ if we want to know if every element from an array meets a specific closure. This method is somehow
 similar to some but the opposite. This method also returns _true_ or _false_.
 
-[//]: # (```javascript)
-[//]: # (const countries = ['Spain', 'Germany', 'Portugal', 'France'])
-[//]: # (const isEveryA = countries.every&#40;&#40;country&#41; => country.includes&#40;'a'&#41;&#41;)
-[//]: # (const isEveryE = countries.every&#40;&#40;country&#41; => country.includes&#40;'e'&#41;&#41;)
-[//]: # (console.log&#40;isEveryA&#41;)
-[//]: # (console.log&#40;isEveryE&#41;)
-[//]: # ()
-[//]: # (--OUTPUT--)
-[//]: # (true)
-[//]: # (false)
-[//]: # (```)
-<pre data-lang="javascript" style="background-color:#eff1f5;color:#4f5b66;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>countries</b> </span><span>= ['</span><span style="color:#a3be8c;">Spain</span><span>', '</span><span style="color:#a3be8c;">Germany</span><span>', '</span><span style="color:#a3be8c;">Portugal</span><span>', '</span><span style="color:#a3be8c;">France</span><span>']
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>isEveryA</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;">every</span><span>((</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">a</span><span>'))
-</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;"><b>isEveryE</b> </span><span>= </span><span style="color:#bf616a;"><b>countries</b></span><span>.</span><span style="color:#8fa1b3;">every</span><span>((</span><span style="color:#bf616a;">country</span><span>) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">country</span><span>.</span><span style="color:#8fa1b3;">includes</span><span>('</span><span style="color:#a3be8c;">e</span><span>'))
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>isEveryA</b></span><span>)
-</span><span style="color:#d08770;"><b>console</b></span><span>.</span><span style="color:#96b5b4;">log</span><span>(</span><span style="color:#bf616a;"><b>isEveryE</b></span><span>)
-</span><span>
-</span><span>--</span><span style="color:#bf616a;">OUTPUT</span><span>--
-</span><span style="color:#d08770;">true
-</span><span style="color:#d08770;">false
-</span></code></pre>
+```javascript
+const countries = ['Spain', 'Germany', 'Portugal', 'France']
+const isEveryA = countries.every((country) => country.includes('a'))
+const isEveryE = countries.every((country) => country.includes('e'))
+console.log(isEveryA)
+console.log(isEveryE)
+
+--OUTPUT--
+true
+false
+```
 
 <div class="separator"></div>
 

@@ -13,8 +13,6 @@ subtitle = "Dummy, Stub, Spy, Mock or Fake"
 
 <img alt="parliament-budapest" src="/images/2020-06-11/1.png" style="width: 100%"/>
 
-<!-- more -->
-
 ## Test Doubles
 
 A Test Double is an object that can stand-in for a real object in a test, similar to how a stunt double stands in for an

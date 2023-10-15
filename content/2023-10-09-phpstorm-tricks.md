@@ -14,8 +14,6 @@ subtitle = "Customize the IDE with templates, plugins and more"
 
 PHPStorm is a powerful IDE that helps to boost your development, but over time, we (the users) missed some settings, shortcuts or even 3rd party plugin that could help us even more when programming.
 
-<!-- more -->
-
 ![phpstorm-logo](/images/2023-10-09/1.png)
 
 ## Plugins
@@ -65,7 +63,7 @@ Update Live Templates with `:void` and navigate pressing Enter.
 
 You need to add in `pri, prisf, prof, prosf, pubf, pubsf` the following `: $RETURN_TYPE$` in the `Template text` (bottom), then, press on **Edit variables** and insert `"void"` on _RETURN_VALUE_ field
 
-```php
+```php source
 private function $NAME$($PARAMETERS$): $RETURN_TYPE$
 {
     $END$
@@ -80,14 +78,13 @@ private function $NAME$($PARAMETERS$): $RETURN_TYPE$
 If you are into `strict_types` and `final` classes by default, you can modify the basic template when you create a new file.
 
 ### PHP File
-```php
-<?php
+```php source
 declare(strict_types=1);
 #parse("PHP File Header.php")
 ```
 
 ### PHP Class
-```php
+```php source
 <?php
 declare(strict_types=1);
 
@@ -103,7 +100,7 @@ class ${NAME} {
 ```
 
 ### PHP Interface
-```php
+```php source
 <?php
 declare(strict_types=1);
 

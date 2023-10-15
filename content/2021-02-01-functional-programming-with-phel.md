@@ -13,8 +13,6 @@ subtitle = "When PHP meets FP 🚀🚀🚀🌚"
 
 ![phel-purple](/images/2021-02-01/1.png)
 
-<!-- more -->
-
 ## What is Functional Programming?
 
 Functional Programming ([FP](https://en.wikipedia.org/wiki/Functional_programming)) is a programming paradigm that was
@@ -37,19 +35,19 @@ world.
 
 > The factorial is the product of all positive integers less than or equal to a given positive number.
 
-```
+```clojure
 n! = n * (n - 1) * (n - 2) * ... * 1
 ```
 
 Following this formula, we can assert that the factorial of 5 is:
 
-```
+```clojure
 5! = 5 * 4 * 3 * 2 * 1
 ```
 
 But if you noticed, the factorial of 5 is actually 5 times the factorial of 4.
 
-```
+```clojure
 5! = 5 * 4!
 ```
 
@@ -61,7 +59,7 @@ It’s a _recursive_ problem!
 
 The developer describes the steps one-by-one to achieve the desired result.
 
-```java
+```php source
 function factorial(int $number): int {
     $factorial = 1;
     while ($number >= 1) {
@@ -81,7 +79,7 @@ We focus on “**HOW**”.
 The developer declares what the program does usually in small functions, with immutable variables, without side effects
 using recursivity instead of loops if needed.
 
-```lisp
+```clojure
 (defn factorial
   [number]
   (if (<= number 1)

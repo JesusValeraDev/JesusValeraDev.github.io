@@ -14,8 +14,6 @@ subtitle = "with some code examples"
 
 ![the-art-of-programming-meme](/images/2020-04-03/1.png)
 
-<!-- more -->
-
 ## It causes bugs when refactoring due to the high coupling
 
 When we use reflection, our tests get too fragile, we are allowing our tests to know so much information about the real
@@ -31,7 +29,7 @@ So, we do not need to test the private methods per se; they are called indirectl
 
 ## Comparison between standard and Reflection tests
 
-```php
+```php source
 <?php declare(strict_types=1);
 
 final class Addition
@@ -83,23 +81,15 @@ final class OperationTest
 What would happen if we modified the `simpleOperation()` method from the Addition class to the following, and we run the
 tests?
 
-[//]: # (```php)
-[//]: # (final class Addition)
-[//]: # ({)
-[//]: # (   public function simpleOperation&#40;int $number1, int $number2&#41;: int)
-[//]: # (   {)
-[//]: # (       return $number1 - $number2;)
-[//]: # (   })
-[//]: # (})
-[//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final class </span><span style="color:#d08770;">Addition
-</span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">   </span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">simpleOperation</span><span style="color:#343d46;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">$number1</span><span style="color:#343d46;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">$number2</span><span style="color:#343d46;">): </span><span style="color:#b48ead;">int
-</span><span style="color:#343d46;">   {
-</span><span style="color:#343d46;">       </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">$number1 </span><span>- </span><span style="color:#bf616a;">$number2</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">   }
-</span><span style="color:#343d46;">}
-</span></code></pre>
+```php source
+final class Addition
+{
+   public function simpleOperation(int $number1, int $number2): int
+   {
+       return $number1 - $number2;
+   }
+}
+```
 
 - **Q**: Will the ‘standard’ fail? What about the Reflection one?
 - **A**: The standard will fail because we expect 4 as a result, but we got a 0.
@@ -111,100 +101,56 @@ tests?
 Let me show you a more realistic example (idea from 
 [PHPTheRightWay](https://phptherightway.com/pages/Design-Patterns.html)):
 
-[//]: # (```php)
-[//]: # (final readonly class Vehicle)
-[//]: # ({)
-[//]: # (    public string $model;)
-[//]: # (    public int $price;)
-[//]: # ()
-[//]: # (    public function __construct&#40;string $model&#41;)
-[//]: # (    {)
-[//]: # (        $this->model = $model;)
-[//]: # (        $this->price = random_int&#40;1000, 3000&#41;;)
-[//]: # (    })
-[//]: # (})
-[//]: # (```)
+```php source
+final readonly class Vehicle
+{
+    public string $model;
+    public int $price;
 
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final readonly class </span><span style="color:#d08770;">Vehicle
-</span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public </span><span style="color:#d08770;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public </span><span style="color:#d08770;">int </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">)
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">model </span><span>= </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">;
-</span><span style="color:#343d46;">        </span><span style="color:#bf616a;">$this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">price </span><span>= </span><span style="color:#96b5b4;">random_int</span><span style="color:#343d46;">(</span><span style="color:#d08770;">1000</span><span style="color:#343d46;">, </span><span style="color:#d08770;">3000</span><span style="color:#343d46;">);
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">}
-</span></code></pre>
+    public function __construct(string $model)
+    {
+        $this->model = $model;
+        $this->price = random_int(1000, 3000);
+    }
+}
+```
 
 To test the vehicle’s model is easy, but what about the price?
 
-[//]: # (```php)
-[//]: # (public function testModel&#40;&#41;: void)
-[//]: # ({)
-[//]: # (    $model = 'Seat';)
-[//]: # (    $vehicle = new Vehicle&#40;$model&#41;;)
-[//]: # ()
-[//]: # (    $this->assertSame&#40;$model, $vehicle->model&#40;&#41;&#41;;)
-[//]: # (})
-[//]: # ()
-[//]: # (public function testPrice&#40;&#41;: void)
-[//]: # ({)
-[//]: # (    $model = 'Seat';)
-[//]: # (    $vehicle = new Vehicle&#40;$model&#41;;)
-[//]: # ()
-[//]: # (    $this->assertSame&#40; ¿¿?? , $vehicle->price&#40;&#41;&#41;;)
-[//]: # (})
-[//]: # (```)
+```php source
+public function testModel(): void
+{
+    $model = 'Seat';
+    $vehicle = new Vehicle($model);
 
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php"><code class="language-php" data-lang="php"><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">testModel</span><span>(): </span><span style="color:#d08770;">void
-</span><span>{
-</span><span>    </span><span style="color:#bf616a;">$model </span><span>= '</span><span style="color:#a3be8c;">Seat</span><span>';
-</span><span>    </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>(</span><span style="color:#bf616a;">$model</span><span>);
-</span><span>
-</span><span>    </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>(</span><span style="color:#bf616a;">$model</span><span>, </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">model</span><span>());
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">testPrice</span><span>(): </span><span style="color:#d08770;">void
-</span><span>{
-</span><span>    </span><span style="color:#bf616a;">$model </span><span>= '</span><span style="color:#a3be8c;">Seat</span><span>';
-</span><span>    </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>(</span><span style="color:#bf616a;">$model</span><span>);
-</span><span>
-</span><span>    </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>( ¿¿?? , </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">price</span><span>());
-</span><span>}
-</span></code></pre>
+    $this->assertSame($model, $vehicle->model());
+}
+
+public function testPrice(): void
+{
+    $model = 'Seat';
+    $vehicle = new Vehicle($model);
+
+    $this->assertSame( ¿¿?? , $vehicle->price());
+}
+```
 
 One possible solution could be using the Reflection class to be able to set explicitly the price like:
 
-[//]: # (```php)
-[//]: # (public function testGetPrice&#40;&#41;: void)
-[//]: # ({)
-[//]: # (     /** @var Vehicle|MockObject $vehicle */)
-[//]: # (     $vehicle = $this->createPartialMock&#40;Vehicle::class, []&#41;;)
-[//]: # ()
-[//]: # (     $reflection = new \ReflectionProperty&#40;Vehicle::class, 'price'&#41;;)
-[//]: # (     $reflection->setAccessible&#40;true&#41;;)
-[//]: # (     $price = 200;)
-[//]: # (     $reflection->setValue&#40;$vehicle, $price&#41;;)
-[//]: # ()
-[//]: # (     $this->assertSame&#40;$price, $vehicle->price&#40;&#41;&#41;;)
-[//]: # (})
-[//]: # (```)
+```php source
+public function testGetPrice(): void
+{
+     /** @var Vehicle|MockObject $vehicle */
+     $vehicle = $this->createPartialMock(Vehicle::class, []);
 
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php"><code class="language-php" data-lang="php"><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">testGetPrice</span><span>(): </span><span style="color:#d08770;">void
-</span><span>{
-</span><span>     </span><span style="color:#a7adba;">/** </span><span style="color:#b48ead;">@var</span><span style="color:#a7adba;"> Vehicle|MockObject $vehicle */
-</span><span>     </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">createPartialMock</span><span>(</span><span style="color:#d08770;">Vehicle</span><span>::</span><span style="color:#d08770;">class</span><span>, []);
-</span><span>
-</span><span>     </span><span style="color:#bf616a;">$reflection </span><span>= </span><span style="color:#b48ead;">new </span><span>\</span><span style="color:#d08770;">ReflectionProperty</span><span>(</span><span style="color:#d08770;">Vehicle</span><span>::</span><span style="color:#d08770;">class</span><span>, '</span><span style="color:#a3be8c;">price</span><span>');
-</span><span>     </span><span style="color:#bf616a;">$reflection</span><span>-&gt;</span><span style="color:#bf616a;">setAccessible</span><span>(</span><span style="color:#d08770;">true</span><span>);
-</span><span>     </span><span style="color:#bf616a;">$price </span><span>= </span><span style="color:#d08770;">200</span><span>;
-</span><span>     </span><span style="color:#bf616a;">$reflection</span><span>-&gt;</span><span style="color:#bf616a;">setValue</span><span>(</span><span style="color:#bf616a;">$vehicle</span><span>, </span><span style="color:#bf616a;">$price</span><span>);
-</span><span>
-</span><span>     </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>(</span><span style="color:#bf616a;">$price</span><span>, </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">price</span><span>());
-</span><span>}
-</span></code></pre>
+     $reflection = new \ReflectionProperty(Vehicle::class, 'price');
+     $reflection->setAccessible(true);
+     $price = 200;
+     $reflection->setValue($vehicle, $price);
+
+     $this->assertSame($price, $vehicle->price());
+}
+```
 
 But our Vehicle class is final, so we cannot perform this test, also, we said we shouldn’t use the Reflection class, so,
 probably we are doing something wrong in this class (TIP: you should make **final** your classes by default 😉).
@@ -215,59 +161,36 @@ probably we are doing something wrong in this class (TIP: you should make **fina
 
 One solution could be to inject the value in the constructor like:
 
-[//]: # (```php)
-[//]: # (<?php)
-[//]: # (final readonly class Vehicle)
-[//]: # ({)
-[//]: # (    public function __construct&#40;)
-[//]: # (        public string $model,)
-[//]: # (        public int $price,)
-[//]: # (    &#41; {)
-[//]: # (    })
-[//]: # (})
-[//]: # (```)
-
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final </span><span style="color:#d08770;">readonly </span><span style="color:#b48ead;">class </span><span style="color:#d08770;">Vehicle
-</span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(
-</span><span style="color:#343d46;">        </span><span style="color:#d08770;">public </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">$model</span><span style="color:#343d46;">,
-</span><span style="color:#343d46;">        </span><span style="color:#d08770;">public </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">$price</span><span style="color:#343d46;">,
-</span><span style="color:#343d46;">    ) {
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">}
-</span></code></pre>
+```php source
+<?php
+final readonly class Vehicle
+{
+    public function __construct(
+        public string $model,
+        public int $price,
+    ) {
+    }
+}
+```
 
 And when we want to create this class, we could pass the final price as:
 
-[//]: # (```php)
-[//]: # ($vehiclePrice = random_int&#40;1000, 3000&#41;;)
-[//]: # ($vehicle = new Vehicle&#40;‘Seat’, $vehiclePrice&#41;;)
-[//]: # (```)
-
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php"><code class="language-php" data-lang="php"><span style="color:#bf616a;">$vehiclePrice </span><span>= </span><span style="color:#96b5b4;">random_int</span><span>(</span><span style="color:#d08770;">1000</span><span>, </span><span style="color:#d08770;">3000</span><span>);
-</span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>(‘</span><span style="color:#d08770;">Seat</span><span>’, </span><span style="color:#bf616a;">$vehiclePrice</span><span>);
-</span></code></pre>
+```php source
+$vehiclePrice = random_int(1000, 3000);
+$vehicle = new Vehicle(‘Seat’, $vehiclePrice);
+```
 
 So, our price test could be like:
 
-[//]: # (```php)
-[//]: # (public function testPrice&#40;&#41;: void)
-[//]: # ({)
-[//]: # (    $price = 200;)
-[//]: # (    $vehicle = new Vehicle&#40;'foo', $price&#41;;)
-[//]: # ()
-[//]: # (    $this->assertSame&#40;$price, $vehicle->price&#40;&#41;&#41;;)
-[//]: # (})
-[//]: # (```)
+```php source
+public function testPrice(): void
+{
+    $price = 200;
+    $vehicle = new Vehicle('foo', $price);
 
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">testPrice</span><span>(): </span><span style="color:#d08770;">void
-</span><span>{
-</span><span>    </span><span style="color:#bf616a;">$price </span><span>= </span><span style="color:#d08770;">200</span><span>;
-</span><span>    </span><span style="color:#bf616a;">$vehicle </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#d08770;">Vehicle</span><span>('</span><span style="color:#a3be8c;">foo</span><span>', </span><span style="color:#bf616a;">$price</span><span>);
-</span><span>
-</span><span>    </span><span style="color:#bf616a;">$this</span><span>-&gt;</span><span style="color:#bf616a;">assertSame</span><span>(</span><span style="color:#bf616a;">$price</span><span>, </span><span style="color:#bf616a;">$vehicle</span><span>-&gt;</span><span style="color:#bf616a;">price</span><span>());
-</span><span>}
-</span></code></pre>
+    $this->assertSame($price, $vehicle->price());
+}
+```
 
 To sum up, I don’t recommend using the Reflection class anywhere in your code unless you are very aware of what you are
 doing, usually, there are alternative implementations to what you want to achieve without using it.

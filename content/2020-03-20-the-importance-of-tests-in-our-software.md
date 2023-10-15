@@ -14,8 +14,6 @@ subtitle = "Introduction to unit testing with PHP"
 
 A test is an empirical assertion that demonstrates the behaviour of an expected functionality from something.
 
-<!-- more -->
-
 ## Cohn pyramid
 
 <img src="/images/2020-03-20/4.png" alt="cohn-pyramid" style="width: 80%">

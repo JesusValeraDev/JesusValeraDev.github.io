@@ -15,8 +15,6 @@ A **mutable** object can be modified after its creation, an **immutable** cannot
 
 <img alt="parliament-budapest" src="/images/2020-08-20/1.png" style="width: 100%"/>
 
-<!-- more -->
-
 An immutable object will remain in the same state as it was created. Design and implementation will be much easier and
 consistent. In the case of problems, locate a potential bug is faster due that it won't have side effects.
 
@@ -25,10 +23,8 @@ be mutable for example).
 
 ## Mutability examples and their impacts
 
-```php
-<?php
-
-final  class ProductTransfer
+```php source
+final class ProductTransfer
 {
     public function __construct(
         public string $name,
@@ -71,9 +67,7 @@ variable and the object itself.
 
 ## Modifying the name (being a string)
 
-```php
-<?php
-
+```php source
 $name = $product->name;
 $name = 'Acer FC-288';
 
@@ -95,9 +89,7 @@ will remain the same.
 
 ## Modifying the price (being a number)
 
-```php
-<?php
-
+```php source
 $price = $product->price;
 $price = 1.0;
 
@@ -118,9 +110,7 @@ Numbers in PHP are also copied by value.
 
 ## Modifying the tags (being an array)
 
-```php
-<?php
-
+```php source
 $tags = $product->tags;
 $tags = ['phone', 'reconditioned'];
 
@@ -143,9 +133,7 @@ modification won’t alter the original one.
 
 ## Modifying the released date (being an object)
 
-```php
-<?php
-
+```php source
 $date = $product->releaseDate;
 $date = $date->modify(<b>'+1 day'</b>);
 
@@ -168,9 +156,7 @@ In OOP languages, objects are passed (or assigned) by reference: any modificatio
 
 If we replace the `\DateTime` by a `\DateTimeImmutable` class, let’s see what happens with the previous example.
 
-```php
-<?php
-
+```php source
 final class ProductTransfer
 {
     public function __construct(
@@ -206,9 +192,7 @@ values.
 
 Perfect, now our code is working like a charm, doesn't it? Well, take a look at the following snippet.
 
-```php
-<?php
-
+```php source
 /** @var \DateTimeImmutable $date */
 $date = <b>&$product->releaseDate;</b> // Notice the '&' character 👀
 $date = $date->modify(<b>'+1 day'</b>);
@@ -234,9 +218,7 @@ alternatives.
 
 On the one hand, is to make private the properties and implement getters, then, in the getter use the clone keyword.
 
-```php
-<?php
-
+```php source
 private \DateTimeImmutable $releaseDate;
 
 public function releaseDate(): \DateTimeImmutable
@@ -253,9 +235,7 @@ public function releaseDate(): \DateTimeImmutable
 On the other hand, is about a static analyzer code library (such as Psalm), it will complain if you are not taking into
 account the PHPDoc that you define.
 
-```php
-<?php
-
+```php source
 /** @psalm-immutable */
 final  class ProductTransfer
 {

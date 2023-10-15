@@ -13,8 +13,6 @@ subtitle = "Which one is better and why?"
 
 ![a](/images/2022-12-06/1.png)
 
-<!-- more -->
-
 ORM stands for **Object-Relational Mapping**, that is, the technique that transforms Objects from OOP into rows in the
 database and vice versa.
 
@@ -31,82 +29,48 @@ _hasOne()_ / _hasMany()_ methods for the Active Record.
 As I previously mentioned, the entity itself can be created, updated or deleted. In PHP for example, Eloquent is an
 Active Record ORM developed by the Laravel community.
 
-[//]: # (```php)
-[//]: # (final class UserCreator)
-[//]: # ({)
-[//]: # (    public function create&#40;UserInformation $userInfo&#41;: void)
-[//]: # (    {)
-[//]: # (        $address = Address::createFrom&#40;$userInfo->address&#40;&#41;&#41;;)
-[//]: # (        $address->save&#40;&#41; # Address is stored in the database)
-[//]: # ()
-[//]: # (        $user = User::createFrom&#40;$userInfo->user&#40;&#41;&#41;;)
-[//]: # (        $user->address = $address; // Set relationship)
-[//]: # (        $user->save&#40;&#41;; # User is stored in the database)
-[//]: # (    })
-[//]: # (})
-[//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final class </span><span style="color:#d08770;">UserCreator
-</span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">create</span><span style="color:#343d46;">(</span><span style="color:#d08770;">UserInformation </span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">): </span><span style="color:#d08770;">void
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">address </span><span>= </span><span style="color:#d08770;">Address</span><span style="color:#343d46;">::</span><span style="color:#bf616a;">createFrom</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">address</span><span style="color:#343d46;">());
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">address</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">save</span><span style="color:#343d46;">() </span><span style="color:#a7adba;"># Address is stored in the database
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">user </span><span>= </span><span style="color:#d08770;">User</span><span style="color:#343d46;">::</span><span style="color:#bf616a;">createFrom</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">user</span><span style="color:#343d46;">());
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">user</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">address </span><span>= $</span><span style="color:#bf616a;">address</span><span style="color:#343d46;">; </span><span style="color:#a7adba;">// Set relationship
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">user</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">save</span><span style="color:#343d46;">(); </span><span style="color:#a7adba;"># User is stored in the database
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">}
-</span></code></pre>
+```php source
+final class UserCreator
+{
+    public function create(UserInformation $userInfo): void
+    {
+        $address = Address::createFrom($userInfo->address());
+        $address->save() # Address is stored in the database
+
+        $user = User::createFrom($userInfo->user());
+        $user->address = $address; // Set relationship
+        $user->save(); # User is stored in the database
+    }
+}
+```
 
 # Data Mapper
 
 In the data mapper, we need an external class that will update the DB. In PHP for example, Doctrine is the de facto Data
 Mapper ORM for Symfony.
 
-[//]: # (```php)
-[//]: # (final class UserCreator)
-[//]: # ({)
-[//]: # (    public function __construct&#40;)
-[//]: # (        private EntityManager $entityManager,)
-[//]: # (    &#41; {})
-[//]: # ()
-[//]: # (    public function create&#40;UserInformation $userInfo&#41;: void)
-[//]: # (    {)
-[//]: # (        $address = Address::createFrom&#40;$userInfo->address&#40;&#41;&#41;;)
-[//]: # (        $user = User::createFrom&#40;$userInfo->user&#40;&#41;&#41;;)
-[//]: # (        $user->address = $address; # Set relationship)
-[//]: # ()
-[//]: # (        # We persist all objects we want to update)
-[//]: # (        $this->entityManager->persist&#40;$address&#41;;)
-[//]: # (        $this->entityManager->persist&#40;$user&#41;;)
-[//]: # ()
-[//]: # (        # Finally, flushing the entity manager will execute the SQLs)
-[//]: # (        $this->entityManager->flush&#40;&#41;;)
-[//]: # (    })
-[//]: # (})
-[//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final class </span><span style="color:#d08770;">UserCreator
-</span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(
-</span><span style="color:#343d46;">        </span><span style="color:#d08770;">private EntityManager </span><span>$</span><span style="color:#bf616a;">entityManager</span><span style="color:#343d46;">,
-</span><span style="color:#343d46;">    ) {}
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">create</span><span style="color:#343d46;">(</span><span style="color:#d08770;">UserInformation </span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">): </span><span style="color:#d08770;">void
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">address </span><span>= </span><span style="color:#d08770;">Address</span><span style="color:#343d46;">::</span><span style="color:#bf616a;">createFrom</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">address</span><span style="color:#343d46;">());
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">user </span><span>= </span><span style="color:#d08770;">User</span><span style="color:#343d46;">::</span><span style="color:#bf616a;">createFrom</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">user</span><span style="color:#343d46;">());
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">user</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">address </span><span>= $</span><span style="color:#bf616a;">address</span><span style="color:#343d46;">; </span><span style="color:#a7adba;"># Set relationship
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">        </span><span style="color:#a7adba;"># We persist all objects we want to update
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">entityManager</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">persist</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">address</span><span style="color:#343d46;">);
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">entityManager</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">persist</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">user</span><span style="color:#343d46;">);
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">        </span><span style="color:#a7adba;"># Finally, flushing the entity manager will execute the SQLs
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">entityManager</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">flush</span><span style="color:#343d46;">();
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">}
-</span></code></pre>
+```php source
+final class UserCreator
+{
+    public function __construct(
+        private EntityManager $entityManager,
+    ) {}
+
+    public function create(UserInformation $userInfo): void
+    {
+        $address = Address::createFrom($userInfo->address());
+        $user = User::createFrom($userInfo->user());
+        $user->address = $address; # Set relationship
+
+        # We persist all objects we want to update
+        $this->entityManager->persist($address);
+        $this->entityManager->persist($user);
+
+        # Finally, flushing the entity manager will execute the SQLs
+        $this->entityManager->flush();
+    }
+}
+```
 
 <div class="separator"></div>
 
@@ -128,9 +92,7 @@ want to provide to the user.
 In order to do this, we need to create an interface and a class that will implement the interface where we will drop all
 logic.
 
-```php
-<?php
-
+```php source
 # App/User/Domain
 interface UserRepository
 {
@@ -175,32 +137,19 @@ final class DataMapperUserRepository implements UserRepository
 So the last step is to define which class will be resolved when we inject our `UserRepository` interface, and finally,
 our `UserCreator` will be like:
 
-[//]: # (```php)
-[//]: # (<?php)
-[//]: # (final class UserCreator)
-[//]: # ({)
-[//]: # (    public function __construct&#40;)
-[//]: # (        private UserRepository $userRepository,)
-[//]: # (    &#41; {})
-[//]: # ()
-[//]: # (    public function create&#40;UserInformation $userInfo&#41;: void)
-[//]: # (    {)
-[//]: # (        $this->userRepository->save&#40;$userInfo&#41;;)
-[//]: # (    })
-[//]: # (})
-[//]: # (```)
-<pre data-lang="php" style="background-color:#eff1f5;color:#4f5b66;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#b48ead;">final class </span><span style="color:#d08770;">UserCreator
-</span><span style="color:#343d46;">{
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#96b5b4;">__construct</span><span style="color:#343d46;">(
-</span><span style="color:#343d46;">        </span><span style="color:#d08770;">private UserRepository </span><span>$</span><span style="color:#bf616a;">userRepository</span><span style="color:#343d46;">,
-</span><span style="color:#343d46;">    ) {}
-</span><span style="color:#343d46;">
-</span><span style="color:#343d46;">    </span><span style="color:#b48ead;">public function </span><span style="color:#8fa1b3;">create</span><span style="color:#343d46;">(</span><span style="color:#d08770;">UserInformation </span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">): </span><span style="color:#d08770;">void
-</span><span style="color:#343d46;">    {
-</span><span style="color:#343d46;">        </span><span>$</span><span style="color:#bf616a;">this</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">userRepository</span><span style="color:#343d46;">-&gt;</span><span style="color:#bf616a;">save</span><span style="color:#343d46;">(</span><span>$</span><span style="color:#bf616a;">userInfo</span><span style="color:#343d46;">);
-</span><span style="color:#343d46;">    }
-</span><span style="color:#343d46;">}
-</span></code></pre>
+```php source
+final class UserCreator
+{
+    public function __construct(
+        private UserRepository $userRepository,
+    ) {}
+
+    public function create(UserInformation $userInfo): void
+    {
+        $this->userRepository->save($userInfo);
+    }
+}
+```
 
 Regarding tests, with the current `UserCreator` implementation, it would be really simple to add a unit test, but it
 won’t make sense as the saving logic would be mocked, and the test would provide no value at all.<br>

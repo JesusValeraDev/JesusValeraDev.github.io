@@ -13,8 +13,6 @@ subtitle = ""
 
 ![caravaca-fuentes-marques-1](/images/2022-08-17/1.png)
 
-<!-- more -->
-
 There are some ways to couple your code, some frameworks like Laravel embrace you to do using their own _façades_ or
 even using _ORM_ as _ActiveRecord_, but this is also possible using PHP native methods like `time()` beyond others.
 
@@ -44,7 +42,7 @@ For the next example, let’s try to use a Laravel facade and a PHP function.
 Imagine we have the following service, and we really want to invert the dependencies. As you can see, we have the
 `trans()` facade and the `date()` PHP function.
 
-```php
+```php source
 namespace Infrastructure;
 
 final class WelcomeController
@@ -65,7 +63,7 @@ final class WelcomeController
 The first thing we should do is to move the `trans()` Laravel function logic to a different service, in order to do
 that, we have to introduce an interface as follows:
 
-```php
+```php source
 namespace Domain;
 
 interface TranslatorInterface
@@ -76,7 +74,7 @@ interface TranslatorInterface
 
 And we can place in this class the original Laravel implementation.
 
-```php
+```php source
 namespace Infrastructure;
 
 final class LaravelTranslator implements TranslatorInterface
@@ -96,7 +94,7 @@ implementation we want to resolve when the framework faces the `TranslatorInterf
 
 namespace Infrastructure;
 
-```php
+```php source
 namespace Infrastructure;
 
 final class WelcomeController
@@ -118,7 +116,7 @@ final class WelcomeController
 
 The next step is to do the same but with the `date()` method.
 
-```php
+```php source
 namespace Domain;
 
 interface DateInterface
@@ -129,7 +127,7 @@ interface DateInterface
 
 And the PHP implementation:
 
-```php
+```php source
 namespace Infrastructure;
 
 final class SystemDate implements DateInterface
@@ -144,7 +142,7 @@ final class SystemDate implements DateInterface
 Let’s do the same as we did previously, but this time we can inject our own `SystemDate` implementation through the
 `DateInterface` interface.
 
-```php
+```php source
 namespace Infrastructure;
 
 final class WelcomeController
@@ -170,7 +168,7 @@ final class WelcomeController
 
 Finally, we are up to creating our controller test.
 
-```php
+```php source
 namespace Test/Infrastructure;
 
 final class WelcomeControllerTest

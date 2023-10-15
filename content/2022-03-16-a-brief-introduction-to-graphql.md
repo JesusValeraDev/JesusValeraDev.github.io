@@ -13,8 +13,6 @@ subtitle = ""
 
 ![atomium-graphql](/images/2022-03-16/1.png)
 
-<!-- more -->
-
 A _RESTful API_ is a de-facto standard to allow communication between applications, although, recently _GraphQL_ comes
 up.
 

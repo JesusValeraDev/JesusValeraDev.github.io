@@ -13,8 +13,6 @@ subtitle = "Unit, Integration and System tests"
 
 A test is an empirical assertion that demonstrates the behaviour of an expected functionality from something.
 
-<!-- more -->
-
 ![the-art-of-programming-meme](/images/2020-03-20/1.png)
 
 Tests can be classified is using the "box" approach.
