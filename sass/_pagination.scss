@@ -11,7 +11,7 @@
   .top {
     @include color(color, --first-text-color, $theme-light-first-text-color);
     font-size: 1.1rem;
-    opacity: .6;
+    opacity: .8;
 
     &:hover {
       opacity: 1;

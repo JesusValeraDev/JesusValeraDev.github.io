@@ -264,7 +264,7 @@ objects, it would be the same but comparing some property, it depends on your ne
 
 ## 📑 Cheat Sheet
 
-```bash
+```php source
 sort() - sort list in ascending order
 rsort() - sort list in descending order
 
