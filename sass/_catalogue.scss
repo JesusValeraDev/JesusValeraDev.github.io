@@ -27,7 +27,7 @@
     margin: .3rem;
     padding: .4rem;
     opacity: .9;
-    @include color(color, --second-text-color, $theme-light-second-text-color);
+    @include color(color, --first-text-color, $theme-light-first-text-color);
   }
 
   div:hover {

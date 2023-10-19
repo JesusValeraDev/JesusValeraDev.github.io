@@ -52,7 +52,7 @@ header {
 
     a {
       font-size: 1.1em;
-      @include color(color, --second-text-color, $theme-light-second-text-color);
+      @include color(color, --first-text-color, $theme-light-first-text-color);
       opacity: .8;
       margin-right: 2rem;
     }
