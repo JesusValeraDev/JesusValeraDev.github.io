@@ -12,54 +12,61 @@ static_thumbnail = "/images/2023-10-09/1.png"
 subtitle = "Customize the IDE with templates, plugins and more"
 +++
 
-PHPStorm is a powerful IDE that helps to boost your development, but over time, we (the users) missed some settings, shortcuts or even 3rd party plugin that could help us even more when programming.
+PHPStorm is a powerful IDE that helps to boost your development, some of them are hidden, let's take a look at them to make PHPStorm even better! ⚡️
 
 ![phpstorm-logo](/images/2023-10-09/1.png)
 
 ## Plugins
 
-Plugins are a crucial part of any IDE, they can help you to write better code with suggestions and/or spotting bugs.
+Plugins are a crucial part of an IDE.
 
-Depending on the framework you work with, I am sure you know plugins like [Symfony Support](https://plugins.jetbrains.com/plugin/7219-symfony-support)
-and [Twig](https://plugins.jetbrains.com/plugin/7303-twig), or [Laravel Idea](https://plugins.jetbrains.com/plugin/13441-laravel-idea) and [Blade](https://plugins.jetbrains.com/plugin/7569-blade).
-However, there are other interesting plugins like [GitToolBox](https://plugins.jetbrains.com/plugin/7499-gittoolbox), [Pest](https://plugins.jetbrains.com/plugin/14636-pest), or [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation).
+If you are a Symfony user, probably you use plugins like [Symfony Support](https://plugins.jetbrains.com/plugin/7219-symfony-support) and [Twig](https://plugins.jetbrains.com/plugin/7303-twig) for the templating.
+In the other hand, if you are a Laravel one, there are [Laravel Idea](https://plugins.jetbrains.com/plugin/13441-laravel-idea) and [Blade](https://plugins.jetbrains.com/plugin/7569-blade).
+However, there are other interesting plugins such as [GitToolBox](https://plugins.jetbrains.com/plugin/7499-gittoolbox) or [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation) that you should check if you never tried them.<br>
+Another recommendation, in case you want to familiarize with the IDE shortcuts is [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x).
 
-Another (not so popular) recommendation, in case you want to familiarize with the IDE shortcuts is [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x).
-
-Although, my favorite so far, which is also not very well-known, is [PHP Inspections (EA Extended)](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-"). This plugin helps you with:
+Although, my favorite so far, which is also not very well-known is [PHP Inspections (EA Extended)](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-). This plugin helps you (among others) with:
 - architecture related issues
 - regular expressions
 - non-optimal, duplicate and suspicious "if" conditions
 - performance issues
 
+You can check the full list on their [GitHub](https://github.com/kalessil/phpinspectionsea) page, this one is a **MUST**.
+
 ---
 
 ## Code Style
 
-PHP is a programming language where anybody can write the code on their own, in order to internationalize the industry, some people reunited and decided to create <span style="text-decoration: underline dotted" title="PHP Standard Recommendation">PSRs</span>.<br>
-For that reason, there are standards for `Loggering` ([PSR-3](https://www.php-fig.org/psr/psr-3)), `Event Dispatcher` ([PSR-14](https://www.php-fig.org/psr/psr-14)), and even `Clock` ([PSR-20](https://www.php-fig.org/psr/psr-20)). Check the full list [here](https://www.php-fig.org/psr/).
+PHP is a programming language where everybody can write the code as they wish, in order to unify the industry, <span style="text-decoration: underline dotted" title="PHP Standard Recommendation">PSRs</span> was born.<br>
+That is the reason we can find standards for `Loggering` ([PSR-3](https://www.php-fig.org/psr/psr-3)), `Event Dispatcher` ([PSR-14](https://www.php-fig.org/psr/psr-14)), and even for the `Clock` ([PSR-20](https://www.php-fig.org/psr/psr-20)). You can check the full list of all available PSRs [here](https://www.php-fig.org/psr/).
 
-One of the most popular is related to the `Code Style`, that is:
+One of the most popular PSRs is concerning the `Code Style`, that is, it defines things like:
 - Should I use tabs or spaces?
-- Where should I place the opening-bracket?
-- When instantiating a class, parenthesis is mandatory when the constructor is empty?
+- Where should I place the brackets in a method? And in a conditional/loop?
+- Are the parenthesis required when instantiating a class with empty constructor?
 
-In recent years, due to the fast changes the language had, PSR-2 became deprecated, and PSR-12 was created instead, but as the language continues evolving very fast, <span style="text-decoration: underline dotted" title="PHP Evolving Recommendation">PERs</span> were introduced.<br>
-At some point, PSR-12 will be replaced by this [PER](https://www.php-fig.org/per/coding-style/), unfortunately, it is not possible to define at the moment your code as `PER`, but `PSR-12` in PHPStorm, anyway, `PSR-12` is enough in the 95% of the situations.
+During the last years, due to the big and fast changes the language experienced, PSR-2 was quickly replaced by PSR-12. However, the language continues evolving very fast, so <span style="text-decoration: underline dotted" title="PHP Evolving Recommendation">PERs</span> were introduced.<br>
+Unfortunately, at the moment is only possible to define the `Code Style` of your IDE `PSR-12` in PHPStorm, anyway, `PSR-12` is enough in the 95% of the situations.
 
-To define `PSR-12` as the code style in PHPStorm:
+To define PSR-12 by default, go to the following path and select **PSR12**.
 
 > Settings ➔ Editor ➔ Code Style ➔ PHP ➔ "Set from..." ➔ PSR12
+
+![phpstorm-define-psr-12](/images/2023-10-09/2.png)
 
 ---
 
 ## Live Templates
 
-> Editor > Live Templates
+Live Templates is ...
+
+<video width="800" controls>
+  <source src="/images/2023-10-09/1.mov" type="video/mp4">
+</video>
+
+> Editor ➔ Live Templates
 
 Update Live Templates with `:void` and navigate pressing Enter.
-
-[ADD SOME gif]
 
 You need to add in `pri, prisf, prof, prosf, pubf, pubsf` the following `: $RETURN_TYPE$` in the `Template text` (bottom), then, press on **Edit variables** and insert `"void"` on _RETURN_VALUE_ field
 
@@ -72,6 +79,9 @@ private function $NAME$($PARAMETERS$): $RETURN_TYPE$
 
 
 ## File and Code Templates
+
+File and Code Templates are ... (when you create a new file, the scaffolding of these new files will have the following information...)
+
 
 > Editor > File and Code Templates
 

@@ -26,7 +26,7 @@ main {
 }
 
 a {
-  color: #4a9ae1;
+  @include color(color, --links-color, $theme-light-links-color);
   text-decoration: none;
 }
 
