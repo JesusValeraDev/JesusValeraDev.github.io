@@ -58,25 +58,35 @@ To define PSR-12 by default, go to the following path and select **PSR12**.
 
 ## Live Templates
 
-Live Templates is ...
+Live Templates are snippets of codes that you use very often, and you can write with a few characters.
 
-<video width="800" controls>
-  <source src="/images/2023-10-09/1.mov" type="video/mp4">
-</video>
-
-> Editor ➔ Live Templates
-
-Update Live Templates with `:void` and navigate pressing Enter.
-
-You need to add in `pri, prisf, prof, prosf, pubf, pubsf` the following `: $RETURN_TYPE$` in the `Template text` (bottom), then, press on **Edit variables** and insert `"void"` on _RETURN_VALUE_ field
+PHPStorm brings some live templates, for example, if we type `prif`, the generated code will be:
 
 ```php source
+private function ░()
+{
+
+}
+```
+
+There is a live template for all function combinations: `prif`, `prisf`, `prof`, `prosf`, `pubf` & `pubsf`.
+
+In case you want to enhance the auto-completion with a default `: void`, you can use variables.
+
+<img src="/images/2023-10-09/3.gif" alt="live templates in action" />
+
+In order to achieve that, go to `Editor  ➔ Live Templates` and adjust each template with:
+
+```javascript
 private function $NAME$($PARAMETERS$): $RETURN_TYPE$
 {
     $END$
 }
 ```
 
+Finally, press on **Edit variables** and insert `"void"` (with quotes) on **RETURN_TYPE** field.
+
+![live-template-setup](/images/2023-10-09/4.jpeg)
 
 ## File and Code Templates
 
@@ -88,13 +98,13 @@ File and Code Templates are ... (when you create a new file, the scaffolding of 
 If you are into `strict_types` and `final` classes by default, you can modify the basic template when you create a new file.
 
 ### PHP File
-```php source
+```php
 declare(strict_types=1);
 #parse("PHP File Header.php")
 ```
 
 ### PHP Class
-```php source
+```php
 <?php
 declare(strict_types=1);
 
@@ -110,7 +120,7 @@ class ${NAME} {
 ```
 
 ### PHP Interface
-```php source
+```php
 <?php
 declare(strict_types=1);
 
