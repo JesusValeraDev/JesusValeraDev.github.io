@@ -33,7 +33,7 @@ Although, my favorite so far, which is also not very well-known is [PHP Inspecti
 
 You can check the full list on their [GitHub](https://github.com/kalessil/phpinspectionsea) page, this one is a **MUST**.
 
----
+<div class="separator"></div>
 
 ## Code Style
 
@@ -54,7 +54,7 @@ To define PSR-12 by default, go to the following path and select **PSR12**.
 
 ![phpstorm-define-psr-12](/images/2023-10-09/2.png)
 
----
+<div class="separator"></div>
 
 ## Live Templates
 
@@ -75,7 +75,7 @@ In case you want to enhance the auto-completion with a default `: void`, you can
 
 <img src="/images/2023-10-09/3.gif" alt="live templates in action" />
 
-In order to achieve that, go to `Editor  ➔ Live Templates` and adjust each template with:
+In order to achieve that, go to `Editor ➔ Live Templates` and adjust each template with:
 
 ```javascript
 private function $NAME$($PARAMETERS$): $RETURN_TYPE$
@@ -88,57 +88,38 @@ Finally, press on **Edit variables** and insert `"void"` (with quotes) on **RETU
 
 ![live-template-setup](/images/2023-10-09/4.jpeg)
 
+<div class="separator"></div>
+
 ## File and Code Templates
 
-File and Code Templates are ... (when you create a new file, the scaffolding of these new files will have the following information...)
+The scaffolding you get when you create a new file in PHPStorm is also editable.
 
+If you are into `strict_types` and `final` classes by default, you are in luck! 🎉
 
-> Editor > File and Code Templates
+To change this, go to `Editor ➔ File and Code Templates` and update all `PHP` templates.
 
-If you are into `strict_types` and `final` classes by default, you can modify the basic template when you create a new file.
+You can edit the `PHP File` template with:
 
-### PHP File
 ```php
+<?php
 declare(strict_types=1);
 #parse("PHP File Header.php")
 ```
 
-### PHP Class
+And with `PHP Class` you can copy-paste the following code (_notice the spaces_).
+
 ```php
 <?php
 declare(strict_types=1);
-
 #parse("PHP File Header.php")
 
 #if (${NAMESPACE})
 namespace ${NAMESPACE};
 
 #end
-class ${NAME} {
+final class ${NAME} {
 
 }
 ```
 
-### PHP Interface
-```php
-<?php
-declare(strict_types=1);
-
-#parse("PHP File Header.php")
-#if (${NAMESPACE})
-namespace ${NAMESPACE};
-
-#end
-interface ${NAME} {
-
-}
-```
-
-## Shortcuts
-
-### Custom shortcuts
-
-- Select File in Project View -> Cmd + Shift + 1
-- Split screen into 2 windows
-
-> Help -> Keyboard Shortcut -> Download "PDF"
+You can use the previous snippet as a reference for the other templates.
