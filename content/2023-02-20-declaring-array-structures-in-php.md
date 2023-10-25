@@ -13,16 +13,16 @@ subtitle = ""
 
 ![statue-people-with-a-string-and-a-cat](/images/2023-02-20/1.png)
 
-Unfortunately, it is not possible to define explicit array types as other programming languages do such as Java:
+Currently, it is not possible to define explicit array types as other programming languages do as Java does.
 
 ```java
 List<User> users = new ArrayList<>();
 ```
 
-There have been some attempts to achieve that, one of the most recent ones was done by **Nikita Popov** in
-this [pull request](https://github.com/PHPGenerics/php-generics-rfc/issues/45), sadly, the conclusion was regarding the
-current PHP status it is not possible, it would require rewriting a huge amount of code and some of them are very
-critical.
+There have been some attempts to achieve that. One of the most recent ones was done by **Nikita Popov** in
+this [pull request](https://github.com/PHPGenerics/php-generics-rfc/issues/45). Unfortunately, the conclusion was that
+regarding the current PHP status, that is not doable (at least in the short/medium term), as it would require rewriting
+an enormous amount of code some of which is very critical.
 
 Hopefully, some tools like **PHPStan** or **Psalm** help us to analyze the code statically, which means, they do not
 execute but check the code for inconsistencies based on PHP comments.
