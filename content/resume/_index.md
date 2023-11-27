@@ -3,7 +3,7 @@ title = "CV"
 template = "section.html"
 +++
 
-## 🧳 Experience
+## 📃 Experience
 
 <div class="resume">
     <div style="display: flex">
@@ -17,7 +17,7 @@ template = "section.html"
     </div>
     <hr>
     <div style="display: flex">
-                <img style="padding-right: 20px; align-self: flex-start; vertical-align: top; margin: 0; user-select: none; user-drag: none;-webkit-user-drag: none;-moz-user-select: none;" src="/cv/procuros.jpeg" alt="procuros logo" width="85px">
+        <img style="padding-right: 20px; align-self: flex-start; vertical-align: top; margin: 0; user-select: none; user-drag: none;-webkit-user-drag: none;-moz-user-select: none;" src="/cv/procuros.jpeg" alt="procuros logo" width="85px">
         <div style="flex: 1 1 auto;">
             <p class="title" style="font-weight: bold; font-size: larger; margin: 0">Procuros</p>
             <time class="catalogue-time" style="font-size: initial">Feb 2023 — May 2023 · 3 mos</time>

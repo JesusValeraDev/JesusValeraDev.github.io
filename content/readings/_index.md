@@ -3,7 +3,10 @@ title = "Readings"
 template = "section.html"
 +++
 
-# Readings
+## 📚 Readings
+
+> A list of the books I have read over the time.<br>
+> The idea of this list is just to have a track to myself 🙂
 
 - Working Effectively With Legacy Code - Michael Feathers
 - Refactoring: Improving the Design of Existing Code - Martin Fowler
