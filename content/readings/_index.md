@@ -5,8 +5,7 @@ template = "section.html"
 
 ## 📚 Readings
 
-> A list of the books I have read over the time.<br>
-> The idea of this list is just to have a track to myself 🙂
+> The idea of this list is to have a track to myself about the books I have read 🙂
 
 - Working Effectively With Legacy Code - Michael Feathers
 - Refactoring: Improving the Design of Existing Code - Martin Fowler

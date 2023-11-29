@@ -1,18 +1,18 @@
 +++
-title = "PHPStorm tricks ✨"
-description = "PHPStorm tricks: Customize the IDE with templates, plugins, shortcuts and more"
+title = "PhpStorm tricks ✨"
+description = "PhpStorm tricks: Customize the IDE with templates, plugins, shortcuts and more"
 date = 2023-11-27
 
 [taxonomies]
-tags = ['PHPStorm', 'Intellij', 'Settings', 'Customize', 'IDE']
+tags = ['PhpStorm', 'Intellij', 'Settings', 'Customize', 'IDE']
 
 [extra]
 static_thumbnail = "/images/2023-11-27/1.png"
 subtitle = "Customize the IDE with templates, plugins and more"
 +++
 
-PHPStorm is a powerful IDE that helps to boost your development, let's take a look to some hidden tricks to make
-PHPStorm even better! ⚡️
+PhpStorm is a powerful IDE that helps to boost your development, let's take a look to some hidden tricks to make
+PhpStorm even better! ⚡️
 
 ![phpstorm-logo](/images/2023-11-27/1.png)
 
@@ -57,7 +57,7 @@ One of the most popular PSRs is concerning the `Code Style`, that is, it defines
 During the last years, due to the big and fast changes the language experienced, PSR-2 was quickly replaced by PSR-12.
 However, the language continues evolving very fast,
 so <span style="text-decoration: underline dotted" title="PHP Evolving Recommendation">PERs</span> were introduced.<br>
-Unfortunately, at the moment is not possible to define `PER` as `Code Style` in PHPStorm, anyway, `PSR-12` is good
+Unfortunately, at the moment is not possible to define `PER` as `Code Style` in PhpStorm, anyway, `PSR-12` is good
 enough.
 
 To define PSR-12 by default, go to the following path and select **PSR12**.
@@ -72,7 +72,7 @@ To define PSR-12 by default, go to the following path and select **PSR12**.
 
 Live Templates are snippets of code that are very used, and you can write them in a few characters.
 
-PHPStorm brings some live templates, for example, if we type `prif`, the generated code will be:
+PhpStorm brings some live templates, for example, if we type `prif`, the generated code will be:
 
 ```php source
 private function ░()
@@ -103,7 +103,7 @@ Finally, press on **Edit variables** and insert `"void"` _(with quotes)_ on **RE
 
 ## File and Code Templates
 
-The scaffolding you get when you create a new file in PHPStorm is also editable.
+The scaffolding you get when you create a new file in PhpStorm is also editable.
 
 If you are into `strict_types` and `final` classes by default, you are in luck! 🎉
 
@@ -333,7 +333,7 @@ It is very important to learn the IDE shortcuts, that will bring you confidence 
 in case you don't know them, definitely you SHOULD.<br>
 I would like to remind the plugin `Key Promoter X` that I mentioned before.
 
-PHPStorm also brings a PDF file with the most important shortcuts, go to `Help ➔ Keyboard Shortcuts PDF` to download it.
+PhpStorm also brings a PDF file with the most important shortcuts, go to `Help ➔ Keyboard Shortcuts PDF` to download it.
 
 List of most important shortcuts:
 
@@ -400,4 +400,4 @@ This way, we don't need to use the mouse at all, we can navigate between tabs wi
 
 To set this new combination, in `Settings ➔ Keymap` search by `Select File in Project View` and `Add Keyboard Shortcut`.
 
-It is also very handy to add shortcuts to `Split Right` or `Split Down` with `Ctrl + I/-`/`⌃ + I/-`.
+It is also very handy to add shortcuts to `Split and Move Right` or `Split and Move Down` with `Ctrl + I/-`/`⌃ + I/-`.

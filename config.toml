@@ -65,5 +65,5 @@ name = "Readings"
 url = "readings"
 
 [[extra.menu]]
-name = "Resume"
-url = "resume"
+name = "CV"
+url = "cv"

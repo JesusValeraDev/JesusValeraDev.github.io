@@ -1,11 +1,12 @@
 +++
 title = "CV"
 template = "section.html"
+aliases = ['resume']
 +++
 
 ## 📃 Experience
 
-<div class="resume">
+<div class="cv">
     <div style="display: flex">
         <img style="padding-right: 20px; align-self: flex-start; vertical-align: top; margin: 0; user-select: none; user-drag: none;-webkit-user-drag: none;-moz-user-select: none;" src="/cv/fotograf.png" alt="fotograf.de logo" width="85px">
         <div style="flex: 1 1 auto;">
