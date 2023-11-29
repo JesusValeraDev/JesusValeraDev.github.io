@@ -35,6 +35,9 @@ aliases = ['resume']
                 <li>Created a new connector, which allowed data transmission between the provider and the client</li>
             </ul>
             <p class="skills"><span>Skills</span>: PHP · Laravel · Docker</p>
+            <button class="button" onClick="window.open('https://procuros.io/');">
+                 <span class="icon">Visit</span>
+            </button>
         </div>
     </div>
     <hr>
@@ -49,6 +52,9 @@ aliases = ['resume']
                 <li>Organised internal tech talks and katas</li>
             </ul>
             <p class="skills"><span>Skills</span>: PHP · Symfony · Docker · Apache Kafka</p>
+            <button class="button" onClick="window.open('https://www.artnight.com/');">
+                 <span class="icon">Visit</span>
+            </button>
         </div>
     </div>
     <hr>
@@ -63,6 +69,9 @@ aliases = ['resume']
                 <li>Exported and imported CSV files to an S3 bucket</li>
             </ul>
             <p class="skills"><span>Skills</span>: PHP · Symfony · Docker · MySQL · PostgreSQL</p>
+            <button class="button" onClick="window.open('https://www.kollex.de/');">
+                 <span class="icon">Visit</span>
+            </button>
         </div>
     </div>
     <hr>
@@ -77,6 +86,9 @@ aliases = ['resume']
                 <li>Organised tech talks and small katas</li>
             </ul>
             <p class="skills"><span>Skills</span>: PHP · Laravel · Docker · MySQL · Redis</p>
+            <button class="button" onClick="window.open('https://selectra.info/');">
+                 <span class="icon">Visit</span>
+            </button>
         </div>
     </div>
     <hr>
@@ -91,6 +103,9 @@ aliases = ['resume']
                 <li>Generated PDFs with pictures and tables populated from the DB</li>
             </ul>
             <p class="skills"><span>Skills</span>: PHP · JavaScript · Laravel · VueJS · MySQL</p>
+            <button class="button" onClick="window.open('https://www.smileandlearn.com/');">
+                 <span class="icon">Visit</span>
+            </button>
         </div>
     </div>
     <hr>
