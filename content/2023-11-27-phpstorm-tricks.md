@@ -347,19 +347,24 @@ List of most important shortcuts:
 - `Alt + →/←` = Move to left/right tab
 - `Ctrl + G` = Go to line X:Y
 - `Ctrl + B` = Navigate in/out (similar to `Ctrl + Click`)
-- `Ctrl + C/V` = Copy/Paste
+- `Ctrl + Y` = Delete current line
+- `Ctrl + C/V (without selection)` = Copy/Paste full line
 - `Ctrl + Shift + V` = Paste with history
 - `Ctrl + E` = Display recent files
 - `Ctrl + Shift + E` = Display last 3 recent files
 - `Ctrl + Shift + F` = Find in path (search words in the whole project)
 - `Ctrl + Shift + L` = Reformat Code
+- `Ctrl + Shift + ↑/↓` = Moves the current code block
 - `Ctrl + Shift + M` = Go to start/end of current brackets
 - `Ctrl + Shift + T` = Open test from specific class (and vice-versa)
 - `Shift + Alt + Click` = Multiple cursor
+- `Ctrl (twice keeping it pushed) + arrows` = Multiple cursor from adjacent lines
 - `Ctrl + W` = Select gradually
 - `Alt + J` = Select next occurrence similar to current one
 - `Ctrl + Alt + F/M/C/V/P` = Refactor Function/Method/Constant/Variable/Parameter
 - `Ctrl + Alt + N` = Inline refactor
+- `Ctrl + Insert` = Contextual menu to override methods, generate getters, setters...
+- `Ctrl + Shift + F10`: Run the scope where the caret is
 - `Ctrl + Alt + Enter` = Jump to next line (adds ";" automatically if needed)
 
 </details>
@@ -374,17 +379,22 @@ List of most important shortcuts:
 - `⌃ + →/←` = Move to left/right tab
 - `⌘ + L` = Go to line X:Y
 - `⌘ + B` = Navigate in/out (similar to `Ctrl + Click`)
-- `⌘ + C/V` = Copy/Paste
+- `⌘ + ⌫` = Delete current line
+- `⌘ + C/V (without selection)` = Copy/Paste full line
 - `⌘ + ⇧ + V` = Paste with history
 - `⌘ + E` = Display recent files
 - `⌘ + ⇧ + E` = Display last 3 recent files
 - `⌘ + ⇧ + F` = Find in path (search words in the whole project)
 - `⌥ + ⌘ + L` = Reformat Code
+- `⌘ + ⇧ + ↑/↓` = Moves the current code block
 - `⌘ + ⇧ + T` = Open test from specific class (and vice-versa)
-- `⌥ + ⌘ + ⇧ + Click` or `⌘ (twice)` = Multiple cursor
+- `⌥ + ⌘ + ⇧ + Click` or = Multiple cursor
+- `⌘ (twice keeping it pushed) + arrows` = Multiple cursor from adjacent lines
 - `⌥ + ↑` = Select gradually
 - `⌥ + ⌘ + F/M/C/V/P` = Refactor Function/Method/Constant/Variable/Parameter
 - `⌥ + ⌘ + N` = Inline refactor
+- `⌘ + N` = Contextual menu to override methods, generate getters, setters...
+- `⇧ + ⌃ + R` = Run the scope where the caret is
 - `⌘ + ⇧ + Enter` = Jump to next line (adds ";" automatically if needed)
 
 > In case the shortcut `⌃ + →/←` changes between Desktops in Mac, you can disable it
