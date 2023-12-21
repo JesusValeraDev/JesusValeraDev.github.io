@@ -11,7 +11,7 @@ static_thumbnail = "/images/2022-12-06/1.png"
 subtitle = "Which one is better and why?"
 +++
 
-![a](/images/2022-12-06/1.png)
+![hiking in Grunewald](/images/2022-12-06/1.png)
 
 ORM stands for **Object-Relational Mapping**, that is, the technique that transforms Objects from OOP into rows in the
 database and vice versa.
