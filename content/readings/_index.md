@@ -22,6 +22,7 @@ template = "section.html"
 - JavaScript: The Good Parts - Crockfold
 - Thinking in Java - Bruce Eckel
 - Head First Design Patterns - Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
+- Tidy First? A personal Exercise in Empirical Software Design - Kent Beck
 - The Passionate Programmer: Creating a Remarkable Career in Software Development - Chad Fowler
 - Kotlin for Android Developers - Antonio Leiva
 - The Pragmatic Programmer: From Journeyman to Master - Andrew Hunt, Dave Thomas
@@ -35,6 +36,7 @@ template = "section.html"
 - Testing con Dobles en PHP - Fran Iglesias
 - Aprende Test Driven Development - Fran Iglesias
 - 97 Things Every Programmer Should Know - Seb Rose, Kevlin Henney
+- Effective Remote Work: For Yourself, Your Team, and Your Company - James Stanier
 - The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change - Camille Fournier
 - Scrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland
 - Extreme Programming Explained: Embrace Change - Kent Beck, Cynthia Andres
