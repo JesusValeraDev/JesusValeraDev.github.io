@@ -1,17 +1,17 @@
 +++
 title = "Three dots in PHP"
 description = "first-class callable syntax, variadic function and argument unpacking"
-date = 2023-12-01
+date = 2024-02-09
 
 [taxonomies]
-tags = ['PHP', 'first-class function', 'variadic', 'varargs', 'uppacking', 'splat']
+tags = ['PHP', 'first-class', 'callables', 'variadic', 'varargs', 'argument unpacking', 'splat operator']
 
 [extra]
 static_thumbnail = "/images/2023-11-27/1.png"
 subtitle = "First-Class Callable Syntax, Variadic function & Argument unpacking"
 +++
 
-![phpstorm-logo](/images/2024-02-09/1.png)
+![hiroshima castle ruins](/images/2024-02-09/1.png)
 
 In this article, let's take a look at the three different meanings of the three consecutive dots in PHP.
 
@@ -19,7 +19,7 @@ In this article, let's take a look at the three different meanings of the three 
 2. Variadic function
 3. Argument unpacking
 
-## First-class Callable Syntax [since PHP 8.1]
+## First-class Callable Syntax _[since PHP 8.1]_
 
 This syntax is used to create `Closure` objects (anonymous function) from `callable` (any expression that can be called in the PHP grammar).
 
@@ -36,6 +36,11 @@ function helloWorldFrom(Closure $closure): void {
 helloWorldFrom($snakeCase); // => hello_world
 helloWorldFrom($upperCase); // => HELLOWORLD
 ```
+
+In the previous snippet, both `$snakeCase` and `$upperCase` are `Closure` objects.<br>
+An anonymous function is always a `Closure` object, while the PHP native functions like `strtoupper` are `callable` expressions, which are transformed into a `Closure` object using the `...` operator.
+
+> We can use the `...` operator to create a `Closure` object not only from functions but also from static/non-static methods from class instances.
 
 ## Variadic function
 
@@ -96,3 +101,5 @@ $f = add(...);
 
 $f(...$numbers); // => 6
 ```
+
+In conclusion, the three dots in PHP are a powerful tool that allows us to work with functions and methods in a more flexible way.
