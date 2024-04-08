@@ -7,15 +7,15 @@ date = 2023-08-26
 tags = ['Testing', 'Test types', 'Unit Testing', 'Programming']
 
 [extra]
-static_thumbnail = "/images/2020-03-20/1.png"
+static_thumbnail = "/images/2023-08-26/1.png"
 subtitle = "Unit, Integration and System tests"
 +++
 
-A test is an empirical assertion that demonstrates the behaviour of an expected functionality from something.
+![functional testing types](/images/2023-08-26/1.png)
 
-![the-art-of-programming-meme](/images/2020-03-20/1.png)
+A test is an empirical assertion that demonstrates the behaviour of an expected functionality from some assertion.
 
-Tests can be classified is using the "box" approach.
+Tests can be classified by using the "box" approach.
 
 This approach divides the tests on how they interact with the system from the point of view of the
 tester. There are two big approaches, the white and the black-box.

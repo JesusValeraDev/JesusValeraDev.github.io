@@ -21,8 +21,8 @@ implementation.
 We need to hardcode the method name, and we are coupling our test method to the production code.
 Furthermore, we need to write a lot about boilerplate to test a simple method.
 
-- **Q**: I need to get at least 80% of code coverage, how can I get it without the Reflection class?
-- **A**: You should test ONLY your public methods, and depending on the variables we pass, we should reach all the
+- **Question**: I need to get at least 80% of code coverage, how can I get it without the Reflection class?
+- **Answer**: You should test ONLY your public methods, and depending on the variables we pass, we should reach all the
   possible paths.
 
 So, we do not need to test the private methods per se; they are called indirectly from our public functions.
@@ -30,8 +30,6 @@ So, we do not need to test the private methods per se; they are called indirectl
 ## Comparison between standard and Reflection tests
 
 ```php source
-<?php declare(strict_types=1);
-
 final class Addition
 {
     public function simpleOperation(int $number1, int $number2): int
@@ -91,8 +89,8 @@ final class Addition
 }
 ```
 
-- **Q**: Will the ‘standard’ fail? What about the Reflection one?
-- **A**: The standard will fail because we expect 4 as a result, but we got a 0.
+- **Question**: Will the ‘standard’ fail? What about the Reflection one?
+- **Answer**: The standard will fail because we expect 4 as a result, but we got a 0.
   However, the reflection will pass, because we are not focusing on the real implementation, we are creating a false
   positive which can be dangerous.
 
@@ -155,14 +153,13 @@ public function testGetPrice(): void
 But our Vehicle class is final, so we cannot perform this test, also, we said we shouldn’t use the Reflection class, so,
 probably we are doing something wrong in this class (TIP: you should make **final** your classes by default 😉).
 
-- **Q**: So what is the problem here?
-- **A**: The problem here is that we are performing an action inside the class (on the constructor) to which we do not
+- **Question**: So what is the problem here?
+- **Answer**: The problem here is that we are performing an action inside the class (on the constructor) to which we do not
   have access from the outside.
 
 One solution could be to inject the value in the constructor like:
 
 ```php source
-<?php
 final readonly class Vehicle
 {
     public function __construct(
