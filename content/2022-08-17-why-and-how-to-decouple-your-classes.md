@@ -8,7 +8,7 @@ tags = ['PHP', 'Solid', 'Decoupling', 'Dependency Inversion', 'OOP']
 
 [extra]
 static_thumbnail = "/images/2022-08-17/1.png"
-subtitle = ""
+subtitle = "with a real decoupling example"
 +++
 
 ![caravaca-fuentes-marques-1](/images/2022-08-17/1.png)
@@ -43,14 +43,14 @@ Imagine we have the following service, and we really want to invert the dependen
 `trans()` facade and the `date()` PHP function.
 
 ```php source
-namespace Infrastructure;
+namespace App\Application;
 
-final class WelcomeController
+final class WelcomeService
 {
     /**
      * Output: "hello {$name} @ {Y-m-d}"
      */
-    public function __invoke(string $name): string
+    public function welcome(string $name): string
     {
         return trans('messages.welcome', [
             'name' => $name,
@@ -61,23 +61,23 @@ final class WelcomeController
 ```
 
 The first thing we should do is to move the `trans()` Laravel function logic to a different service, in order to do
-that, we have to introduce an interface as follows:
+that, we have to invert the dependencies introducing a new interface as follows:
 
 ```php source
-namespace Domain;
+namespace App\Domain;
 
-interface TranslatorInterface
+interface Translator
 {
-   function trans(string $message, string ...$placeholders): string;
+   public function trans(string $message, string ...$placeholders): string;
 }
 ```
 
 And we can place in this class the original Laravel implementation.
 
 ```php source
-namespace Infrastructure;
+namespace App\Infrastructure;
 
-final class LaravelTranslator implements TranslatorInterface
+final class LaravelTranslator implements Translator
 {
    public function trans(string $message, string ...$placeholders)
    {
@@ -86,26 +86,23 @@ final class LaravelTranslator implements TranslatorInterface
 }
 ```
 
-So, from this point on, we are able to switch the translator class to our Laravel custom one or a third-party one by
-implementing the `TranslatorInterface`.
+From now on, we are able to switch the translator implementation between Laravel or a third-party one by implementing
+the `Translator` interface.
 
-Finally, we can inject the new `Translator` service in our `Controller` defining in the service container which
-implementation we want to resolve when the framework faces the `TranslatorInterface` in the constructor.
-
-namespace Infrastructure;
+We can inject the new `LaravelTranslator` service in our `WelcomeService` defining in the service container
+which implementation we want to resolve when the framework faces the `Translator` in the constructor.
 
 ```php source
-namespace Infrastructure;
+namespace App\Infrastructure;
 
-final class WelcomeController
+final class WelcomeService
 {
     public function __construct(
-        private TranslatorInterface $translator,
+        private Translator $translator,
     ) {}
 
-    public function __invoke(Request $request): void
+    public function welcome(string $name): void
     {
-        $name = $request->get('name');
         return $this->translator->trans(
             'messages.welcome',
             ['name' => $name, 'date' => date('Y-m-d')],
@@ -117,9 +114,9 @@ final class WelcomeController
 The next step is to do the same but with the `date()` method.
 
 ```php source
-namespace Domain;
+namespace App\Domain;
 
-interface DateInterface
+interface Date
 {
    function toString(): string;
 }
@@ -128,9 +125,9 @@ interface DateInterface
 And the PHP implementation:
 
 ```php source
-namespace Infrastructure;
+namespace App\Infrastructure;
 
-final class SystemDate implements DateInterface
+final class SystemDate implements Date
 {
     public function toString(): string
     {
@@ -140,22 +137,21 @@ final class SystemDate implements DateInterface
 ```
 
 Let’s do the same as we did previously, but this time we can inject our own `SystemDate` implementation through the
-`DateInterface` interface.
+`Date` interface.
 
 ```php source
-namespace Infrastructure;
+namespace App\Application;
 
-final class WelcomeController
+final class WelcomeService
 {
     public function __construct(
-        private TranslatorInterface $translatorService,
-        private DateInterface $date,
+        private Translator $translator,
+        private Date $date,
     ) {}
 
-    public function __invoke(Request $request): void
+    public function welcome(string $name): void
     {
-        $name = $request->get('name');
-        return $this->translatorService->trans(
+        return $this->translator->trans(
             'messages.welcome',
             ['name' => $name, 'date' => $this->date->toString()],
        );
@@ -163,32 +159,32 @@ final class WelcomeController
 }
 ```
 
-> ⚠️ Do not forget to add both mapping interfaces between `TranslatorInterface` and `LaravelTranslator`, and
-> `DateInterface` and `SystemDate` in the `ServiceProvider` class.
-
-Finally, we are up to creating our controller test.
+Finally, we can create a test for the `WelcomeService` injecting the required dependencies.
 
 ```php source
-namespace Test/Infrastructure;
-
-final class WelcomeControllerTest
+final class WelcomeServiceTest extends TestCase
 {
-    public function test_invoke(): void
+    public function test_welcome(): void
     {
-        $translate = new LaravelTranslator();
+        $translate = new LaravelTranslator(); // Real implmentation
 
-        $date = $this->createStub(DateInterface::class);
+        $date = $this->createStub(Date::class); // Fake implementation
         $date->method('toString')->willReturn('2022-02-22');
 
-        $request = $this->createStub(Request::class);
-        $request->method('get')->willReturn('World');
+        $name = 'World';
 
-        $controller = new WelcomeController($translate, $date);
-        $response = $controller->__invoke($request);
+        $service = new WelcomeService($translate, $date);
+        $response = $service->welcome($name);
 
         self::assertSame('hello World @ 2022-02-22', $response);
     }
 }
 ```
+
+## Conclusion
+
+Decoupling your classes is a good practice that will help you to maintain your codebase in the long run.<br>
+It will also help you not only to switch between different implementations of the same interface in case you decided to
+change the framework or the third-party service but also to test your code in a more efficient way.
 
 ![caravaca-fuentes-marques-2](/images/2022-08-17/2.png)
