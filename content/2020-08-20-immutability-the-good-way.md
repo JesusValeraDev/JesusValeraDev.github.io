@@ -36,7 +36,7 @@ final class ProductTransfer
     public function toString(): string
     {
         return sprintf(
-            'Name: %s\nPrice: %.2f\nTags: {%s}\nRelease date: %s\n',
+            "Name: %s\nPrice: %.2f\nTags: {%s}\nRelease date: %s\n",
             $this->name,
             $this->price,
             implode(', ', $this->tags),
@@ -76,7 +76,7 @@ echo $product->toString();
 
 *** OUTPUT ***
 
-> Modified name: <b>Acer FC-288</b>
+> Modified name: Acer FC-288
 
 > Name: Asus 452X
 > Price: 1024.50
@@ -84,8 +84,8 @@ echo $product->toString();
 > Release date: 1999-12-31
 ```
 
-Strings in PHP are copied by value, therefore. When we modify the variable $name the original value from $product->name
-will remain the same.
+Strings in PHP are copied by value, therefore. When we modify the variable `$name` the original value from 
+`$product->name` will remain the same.
 
 ## Modifying the price (being a number)
 
@@ -98,7 +98,7 @@ echo $product->toString();
 
 *** OUTPUT ***
 
-> Modified price: <b>1.0</b>
+> Modified price: 1.0
 
 > Name: Asus 452X
 > Price: 1024.50
@@ -119,7 +119,7 @@ echo $product->toString();
 
 *** OUTPUT ***
 
-> Modified tags: <b>{phone, reconditioned}</b>
+> Modified tags: {phone, reconditioned}
 
 > Name: Asus 452X
 > Price: 1024.50
@@ -127,27 +127,27 @@ echo $product->toString();
 > Release date: 1999-12-31
 ```
 
-In Java, arrays are passed by reference, however. In PHP they are considered as primitive types, which means if you have
-an array with 5.000 elements and you pass it to a function, that array will be fully copied inside that function and any
-modification won’t alter the original one.
+In Java, arrays are passed by reference, however. In PHP, they are considered as primitive types, which means if you
+have an array with 5.000 elements and you pass it to a function, that array will be fully copied inside that function
+and any modification won’t alter the original one.
 
 ## Modifying the released date (being an object)
 
 ```php source
 $date = $product->releaseDate;
-$date = $date->modify(<b>'+1 day'</b>);
+$date = $date->modify('+1 day');
 
 echo "Modified released date: {$date->format('Y-m-d')}" . PHP_EOL;
 echo $product->toString();
 
 *** OUTPUT ***
 
-> Modified release date: <b>2000-01-01</b>
+> Modified release date: 2000-01-01
 
 > Name: Asus 452X
 > Price: 1024.50
 > Tags: {computer, asus}
-> Release date: <b>2000-01-01</b>
+> Release date: 2000-01-01
 ```
 
 In OOP languages, objects are passed (or assigned) by reference: any modification will alter the original object.
@@ -172,19 +172,19 @@ final class ProductTransfer
 ---
 
 $date = $product->releaseDate;
-$date = $date->modify(<b>'+1 day'</b>);
+$date = $date->modify('+1 day');
 
 echo "Modified released date: {$date->format('Y-m-d')}" . PHP_EOL;
 echo $product->toString();
 
 *** OUTPUT ***
 
-> Modified date: <b>2000-01-01</b>
+> Modified date: 2000-01-01
 
 > Name: Asus 452X
 > Price: 1024.50
 > Tags: {computer, asus}
-> Release date: <b>1999-12-310</b>
+> Release date: 1999-12-310
 ```
 
 This is happening because what _\DateTimeImmutable_ does is to create a new instance of the same object with the same
@@ -194,20 +194,20 @@ Perfect, now our code is working like a charm, doesn't it? Well, take a look at 
 
 ```php source
 /** @var \DateTimeImmutable $date */
-$date = <b>&$product->releaseDate;</b> // Notice the '&' character 👀
-$date = $date->modify(<b>'+1 day'</b>);
+$date = &$product->releaseDate; // Notice the '&' character 👀
+$date = $date->modify('+1 day');
 
 echo "Modified released date: {$date->format('Y-m-d')}" . PHP_EOL;
 echo $product->toString();
 
 *** OUTPUT ***
 
-> Modified name: <b>2000-01-01</b>
+> Modified name: 2000-01-01
 
 > Name: Asus 452X
 > Price: 1024.50
 > Tags: {computer, asus}
-> Release date: <b>2000-01-01</b>
+> Release date: 2000-01-01
 ```
 
 The ‘&’ operator is used to get a value by reference, which means we are modifying the original value instead of
@@ -229,7 +229,7 @@ public function releaseDate(): \DateTimeImmutable
 ---
 
 // 🚨 Error - Only variables should be assigned by reference
-// $date = <b>&</b>$product->releaseDate();
+// $date = &$product->releaseDate();
 ```
 
 On the other hand, is about a static analyzer code library (such as Psalm), it will complain if you are not taking into

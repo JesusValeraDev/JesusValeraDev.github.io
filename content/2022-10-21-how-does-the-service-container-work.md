@@ -103,7 +103,6 @@ So, from now on, the next time we try to inject our interface `UserRepository` a
 another class, eg:
 
 ```php source
-<?php
 final class UserCreator
 {
     public function __construct(
