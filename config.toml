@@ -57,10 +57,6 @@ creator = "JesusValera96"
 
 # Menu items
 [[extra.menu]]
-name = "✞"
-url = "other/parlamento-entre-el-rey-cristiano-y-el-sultan-moro/"
-
-[[extra.menu]]
 name = "Blog"
 url = ""
 

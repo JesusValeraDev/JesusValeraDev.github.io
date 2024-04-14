@@ -1,9 +1,10 @@
-$body-width: 800px;
+$body-width: 720px;
+
+@import url(//fonts.googleapis.com/css?family=Poppins:400,600);
 
 $font-size: 18px;
 $font-size-code: 16px;
-$font-primary: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-secondary: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-primary: 'Poppins', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
 // In order to add new rules, update the '.theme-dark' property from the file _macros.scss.
@@ -23,7 +24,7 @@ $theme-light-links-color: #0159a7;
 $theme-dark-links-color: #6cbaff;
 
 $theme-light-catalogue-color: #efefef;
-$theme-dark-catalogue-color: #252525;
+$theme-dark-catalogue-color: #212121;
 
 $theme-light-code-background-color: rgba(27,31,35,.05);
 $theme-dark-code-background-color: #3f3f3f;

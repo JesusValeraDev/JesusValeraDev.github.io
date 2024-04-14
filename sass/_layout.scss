@@ -20,7 +20,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 800px;
+  max-width: 720px;
   font-size: 1.1rem;
   margin: auto;
   padding-bottom: 1rem;
@@ -49,6 +49,7 @@ header {
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
+    margin-right: 1em;
 
     a {
       font-size: 1.1em;
@@ -87,7 +88,7 @@ header {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   header {
     flex-wrap: wrap;
     text-align: center;
