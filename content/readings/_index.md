@@ -45,6 +45,7 @@ template = "section.html"
 - Never Split the Difference - Chris Voss, Tahl Raz
 - Start with Why - Simon Sinek
 - Turn the Ship Around!: A True Story of Turning Followers into Leaders - L. David Marquet
+- High Output Management - Andrew S. Grove
 - Who Moved my Cheese? - Spencer Johnson
 - The Little Prince - Antoine de Saint-Exupéry
 - The Metamorphosis - Franz Kafka
