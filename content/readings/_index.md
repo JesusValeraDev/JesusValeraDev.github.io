@@ -67,6 +67,7 @@ template = "section.html"
 - Momo - Michael Ende
 - The Day of the Triffids - John Wyndham
 - The Book Thief - Markus Zusak
+- The Last Checkmate - Gabriella Saab
 - Brave New World - Aldous Huxley
 - Life is a Dream - Pedro Calderón de la Barca
 - Wardog y el mundo - Ismael Trancón Martín
