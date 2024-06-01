@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ config.title | default(value='JesusValera') }}</title>
   <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,600" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.jpeg') | safe }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.jpeg') | safe }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='assets/apple-touch-icon.jpeg') | safe }}">
@@ -39,7 +40,7 @@
   {% block header %}
   <header>
     <a class="profile-icon" href="{{ config.base_url | safe }}">
-      <img alt="JesusValera" src="{{ get_url(path='jesus.png') | safe }}">
+      <img alt="JesusValera" src="{{ get_url(path='jesus.webp') | safe }}" width="auto" height="auto">
     </a>
     <nav>
       {% for menu in config.extra.menu %}
@@ -73,10 +74,10 @@
         <a href="/atom.xml">RSS</a> &copy; <time datetime="{{ now() | date(format='%Y') }}">{{ now() | date(format="%Y") }}</time> - Jesus Valera Reales
       </span>
       <a href="https://github.com/JesusValera" style="display: inline-block" target="_blank">
-        <img alt="github" src="/about/github.svg" style="margin: auto">
+        <img alt="github" src="/about/github.svg" style="margin: auto" width="24" height="24">
       </a>
       <a href="https://www.linkedin.com/in/jesusvalera/" style="display: inline-block" target="_blank">
-        <img alt="linkedin" src="/about/linkedin.svg" style="margin: auto">
+        <img alt="linkedin" src="/about/linkedin.svg" style="margin: auto" width="24" height="24">
       </a>
     </div>
   </footer>

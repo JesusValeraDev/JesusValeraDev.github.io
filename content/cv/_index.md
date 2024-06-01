@@ -10,10 +10,11 @@ aliases = ['resume']
     <div class="company">
         <img src="/cv/fotograf.png" alt="fotograf.de logo" width="85px">
         <div class="content">
-            <p class="title"><a href="https://www.fotograf.de" target="_blank">GotPhoto.com | fotograf.de</a></p>
+            <p class="title"><a href="https://www.fotograf.de" target="_blank">GotPhoto.com | fotograf.de</a></p>
             <time class="catalogue-time">Sep 2023 — Present</time>
             <p class="location">Berlin, Germany</p>
             <ul>
+                <li>Rewriting the shop from scratch and migrating the old code to the new one</li>
                 <li>Improve the design of the customers' package customization screen</li>
                 <li>Maintenance and bug fixing</li>
             </ul>
