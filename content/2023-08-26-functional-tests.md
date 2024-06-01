@@ -42,7 +42,7 @@ important to master them to write cleaner code.
 
 ### Unit test
 
-<img src="/images/2020-03-20/2.png" alt="given-when-then" style="width: 80%">
+<img src="/images/2023-08-26/2.png" alt="given-when-then" style="width: 80%">
 
 A unit test is a verification between an input and an expected output, it is an isolated logic and decoupled from the
 outside. We could consider a unit test as the public method from one API class. Usually, it is a good idea to use
@@ -98,7 +98,7 @@ expected result is whatever we want.
 
 In other words, we do not care what the developer did, we care about the output as we were the client.
 
-<img src="/images/2020-03-20/3.png" alt="functional-test" style="width: 80%">
+<img src="/images/2023-08-26/3.png" alt="functional-test" style="width: 80%">
 
 For example, if we send a form with a wrong value, we expect to see an error message in a specific field, we do not care
 about what regular expression is and why it failed.
