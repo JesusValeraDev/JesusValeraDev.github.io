@@ -68,6 +68,7 @@ template = "section.html"
 - The Day of the Triffids - John Wyndham
 - The Book Thief - Markus Zusak
 - The Last Checkmate - Gabriella Saab
+- The Tattooist of Auschwitz - Heather Morris
 - Brave New World - Aldous Huxley
 - Life is a Dream - Pedro Calderón de la Barca
 - Wardog y el mundo - Ismael Trancón Martín
