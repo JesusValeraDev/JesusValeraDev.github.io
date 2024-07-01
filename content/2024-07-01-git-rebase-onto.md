@@ -8,7 +8,7 @@ tags = ['Git', 'Rebase', 'Onto', 'Branch']
 
 [extra]
 static_thumbnail = "/images/2025-03-20/1.png"
-subtitle = "How to modify commit history with git rebase onto"
+subtitle = "How to modify the commit history with git rebase onto"
 +++
 
 When you are working with Git, you may find yourself in a situation where you need to rebase your branch onto another branch.<br>
@@ -16,64 +16,101 @@ This can happen when you want to incorporate changes from one branch into anothe
 
 ## What is `git rebase --onto`?
 
-The `git rebase --onto` is a powerful command that allows you to rebase a range of commits onto a new base. This can be useful when you want to move a series of commits from one branch to another, or when you want to rebase a branch onto a different base commit.
+The `git rebase --onto` is a powerful command when you need more control over the rebase process.
+It allows you to specify a different branch or commit to rebase your changes onto, which is not necessarily the upstream branch of the current branch.
 
 The command takes three arguments:
 
 1. The new base commit
 2. The **exclusive** starting commit of the range to rebase
-3. The **inclusive** ending commit of the range to rebase (default is _`HEAD`_)
+3. The **inclusive** ending commit of the range to rebase
 
-The syntax for the `git rebase --onto` command is as follows:
+### Syntax
 
 ```bash
-git rebase --onto origin/[new-base] <start-commit> <end-commit>
+git rebase --onto <new-base> <upstream> <branch>
 ```
 
-## How to use `git rebase --onto`?
+## When to use `--onto`?
 
-This is the git history of the `new-feature` branch:
+### 1. Rebasing a Subset of Commits
+
+When you want to rebase a subset of commits from your branch onto another branch:
 
 ```bash
-X---Y---Z (master)
-         \
-          A---B---C---D---E---F (new-feature)
+     A---B---C  (feature)
+    /
+---X---Y---Z  (master)
 ```
 
-You run `git rebase` and get multiple conflicts and the branch history becomes messy.
-
-At the end, the commits from the `new-feature` branch is incorrect, and you want to discard commits `A` and `B`.
-
-To rebase the `new-feature` branch onto the `master` branch, you can use the following command:
+If you want to rebase `A` into `Z`, you can use the following command:
 
 ```bash
-(new-feature)$ git rebase --onto master B
+(feature)$ git rebase --onto master Z
+
+-- also works --
+(feature)$ git rebase --onto master master feature
 ```
 
-This command tells Git to take the commits starting from `B` (not included) until the end, and apply them on top of the `master` branch.
+This command will rebase the commits from `feature` branch onto the `master` branch, starting from commit `Z`.
 
 ```bash
-X---Y---Z (master)
-         \
-          C---D---E---F (new-feature)
+             A'---B'---C'  (feature)
+            /
+---X---Y---Z  (master)
 ```
 
-<div class="separator"></div>
+### 2. Skipping Commits
 
-Let's imagine another example, having the previous example, we only want to keep the commits `D` and `E` but discard the rest. In this case we should run:
+When you want to skip a set of commits from your current branch:
 
 ```bash
-(new-feature)$ git rebase --onto master C E
+             A---B---C---D  (feature)
+            /
+---X---Y---Z  (master)
 ```
 
-This command tells Git to take the commits starting from `C` (not included) and ending at `E` (included) and apply them on top of the `master` branch.
+If you want to skip `A` and `B` and rebase the rest onto `Z`, you can use the following command:
 
 ```bash
-X---Y---Z (master)
-         \
-          D---E (new-feature)
+(feature)$ git rebase --onto master B feature
+```
+
+This skips commits `A` and `B` and applies the remaining commits onto the `master` branch.
+
+```bash
+             C'---D'  (feature)
+            /
+---X---Y---Z  (master)
+```
+
+### 3. Rebasing to a different base
+
+When you want to rebase a branch onto a completely different base that is not its current base.
+
+```bash
+     A---B---C  (feature1)
+    /
+---X---Y---Z  (master)
+    \
+     D---E (feature2)
+```
+
+If you want to rebase `feature2` onto `feature1`:
+
+```bash
+(feature1)$ git rebase --onto feature1 master feature2
+```
+
+This command will rebase `feature2` onto `feature1`.
+
+```bash
+     A---B---C---D'---E'  (feature1)
+    /
+---X---Y---Z  (master)
 ```
 
 ## References
 
-- [Git Rebase](https://git-scm.com/docs/git-rebase)
+- [Git Rebase | Git](https://git-scm.com/docs/git-rebase)
+- [Git rebase --onto an overview | Woman on Rails](https://womanonrails.com/git-rebase-onto)
