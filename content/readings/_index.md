@@ -72,6 +72,7 @@ template = "section.html"
 - Brave New World - Aldous Huxley
 - Life is a Dream - Pedro Calderón de la Barca
 - Wardog y el mundo - Ismael Trancón Martín
+- The Truth About the Harry Quebert Affair - Joël Dicker
 - Malware en Android: Discovering, Reversing and Forensics - Miguel Ángel García
 - Deep Web: TOR, FreeNET & I2P - Privacidad y Anonimato - Daniel Echeverri
 - Una al día - Sergio de los Santos
