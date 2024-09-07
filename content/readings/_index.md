@@ -12,6 +12,7 @@ template = "section.html"
 - Clean Code - Robert C. Martin
 - Clean Coder - Robert C. Martin
 - Clean Architecture - Robert C. Martin
+- Clean Agile - Robert C. Martin
 - Clean Craftsmanship - Robert C. Martin
 - Object Design Style Guide - Matthias Noback
 - Advanced Web Application Architecture - Matthias Noback
