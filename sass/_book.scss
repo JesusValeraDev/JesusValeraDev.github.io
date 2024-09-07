@@ -30,3 +30,9 @@
     }
   }
 }
+
+@media (max-width: 720px) {
+  .book {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
