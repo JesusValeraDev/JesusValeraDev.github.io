@@ -66,6 +66,7 @@ template = "section.html"
 - The Ballad Of Songbirds And Snakes - Suzanne Collins
 - Momo - Michael Ende
 - The Day of the Triffids - John Wyndham
+- Man's Search for Meaning - Viktor E Frankl
 - The Book Thief - Markus Zusak
 - The Last Checkmate - Gabriella Saab
 - The Tattooist of Auschwitz - Heather Morris
