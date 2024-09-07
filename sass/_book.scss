@@ -1,0 +1,32 @@
+.book {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  row-gap: 50px;
+  text-align: center;
+
+  .book-item {
+    display: inline-block;
+    border: 10px;
+    padding: 5px;
+
+    .title {
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    img {
+      width: auto;
+      max-height: 300px;
+    }
+
+    .author {
+      font-size: 0.8rem;
+    }
+
+    .date {
+      font-weight: lighter;
+      font-size: small;
+    }
+  }
+}
