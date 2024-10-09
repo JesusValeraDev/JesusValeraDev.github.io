@@ -69,7 +69,7 @@
     "title": "PHP for the Web",
     "author": " Matthias Noback",
     "date": "",
-    "img": "PHP for the Web.png"
+    "img": "PHP for the Web.jpg"
   },
   {
     "title": "Atomic Habits",
@@ -300,10 +300,10 @@
     "img": "Yellow Star.jpg"
   },
   {
-    "title": "The Boy in the Striped Pyjamas",
+    "title": "The Boy in the Striped Pajamas",
     "author": "John Boyne",
     "date": "",
-    "img": "The Boy in the Striped Pyjamas.jpg"
+    "img": "The Boy in the Striped Pajamas.jpg"
   },
   {
     "title": "Man's Search for Meaning",
@@ -330,10 +330,10 @@
     "img": "The Tattooist of Auschwitz.jpg"
   },
   {
-    "title": "A Farewell to Arms",
-    "author": "Ernest Hemingway",
+    "title": "The Alchemist: A Fable About Following Your Dream",
+    "author": "Paulo Coelho",
     "date": "",
-    "img": "A Farewell to Arms.png"
+    "img": "The Alchemist A Fable About Following Your Dream.jpg"
   },
   {
     "title": "Jonathan Livingston Seagull",
@@ -348,10 +348,10 @@
     "img": "Momo.jpg"
   },
   {
-    "title": "The Alchemist: A Fable About Following Your Dream",
-    "author": "Paulo Coelho",
+    "title": "A Farewell to Arms",
+    "author": "Ernest Hemingway",
     "date": "",
-    "img": "The Alchemist A Fable About Following Your Dream.jpg"
+    "img": "A Farewell to Arms.png"
   },
   {
     "title": "The Hunger Games",
@@ -414,8 +414,8 @@
     "img": "Hacking con buscadores Google, Bing & Shodan + Robtex.jpg"
   },
   {
-    "title": "Desarrollo de aplicaciones Android seguras - Miguel Ángel Moreno Álvarez",
-    "author": "Desarrollo de aplicaciones Android seguras - Miguel Ángel Moreno Álvarez",
+    "title": "Desarrollo de aplicaciones Android seguras",
+    "author": "Miguel Ángel Moreno Álvarez",
     "date": "",
     "img": "Desarrollo de aplicaciones Android seguras.jpg"
   },
@@ -444,7 +444,7 @@
     "img": "Una al dia.png"
   },
   {
-    "title": "Microhistorias: anécdotas y curiosidades de la Informática",
+    "title": "Microhistorias",
     "author": "Rafael Troncoso, Fran Ramírez",
     "date": "",
     "img": "Microhistorias anecdotas y curiosidades de la Informatica.png"

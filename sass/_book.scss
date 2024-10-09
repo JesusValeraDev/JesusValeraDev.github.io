@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  row-gap: 50px;
+  row-gap: 30px;
   text-align: center;
+  align-items: end;
 
   .book-item {
     display: inline-block;
@@ -11,22 +12,29 @@
     padding: 5px;
 
     .title {
-      display: inline-block;
       font-weight: bold;
     }
 
     img {
-      width: auto;
-      max-height: 300px;
+      width: 100%;
+      height: 300px;
+      margin: .5rem auto;
     }
 
     .author {
       font-size: 0.8rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      padding: 5px 0;
     }
 
     .date {
       font-weight: lighter;
       font-size: small;
+      position: absolute;
     }
   }
 }
@@ -34,5 +42,12 @@
 @media (max-width: 720px) {
   .book {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+
+    .book-item {
+      img {
+        width: auto;
+      }
+    }
   }
 }
