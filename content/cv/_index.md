@@ -32,7 +32,7 @@ aliases = ['resume']
         </span>
       </div>
       <img src="/cv/fotograf.png" alt="fotograf.de logo" width="85px">
-      <p class="title"><a href="https://www.gotphoto.com/" target="_blank">GotPhoto.com</a></p>
+      <p class="title"><a href="https://www.gotphoto.com/" target="_blank">GotPhoto.com | fotograf.de</a></p>
       <ul>
         <li>Rewrote the old shop from scratch and migrated it to Symfony</li>
         <li>Improved the design of the customers' package customization screen</li>
@@ -67,7 +67,7 @@ aliases = ['resume']
         </span>
       </div>
       <img src="/cv/artnight.jpeg" alt="realtainment logo" width="85px">
-      <p class="title"><a href="https://www.artnight.com/" target="_blank">Realtainment GmbH</a></p>
+      <p class="title"><a href="https://www.artnight.com/" target="_blank">ArtNight</a></p>
       <ul>
         <li>Decoupled domain from infrastructure</li>
         <li>Wrote tests and sort classes by modules</li>
@@ -102,7 +102,7 @@ aliases = ['resume']
         </span>
       </div>
       <img src="/cv/kollex.jpeg" alt="kollex logo" width="85px">
-      <p class="title"><a href="https://www.kollex.de/" target="_blank">Kollex GmbH</a></p>
+      <p class="title"><a href="https://www.kollex.de/" target="_blank">Kollex</a></p>
       <ul>
         <li>Worked in a eCommerce Shop built on Symfony using CQRS</li>
         <li>Exported and imported CSV files to an S3 bucket</li>
