@@ -5,7 +5,7 @@ $font-size-code: 16px;
 $font-primary: 'Poppins', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
-// In order to add new rules, update the '.theme-dark' property from the file _macros.scss.
+// In order to add new rules, update the '.theme-dark' property from '_macros.scss' file.
 $theme-light-bg-color: white;
 $theme-dark-bg-color: #292929;
 
@@ -26,3 +26,10 @@ $theme-dark-catalogue-color: #212121;
 
 $theme-light-code-background-color: rgba(27,31,35,.05);
 $theme-dark-code-background-color: #3f3f3f;
+
+//
+$theme-light-timeline-background-color: #00a3f1;
+$theme-dark-timeline-background-color: #16558d;
+
+$theme-light-timeline-bullet-color: #4db9f3;
+$theme-dark-timeline-bullet-color: #153b5e;

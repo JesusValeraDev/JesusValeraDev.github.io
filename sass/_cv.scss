@@ -1,0 +1,94 @@
+.timeline {
+  position: relative;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--timeline-background-color, $theme-light-timeline-background-color);
+  top: 0;
+  bottom: 0;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 0 10px 40px;
+  position: relative;
+  background-color: inherit;
+  text-align: center;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--timeline-background-color, $theme-light-timeline-background-color);
+  border: 4px solid var(--timeline-bullet-color, $theme-light-timeline-bullet-color);
+  top: 15px;
+  border-radius: 50%;
+  left: -16px;
+}
+
+/* Container's arrows */
+.container::before {
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--catalogue-color, #efefef);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--catalogue-color, #efefef) transparent transparent;
+}
+
+.content {
+  padding: 20px;
+  background-color: var(--catalogue-color, #efefef);
+  position: relative;
+  border-radius: 6px;
+
+  p {
+    text-align: center;
+  }
+
+  ul {
+    list-style-position: inside;
+    font-size: smaller;
+    padding-left: 20px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:1.5rem;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 20px;
+    @include color(color, --first-text-color, #444);
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: larger;
+    margin: 0;
+  }
+
+  time {
+    font-size: initial
+  }
+
+  .skills {
+    font-size: initial;
+    display: block;
+    margin: 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
