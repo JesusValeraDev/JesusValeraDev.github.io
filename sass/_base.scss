@@ -6,8 +6,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  @include color(background, --bg-color, $theme-light-bg-color);
-  @include color(color, --first-text-color, $theme-light-first-text-color);
+  background: var(--bg-color, $theme-light-bg-color);
+  color: var(--first-text-color, $theme-light-first-text-color);
 }
 
 html {
@@ -26,13 +26,13 @@ main {
 }
 
 a {
-  @include color(color, --links-color, $theme-light-links-color);
+  color: var(--links-color, $theme-light-links-color);
   text-decoration: none;
 }
 
 blockquote {
   border-left: .25rem solid;
-  @include color(border-left-color, --second-text-color, $theme-light-second-text-color);
+  border-left-color: var(--second-text-color, $theme-light-second-text-color);
   margin: .8rem 0;
   padding: .5rem 1rem;
 

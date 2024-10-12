@@ -11,9 +11,15 @@ aliases = ['resume']
     <div class="content">
       <div class="header">
         <span class="time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 24 24" fill="none">
-            <path stroke="#AAAAAAFF" stroke-width="3" stroke-linecap="round" d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
-          </svg> Sep 2023 — Present
+          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-300, -2799)" fill="#AAAAAAFF">
+              <g transform="translate(56, 160)">
+                <path d="M262,2656 C262,2656.552 261.552,2657 261,2657 L247,2657 C246.448,2657 246,2656.552 246,2656 L246,2646 C246,2645.448 246.448,2645 247,2645 L261,2645 C261.552,2645 262,2645.448 262,2646 L262,2656 Z M262,2641 L262,2640 C262,2639.448 261.552,2639 261,2639 C260.448,2639 260,2639.448 260,2640 L260,2641 L255,2641 L255,2640 C255,2639.448 254.552,2639 254,2639 C253.448,2639 253,2639.448 253,2640 L253,2641 L248,2641 L248,2640 C248,2639.448 247.552,2639 247,2639 C246.448,2639 246,2639.448 246,2640 L246,2641 C244.895,2641 244,2641.895 244,2643 L244,2657 C244,2658.104 244.895,2659 246,2659 L262,2659 C263.105,2659 264,2658.104 264,2657 L264,2643 C264,2641.895 263.105,2641 262,2641 L262,2641 Z"></path>
+              </g>
+            </g>
+          </g>
+        </svg> Sep 2023 — Present
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">
@@ -40,9 +46,15 @@ aliases = ['resume']
     <div class="content">
       <div class="header">
         <span class="time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 24 24" fill="none">
-            <path stroke="#AAAAAAFF" stroke-width="3" stroke-linecap="round" d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
-          </svg> Oct 2021 — May 2023 · 1 yr 8 mos
+          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-300, -2799)" fill="#AAAAAAFF">
+              <g transform="translate(56, 160)">
+                <path d="M262,2656 C262,2656.552 261.552,2657 261,2657 L247,2657 C246.448,2657 246,2656.552 246,2656 L246,2646 C246,2645.448 246.448,2645 247,2645 L261,2645 C261.552,2645 262,2645.448 262,2646 L262,2656 Z M262,2641 L262,2640 C262,2639.448 261.552,2639 261,2639 C260.448,2639 260,2639.448 260,2640 L260,2641 L255,2641 L255,2640 C255,2639.448 254.552,2639 254,2639 C253.448,2639 253,2639.448 253,2640 L253,2641 L248,2641 L248,2640 C248,2639.448 247.552,2639 247,2639 C246.448,2639 246,2639.448 246,2640 L246,2641 C244.895,2641 244,2641.895 244,2643 L244,2657 C244,2658.104 244.895,2659 246,2659 L262,2659 C263.105,2659 264,2658.104 264,2657 L264,2643 C264,2641.895 263.105,2641 262,2641 L262,2641 Z"></path>
+              </g>
+            </g>
+          </g>
+        </svg> Oct 2021 — May 2023 · <i style="font-size: smaller">1 yr 8 mos</i>
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">
@@ -69,9 +81,15 @@ aliases = ['resume']
     <div class="content">
       <div class="header">
         <span class="time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 24 24" fill="none">
-            <path stroke="#AAAAAAFF" stroke-width="3" stroke-linecap="round" d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
-          </svg> 2020 — Sep 2021 · 1 yr 1 mo
+          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-300, -2799)" fill="#AAAAAAFF">
+              <g transform="translate(56, 160)">
+                <path d="M262,2656 C262,2656.552 261.552,2657 261,2657 L247,2657 C246.448,2657 246,2656.552 246,2656 L246,2646 C246,2645.448 246.448,2645 247,2645 L261,2645 C261.552,2645 262,2645.448 262,2646 L262,2656 Z M262,2641 L262,2640 C262,2639.448 261.552,2639 261,2639 C260.448,2639 260,2639.448 260,2640 L260,2641 L255,2641 L255,2640 C255,2639.448 254.552,2639 254,2639 C253.448,2639 253,2639.448 253,2640 L253,2641 L248,2641 L248,2640 C248,2639.448 247.552,2639 247,2639 C246.448,2639 246,2639.448 246,2640 L246,2641 C244.895,2641 244,2641.895 244,2643 L244,2657 C244,2658.104 244.895,2659 246,2659 L262,2659 C263.105,2659 264,2658.104 264,2657 L264,2643 C264,2641.895 263.105,2641 262,2641 L262,2641 Z"></path>
+              </g>
+            </g>
+          </g>
+        </svg> 2020 — Sep 2021 · <i style="font-size: smaller">1 yr 1 mo</i>
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">
@@ -97,9 +115,15 @@ aliases = ['resume']
     <div class="content">
       <div class="header">
         <span class="time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 24 24" fill="none">
-            <path stroke="#AAAAAAFF" stroke-width="3" stroke-linecap="round" d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
-          </svg> Jun 2019 — Sep 2020 · 1 yr 4 mos
+          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-300, -2799)" fill="#AAAAAAFF">
+              <g transform="translate(56, 160)">
+                <path d="M262,2656 C262,2656.552 261.552,2657 261,2657 L247,2657 C246.448,2657 246,2656.552 246,2656 L246,2646 C246,2645.448 246.448,2645 247,2645 L261,2645 C261.552,2645 262,2645.448 262,2646 L262,2656 Z M262,2641 L262,2640 C262,2639.448 261.552,2639 261,2639 C260.448,2639 260,2639.448 260,2640 L260,2641 L255,2641 L255,2640 C255,2639.448 254.552,2639 254,2639 C253.448,2639 253,2639.448 253,2640 L253,2641 L248,2641 L248,2640 C248,2639.448 247.552,2639 247,2639 C246.448,2639 246,2639.448 246,2640 L246,2641 C244.895,2641 244,2641.895 244,2643 L244,2657 C244,2658.104 244.895,2659 246,2659 L262,2659 C263.105,2659 264,2658.104 264,2657 L264,2643 C264,2641.895 263.105,2641 262,2641 L262,2641 Z"></path>
+              </g>
+            </g>
+          </g>
+        </svg> Jun 2019 — Sep 2020 · <i style="font-size: smaller">1 yr 4 mos</i>
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">
@@ -125,9 +149,15 @@ aliases = ['resume']
     <div class="content">
       <div class="header">
         <span class="time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 24 24" fill="none">
-            <path stroke="#AAAAAAFF" stroke-width="3" stroke-linecap="round" d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
-          </svg> Nov 2018 — Jun 2019 · 8 mos
+          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-300, -2799)" fill="#AAAAAAFF">
+              <g transform="translate(56, 160)">
+                <path d="M262,2656 C262,2656.552 261.552,2657 261,2657 L247,2657 C246.448,2657 246,2656.552 246,2656 L246,2646 C246,2645.448 246.448,2645 247,2645 L261,2645 C261.552,2645 262,2645.448 262,2646 L262,2656 Z M262,2641 L262,2640 C262,2639.448 261.552,2639 261,2639 C260.448,2639 260,2639.448 260,2640 L260,2641 L255,2641 L255,2640 C255,2639.448 254.552,2639 254,2639 C253.448,2639 253,2639.448 253,2640 L253,2641 L248,2641 L248,2640 C248,2639.448 247.552,2639 247,2639 C246.448,2639 246,2639.448 246,2640 L246,2641 C244.895,2641 244,2641.895 244,2643 L244,2657 C244,2658.104 244.895,2659 246,2659 L262,2659 C263.105,2659 264,2658.104 264,2657 L264,2643 C264,2641.895 263.105,2641 262,2641 L262,2641 Z"></path>
+              </g>
+            </g>
+          </g>
+        </svg> Nov 2018 — Jun 2019 · <i style="font-size: smaller">8 mos</i>
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">
@@ -153,9 +183,15 @@ aliases = ['resume']
     <div class="content">
       <div class="header">
         <span class="time">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 24 24" fill="none">
-            <path stroke="#AAAAAAFF" stroke-width="3" stroke-linecap="round" d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
-          </svg> Mar 2018 — Jun 2018 · 4 mos
+          <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 20 20">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-300, -2799)" fill="#AAAAAAFF">
+              <g transform="translate(56, 160)">
+                <path d="M262,2656 C262,2656.552 261.552,2657 261,2657 L247,2657 C246.448,2657 246,2656.552 246,2656 L246,2646 C246,2645.448 246.448,2645 247,2645 L261,2645 C261.552,2645 262,2645.448 262,2646 L262,2656 Z M262,2641 L262,2640 C262,2639.448 261.552,2639 261,2639 C260.448,2639 260,2639.448 260,2640 L260,2641 L255,2641 L255,2640 C255,2639.448 254.552,2639 254,2639 C253.448,2639 253,2639.448 253,2640 L253,2641 L248,2641 L248,2640 C248,2639.448 247.552,2639 247,2639 C246.448,2639 246,2639.448 246,2640 L246,2641 C244.895,2641 244,2641.895 244,2643 L244,2657 C244,2658.104 244.895,2659 246,2659 L262,2659 C263.105,2659 264,2658.104 264,2657 L264,2643 C264,2641.895 263.105,2641 262,2641 L262,2641 Z"></path>
+              </g>
+            </g>
+          </g>
+        </svg> Mar 2018 — Jun 2018 · <i style="font-size: smaller">4 mos</i>
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">

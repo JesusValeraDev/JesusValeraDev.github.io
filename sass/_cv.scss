@@ -69,7 +69,7 @@
     flex-wrap: wrap;
     row-gap: 5px;
     column-gap: 20px;
-    @include color(color, --first-text-color, #444);
+    color: var(--first-text-color, $theme-light-first-text-color);
   }
 
   .title {

@@ -9,7 +9,7 @@
   }
 
   .top {
-    @include color(color, --first-text-color, $theme-light-first-text-color);
+    color: var(--first-text-color, $theme-light-first-text-color);
     font-size: 1.1rem;
     opacity: .8;
 
