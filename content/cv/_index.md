@@ -70,7 +70,7 @@ aliases = ['resume']
       <p class="title"><a href="https://www.artnight.com/" target="_blank">ArtNight</a></p>
       <ul>
         <li>Decoupled domain from infrastructure</li>
-        <li>Wrote tests and sort classes by modules</li>
+        <li>Wrote tests and sorted classes by modules</li>
         <li>Organised internal tech talks and katas</li>
       </ul>
       <p class="skills"><span>Skills</span>: PHP · Symfony · Docker · Apache Kafka</p>
@@ -206,7 +206,7 @@ aliases = ['resume']
       <img src="/cv/rad4m.jpg" alt="rad4m logo" width="85px">
       <p class="title">RAD4M · <i>Internship</i></p>
       <ul>
-        <li>Developed an Android app with native components & 3rd party libraries like Maps</li>
+        <li>Developed from scratch an Android application with Maps, Shared Preferences and third-party libraries</li>
       </ul>
       <p class="skills"><span>Skills</span>: Kotlin · Android · MySQL · Git</p>
     </div>
