@@ -12,6 +12,12 @@
     "img": "Refactoring Improving the Design of Existing Code.png"
   },
   {
+    "title": "Extreme Programming Explained: Embrace Change",
+    "author": "Kent Beck, Cynthia Andres",
+    "date": "",
+    "img": "Extreme Programming Explained.jpg"
+  },
+  {
     "title": "Domain-Driven Design Distilled",
     "author": "Vaughn Vernon",
     "date": "",
@@ -24,22 +30,10 @@
     "img": "Tidy First A personal Exercise in Empirical Software Design.jpg"
   },
   {
-    "title": "Extreme Programming Explained: Embrace Change",
-    "author": "Kent Beck, Cynthia Andres",
-    "date": "",
-    "img": "Extreme Programming Explained.jpg"
-  },
-  {
     "title": "The Pragmatic Programmer: From Journeyman to Master",
     "author": "Andrew Hunt, Dave Thomas",
     "date": "",
     "img": "The Pragmatic Programmer.jpg"
-  },
-  {
-    "title": "The Passionate Programmer",
-    "author": "Chad Fowler",
-    "date": "",
-    "img": "The Passionate Programmer Creating a Remarkable Career in Software Development.jpg"
   },
   {
     "title": "Object Design Style Guide",
@@ -52,6 +46,12 @@
     "author": " Matthias Noback",
     "date": "",
     "img": "Advanced Web Application Architecture.jpg"
+  },
+  {
+    "title": "Head First Design Patterns",
+    "author": "Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra",
+    "date": "",
+    "img": "Head First Design Patterns.png"
   },
   {
     "title": "Principles of Package Design",
@@ -84,64 +84,10 @@
     "img": "The Power of Habits.jpg"
   },
   {
-    "title": "Head First Design Patterns",
-    "author": "Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra",
+    "title": "The Passionate Programmer",
+    "author": "Chad Fowler",
     "date": "",
-    "img": "Head First Design Patterns.png"
-  },
-  {
-    "title": "Symfony 5: The fast Track",
-    "author": "Fabien Potencier",
-    "date": "",
-    "img": "Symfony 5 The fast Track.jpg"
-  },
-  {
-    "title": "Refactoring to Collections",
-    "author": "Adam Wathan",
-    "date": "",
-    "img": "Refactoring to Collections.jpg"
-  },
-  {
-    "title": "Laravel Queues in Action",
-    "author": "Mohamed Said",
-    "date": "",
-    "img": "Laravel Queues in Action.png"
-  },
-  {
-    "title": "Laravel: Up & Running",
-    "author": "Matt Stauffer",
-    "date": "",
-    "img": "Laravel Up & Running.jpg"
-  },
-  {
-    "title": "Laravel Secrets",
-    "author": "Stefan Bauer, Bobby Bouwmann",
-    "date": "",
-    "img": "Laravel Secrets.png"
-  },
-  {
-    "title": "Testing y TDD para PHP",
-    "author": "Fran Iglesias",
-    "date": "",
-    "img": "Testing y TDD para PHP.png"
-  },
-  {
-    "title": "La Guía del Refactor Cotidiano",
-    "author": "Fran Iglesias",
-    "date": "",
-    "img": "La Guía del Refactor Cotidiano.png"
-  },
-  {
-    "title": "Testing con Dobles en PHP",
-    "author": "Fran Iglesias",
-    "date": "",
-    "img": "Testing con Dobles en PHP.png"
-  },
-  {
-    "title": "Aprende Test Driven Development",
-    "author": "Fran Iglesias",
-    "date": "",
-    "img": "Aprende Test Driven Development.png"
+    "img": "The Passionate Programmer Creating a Remarkable Career in Software Development.jpg"
   },
   {
     "title": "Clean Code",
@@ -174,10 +120,22 @@
     "img": "Clean Craftsmanship.jpg"
   },
   {
-    "title": "JavaScript: The Good Parts",
-    "author": "Crockfold",
+    "title": "Symfony 5: The fast Track",
+    "author": "Fabien Potencier",
     "date": "",
-    "img": "JavaScript The Good Parts.jpg"
+    "img": "Symfony 5 The fast Track.jpg"
+  },
+  {
+    "title": "Laravel: Up & Running",
+    "author": "Matt Stauffer",
+    "date": "",
+    "img": "Laravel Up & Running.jpg"
+  },
+  {
+    "title": "Laravel Queues in Action",
+    "author": "Mohamed Said",
+    "date": "",
+    "img": "Laravel Queues in Action.png"
   },
   {
     "title": "Thinking in Java",
@@ -186,22 +144,58 @@
     "img": "Thinking in Java.jpg"
   },
   {
+    "title": "JavaScript: The Good Parts",
+    "author": "Crockfold",
+    "date": "",
+    "img": "JavaScript The Good Parts.jpg"
+  },
+  {
+    "title": "Refactoring to Collections",
+    "author": "Adam Wathan",
+    "date": "",
+    "img": "Refactoring to Collections.jpg"
+  },
+  {
+    "title": "Laravel Secrets",
+    "author": "Stefan Bauer, Bobby Bouwmann",
+    "date": "",
+    "img": "Laravel Secrets.png"
+  },
+  {
     "title": "Kotlin for Android Developers",
     "author": "Antonio Leiva",
     "date": "",
     "img": "Kotlin for Android Developers.png"
   },
   {
+    "title": "Testing y TDD para PHP",
+    "author": "Fran Iglesias",
+    "date": "",
+    "img": "Testing y TDD para PHP.png"
+  },
+  {
+    "title": "La Guía del Refactor Cotidiano",
+    "author": "Fran Iglesias",
+    "date": "",
+    "img": "La Guía del Refactor Cotidiano.png"
+  },
+  {
+    "title": "Testing con Dobles en PHP",
+    "author": "Fran Iglesias",
+    "date": "",
+    "img": "Testing con Dobles en PHP.png"
+  },
+  {
+    "title": "Aprende Test Driven Development",
+    "author": "Fran Iglesias",
+    "date": "",
+    "img": "Aprende Test Driven Development.png"
+  },
+  {
     "title": "97 Things Every Programmer Should Know",
     "author": "Seb Rose, Kevlin Henney",
     "date": "",
     "img": "97 Things Every Programmer Should Know.png"
-  },
-  {
-    "title": "Effective Remote Work: For Yourself, Your Team, and Your Company",
-    "author": "James Stanier",
-    "date": "",
-    "img": "Effective Remote Work For Yourself, Your Team, and Your Company.jpg"
   },
   {
     "title": "The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change",
@@ -244,6 +238,12 @@
     "author": "Spencer Johnson",
     "date": "",
     "img": "Who Moved my Cheese.jpg"
+  },
+  {
+    "title": "Effective Remote Work: For Yourself, Your Team, and Your Company",
+    "author": "James Stanier",
+    "date": "",
+    "img": "Effective Remote Work For Yourself, Your Team, and Your Company.jpg"
   },
   {
     "title": "Rich Dad Poor Dad",
@@ -402,16 +402,16 @@
     "img": "Life is a Dream.jpg"
   },
   {
-    "title": "The Truth About the Harry Quebert Affair",
-    "author": "Joël Dicker",
-    "date": "2024-07-28",
-    "img": "The Truth About the Harry Quebert Affair.jpg"
-  },
-  {
     "title": "Psicología del Éxito.png",
     "author": "Mario Luna",
     "date": "",
     "img": "Psicologia del Exito.png"
+  },
+  {
+    "title": "The Truth About the Harry Quebert Affair",
+    "author": "Joël Dicker",
+    "date": "2024-07-28",
+    "img": "The Truth About the Harry Quebert Affair.jpg"
   },
   {
     "title": "Bitcoin: La tecnología Blockchain y su investigación",
