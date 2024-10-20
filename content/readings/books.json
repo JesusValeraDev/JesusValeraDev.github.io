@@ -390,6 +390,12 @@
     "img": "Brave New World.jpg"
   },
   {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "date": "2024-08-20",
+    "img": "The Hitchhikers Guide to the Galaxy.png"
+  },
+  {
     "title": "Life is a Dream",
     "author": "Pedro Calderón de la Barca",
     "date": "",
@@ -400,6 +406,18 @@
     "author": "Joël Dicker",
     "date": "2024-07-28",
     "img": "The Truth About the Harry Quebert Affair.jpg"
+  },
+  {
+    "title": "Psicología del Éxito.png",
+    "author": "Mario Luna",
+    "date": "",
+    "img": "Psicologia del Exito.png"
+  },
+  {
+    "title": "Bitcoin: La tecnología Blockchain y su investigación",
+    "author": "Félix Brezo Fernández, Yaiza Rubio Viñuela",
+    "date": "",
+    "img": "Bitcoin La tecnologia Blockchain y su investigacion.png"
   },
   {
     "title": "Hacking de Aplicaciones Web: SQL Injection",
