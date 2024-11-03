@@ -378,6 +378,24 @@
     "img": "The Ballad Of Songbirds And Snakes.jpg"
   },
   {
+    "title": "A Christmas Carol",
+    "author": "Carles Dickens",
+    "date": "",
+    "img": "A Christmas Carol.jpg"
+  },
+  {
+    "title": "Life is a Dream",
+    "author": "Pedro Calderón de la Barca",
+    "date": "",
+    "img": "Life is a Dream.jpg"
+  },
+  {
+    "title": "The Life of Lazarillo de Tormes",
+    "author": "Unknown",
+    "date": "",
+    "img": "The Life of Lazarillo de Tormes.jpg"
+  },
+  {
     "title": "The Day of the Triffids",
     "author": "John Wyndham",
     "date": "",
@@ -396,22 +414,16 @@
     "img": "The Hitchhikers Guide to the Galaxy.png"
   },
   {
-    "title": "Life is a Dream",
-    "author": "Pedro Calderón de la Barca",
-    "date": "",
-    "img": "Life is a Dream.jpg"
+    "title": "The Truth About the Harry Quebert Affair",
+    "author": "Joël Dicker",
+    "date": "2024-07-28",
+    "img": "The Truth About the Harry Quebert Affair.jpg"
   },
   {
     "title": "Psicología del Éxito.png",
     "author": "Mario Luna",
     "date": "",
     "img": "Psicologia del Exito.png"
-  },
-  {
-    "title": "The Truth About the Harry Quebert Affair",
-    "author": "Joël Dicker",
-    "date": "2024-07-28",
-    "img": "The Truth About the Harry Quebert Affair.jpg"
   },
   {
     "title": "Bitcoin: La tecnología Blockchain y su investigación",
