@@ -89,7 +89,7 @@ aliases = ['resume']
               </g>
             </g>
           </g>
-        </svg> 2020 — Sep 2021 · <i style="font-size: smaller">1 yr 1 mo</i>
+        </svg> Sep 2020 — Sep 2021 · <i style="font-size: smaller">1 yr 1 mo</i>
         </span>
         <span class="location">
           <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 48 48" fill="none">
