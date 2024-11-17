@@ -60,8 +60,8 @@ final class WelcomeService
 }
 ```
 
-The first thing we should do is to move the `trans()` Laravel function logic to a different service, in order to do
-that, we have to invert the dependencies introducing a new interface as follows:
+The first thing we should do is to move the `trans()` Laravel function logic to a different place, in order to do that,
+we have to invert the dependencies introducing a new interface as follows:
 
 ```php source
 namespace App\Domain;
@@ -72,7 +72,7 @@ interface Translator
 }
 ```
 
-And we can place in this class the original Laravel implementation.
+And place in a new class (which belongs to infrastructure layer) the original Laravel implementation.
 
 ```php source
 namespace App\Infrastructure;
@@ -93,7 +93,7 @@ We can inject the new `LaravelTranslator` service in our `WelcomeService` defini
 which implementation we want to resolve when the framework faces the `Translator` in the constructor.
 
 ```php source
-namespace App\Infrastructure;
+namespace App\Application;
 
 final class WelcomeService
 {
@@ -180,6 +180,8 @@ final class WelcomeServiceTest extends TestCase
     }
 }
 ```
+
+> Ideally we should write the test first, later the real implementation
 
 ## Conclusion
 
