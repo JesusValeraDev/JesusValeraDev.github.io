@@ -1,6 +1,6 @@
 +++
 title = "Declaring array structures in PHP"
-description = "In PHP is not possible to define explicitly the types of your arrays, but using PHPDoc + static analysers (PHPStan or Psalm) we can do it. Here is how"
+description = "It is not possible in PHP to define explicitly the types of your arrays, but using PHPDoc + static analyzers (PHPStan or Psalm), we can do it. Here is how"
 date = 2023-02-20
 
 [taxonomies]
@@ -19,15 +19,15 @@ Currently, it is not possible to define explicit array types as other programmin
 List<User> users = new ArrayList<>();
 ```
 
-There have been some attempts to achieve that. One of the most recent ones was done by **Nikita Popov** in
+There have been some attempts to achieve that. **Nikita Popov** made one of the most recent ones in
 this [pull request](https://github.com/PHPGenerics/php-generics-rfc/issues/45). Unfortunately, the conclusion was that
 regarding the current PHP status, that is not doable (at least in the short/medium term), as it would require rewriting
-an enormous amount of code some of which is very critical.
+an enormous amount of code, some of which is very critical.
 
-Hopefully, some tools like **PHPStan** or **Psalm** help us to analyze the code statically, which means, they do not
+Fortunately, tools like **PHPStan** or **Psalm** help us analyze the code statically. That means, they do not
 execute but check the code for inconsistencies based on PHP comments.
 
-There are 3 different ways to define the type of elements in a PHP array:
+There are three different ways to define the type of elements in a PHP array:
 
 1. Legacy way: `User[]`
 2. List Shape: `array<int,mixed>` & `list<mixed>`
@@ -55,7 +55,9 @@ $firstUser = $users[ ? ];
 # List Shape
 
 We use lists when we have an array of elements with the same type.<br>
-To do that, we use the **diamond syntax** to declare the types of the key and the value: `array<int,mixed>`. There is a very handy shortcut when the key is an auto-incremental integer: `list<mixed>`.
+We use the **diamond syntax** to declare the types of the key and the value: `array<int,mixed>`.
+
+> 💡There is a very handy shortcut when the key is an auto-incremental integer: `list<mixed>`.
 
 ```php source
 /** @var array<string, User> $users */
@@ -72,10 +74,14 @@ $users[0]; # ERROR: "Offset 0 does not exist on array<string, User>"
 ---
 
 /** @var list<User> $users */
-$users = [ ... ];
+$users = [
+    new User('Jesus Valera'),
+    new User('Chema Valera'),
+    // ...
+];
 
-$firstUser = reset($users);
-$lastUser = end($users);
+$firstUser = $users[0];
+$secondUser = $users[1];
 ```
 
 ## Object Shape
@@ -91,18 +97,32 @@ $id = $additionalInfo['id']; # int
 $birthdate = $additionalInfo['birthdate']; # DateTimeImmutable
 ```
 
+---
+
+Given the following 'object shape' array
+
+```php source
+['hello', 'world', new stdClass, false];
+```
+
+It will be addressed internally as follows:
+
+```php source
+list{string, string, stdClass, false}
+```
+
 <div class="separator"></div>
 
 Example of a User class that holds two arrays: a list and an object shape.
 
 ```php source
-final class User
+final readonly class User
 {
     /** @var list<Comment> */
-    public readonly array $comments;
+    public array $comments;
 
     /** @var array{id:int, birthdate:DateTimeImmutable} */
-    public readonly array $additionalInfo;
+    public array $additionalInfo;
 }
 ```
 
