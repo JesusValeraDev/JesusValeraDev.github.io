@@ -396,6 +396,12 @@
     "img": "The Life of Lazarillo de Tormes.jpg"
   },
   {
+    "title": "The Antichrist",
+    "author": "Friedrich Nietzsche",
+    "date": "",
+    "img": "The Anti-Christ.jpg"
+  },
+  {
     "title": "The Day of the Triffids",
     "author": "John Wyndham",
     "date": "",
@@ -420,7 +426,7 @@
     "img": "The Truth About the Harry Quebert Affair.jpg"
   },
   {
-    "title": "Psicología del Éxito.png",
+    "title": "Psicología del Éxito",
     "author": "Mario Luna",
     "date": "",
     "img": "Psicologia del Exito.png"
@@ -438,10 +444,10 @@
     "img": "Hacking de Aplicaciones Web SQL Injection.jpg"
   },
   {
-    "title": "Hacking con buscadores: Google, Bing & Shodan + Robtex",
-    "author": "Enrique Rando",
-    "date": "",
-    "img": "Hacking con buscadores Google, Bing & Shodan + Robtex.jpg"
+    "title": "Ethical Hacking: Teoría y práctica para la realización de un pentesting",
+    "author": "Pablo González Pérez",
+    "date": "2024-12-16",
+    "img": "Ethical Hacking.jpg"
   },
   {
     "title": "Desarrollo de aplicaciones Android seguras",
@@ -460,6 +466,12 @@
     "author": "Daniel Echeverri",
     "date": "",
     "img": "Deep Web TOR, FreeNET & I2P - Privacidad y Anonimato.jpg"
+  },
+  {
+    "title": "Hacking con buscadores: Google, Bing & Shodan + Robtex",
+    "author": "Enrique Rando",
+    "date": "",
+    "img": "Hacking con buscadores Google, Bing & Shodan + Robtex.jpg"
   },
   {
     "title": "Wardog y el mundo",
