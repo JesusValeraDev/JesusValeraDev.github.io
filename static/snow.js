@@ -1,4 +1,4 @@
-let snowflakesCount = 12;
+let snowflakesCount = 25;
 
 let bodyHeightPx = null;
 let pageHeightVh = null;
