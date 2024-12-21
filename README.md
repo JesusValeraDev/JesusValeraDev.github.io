@@ -1,4 +1,4 @@
-# JesusValera's website
+# JesusValera.dev
 
 My personal blog, readings and projects.
 
