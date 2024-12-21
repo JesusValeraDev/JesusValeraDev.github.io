@@ -5,15 +5,14 @@ let pageHeightVh = null;
 
 function setHeightVariables() {
     bodyHeightPx = document.documentElement.offsetHeight;
-    pageHeightVh = (100 * bodyHeightPx / window.innerHeight);
+    pageHeightVh = (100 * bodyHeightPx / window.innerHeight) - 5;
 }
 
 function showSnow() {
     document.getElementById('snow').style.display = "block";
 }
 
-// Creating snowflakes
-function generateSnow(snowDensity = 200) {
+function generateSnowflakes(snowDensity) {
     snowDensity -= 1;
     const snowWrapper = document.getElementById('snow');
     snowWrapper.innerHTML = '';
@@ -26,7 +25,9 @@ function generateSnow(snowDensity = 200) {
 
 function getOrCreateCSSElement() {
     let cssElement = document.getElementById("psjs-css");
-    if (cssElement) return cssElement;
+    if (cssElement) {
+        return cssElement;
+    }
 
     cssElement = document.createElement('style');
     cssElement.id = 'psjs-css';
@@ -41,7 +42,6 @@ function addCSS(rule) {
     document.head.appendChild(cssElement);
 }
 
-// Math
 function randomInt(value = 100) {
     return Math.floor(Math.random() * value) + 1;
 }
@@ -57,12 +57,12 @@ function getRandomArbitrary(min, max) {
 }
 
 // Create style for snowflake
-function generateSnowCSS(snowDensity = 200) {
+function generateSnowCSS(snowDensity) {
     let snowflakeName = "snowflake";
     let rule = ``;
 
     for (let i = 1; i < snowDensity; i++) {
-        let randomX = Math.random() * 100; // vw
+        let randomX = Math.random() * 100 - 10; // vw
         let randomOffset = Math.random() * 10 // vw;
         let randomXEnd = randomX + randomOffset;
         let randomXEndYoyo = randomX + (randomOffset / 2);
@@ -93,11 +93,11 @@ function generateSnowCSS(snowDensity = 200) {
 }
 
 // Load the rules and execute after the DOM loads
-function createSnow() {
+function createSnow(isShowSnow) {
     setHeightVariables();
     generateSnowCSS(snowflakesCount);
-    generateSnow(snowflakesCount);
-    showSnow();
+    generateSnowflakes(snowflakesCount);
+    showSnow(isShowSnow);
 }
 
 function isChristmas() {
@@ -110,6 +110,5 @@ function isChristmas() {
 }
 
 if (isChristmas()) {
-    window.addEventListener('resize', createSnow);
     createSnow();
 }
